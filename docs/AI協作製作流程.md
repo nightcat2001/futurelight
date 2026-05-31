@@ -21,8 +21,8 @@
 | --- | --- | --- |
 | Codex | 可用 | 目前負責規劃、程式、審核、commit/push |
 | imagegen | 可用 | 已產生 `animal-english-words-cover.png` |
-| GPT Image 2 / Image2.0 on RunComfy | Skill 已存在，CLI 未可用 | 本機 Windows 無法直接安裝 `@runcomfy/cli` |
-| Seedance 2.0 Pro on RunComfy | Skill 已存在，CLI 未可用 | 需要 RunComfy CLI；目前 Windows npm 套件不支援 |
+| GPT Image 2 / Image2.0 on RunComfy | Skill 已存在，改走 Docker | 本機 Windows 無法直接安裝 `@runcomfy/cli`，使用 `tools/runcomfy-docker.ps1` |
+| Seedance 2.0 Pro on RunComfy | Skill 已存在，改走 Docker | 需要 RunComfy CLI；目前以 Linux container 執行 |
 | Remotion | Skill 已存在 | 可建立 React-based video pipeline |
 | HyperFrames | Skill 已存在 | 可建立 HTML/GSAP-based video composition |
 | Suno | 未找到本機 skill | 先作為外部音樂產製節點，音檔進 `assets/audio/music` |
@@ -37,11 +37,16 @@ npm install -g @runcomfy/cli
 
 結果：`@runcomfy/cli` 不支援 Windows，需求平台是 `darwin` 或 `linux`。
 
-後續可選方案：
+已採用方案：
+
+1. 使用 Docker Linux container 包裝 RunComfy CLI。
+2. 透過 `tools/runcomfy-docker.ps1` 執行健康檢查與生成任務。
+3. 生成輸出固定落在 `assets/video/generated`，再登記到 `assets/asset_manifest.json`。
+
+備援方案：
 
 1. 安裝 WSL Ubuntu，於 Ubuntu 內安裝 Node 與 `@runcomfy/cli`。
-2. 使用 Docker Linux container 包裝 RunComfy CLI。
-3. 使用遠端 Linux runner 或 CI 執行 RunComfy 任務。
+2. 使用遠端 Linux runner 或 CI 執行 RunComfy 任務。
 
 在 RunComfy 可執行前，專案內仍可先完成：
 
@@ -105,7 +110,7 @@ flowchart TD
 
 第二階段：
 
-- 裝好 Linux/WSL/Docker RunComfy 後啟用 Image2.0 與 Seedance。
+- 使用 `docs/RunComfy執行方案.md` 的 Docker runner 啟用 Image2.0 與 Seedance。
 - Seedance 產角色短動畫。
 - Suno 產課程主題音樂與獎勵 jingle。
 - Remotion 統一剪輯、字幕與輸出。
