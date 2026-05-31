@@ -38,6 +38,7 @@
 - `互動導向規劃.md`：集中管理按鈕會到哪個頁面、連續交互流程、換頁動畫與點選音效。
 - `研究依據與設計準則.md`：整理 Google、W3C、NN/g、兒童互動研究與 GitHub 教育設計系統參考，作為介面與互動決策依據。
 - `外掛使用規劃.md`：整理 Browser、imagegen、verified-delivery、文件/試算表能力與 FutureLight 自訂外掛。
+- `AI協作製作流程.md`：整理 Codex、Image2.0、Seedance、Remotion、Suno 的製作分工與素材落地流程。
 
 ## 功能設計閱讀順序
 

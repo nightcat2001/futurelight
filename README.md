@@ -16,6 +16,10 @@
 - `assets/images/course-covers/animal-english-words-cover.png`
 - `content/courses/animal-english-words.json`
 
+AI 製作管線：
+
+- `docs/AI協作製作流程.md`
+
 ## 開發啟動
 
 啟動 PostgreSQL：
