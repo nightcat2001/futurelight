@@ -8,6 +8,8 @@ Desktop.ini
 
 # Logs
 *.log
+*-verify.png
+frontend-preview.png
 
 # Environment
 .env

@@ -1,0 +1,80 @@
+{
+  "images": [
+    {
+      "id": "course_cover_animal_english_words",
+      "type": "course_cover",
+      "path": "assets/images/course-covers/animal-english-words-cover.png",
+      "recommended_size": "1600x900",
+      "source": "imagegen",
+      "prompt_summary": "Children language learning course cover for English animal words"
+    }
+  ],
+  "audio": [
+    {
+      "id": "ui_click",
+      "type": "ui_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "ui_toggle",
+      "type": "ui_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "ui_error_soft",
+      "type": "ui_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "learning_step_complete",
+      "type": "feedback_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "learning_unit_complete",
+      "type": "feedback_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "answer_correct",
+      "type": "practice_feedback",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "answer_wrong_soft",
+      "type": "practice_feedback",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "reward_star",
+      "type": "reward_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "reward_badge",
+      "type": "reward_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "mission_complete",
+      "type": "reward_effect",
+      "path": null,
+      "status": "planned"
+    },
+    {
+      "id": "page_success",
+      "type": "ui_effect",
+      "path": null,
+      "status": "planned"
+    }
+  ]
+}

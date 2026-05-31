@@ -164,6 +164,15 @@ h2 {
   padding: 28px;
 }
 
+.course-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .today-card p {
   color: #475569;
 }

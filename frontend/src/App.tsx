@@ -119,6 +119,11 @@ function App() {
         </div>
 
         <div className="today-card" aria-label="今日學習摘要">
+          <img
+            className="course-cover"
+            src="/assets/course-covers/animal-english-words-cover.png"
+            alt="動物英文單字課程封面"
+          />
           <span className="card-label">今日推薦</span>
           <h2>{home?.recommendation ?? '動物英文單字'}</h2>
           <p>目前孩子：{home?.current_child ?? '小安'}</p>

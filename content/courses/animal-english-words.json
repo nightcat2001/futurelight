@@ -1,0 +1,40 @@
+{
+  "id": "animal-english-words",
+  "title": "動物英文單字",
+  "status": "draft",
+  "target_language": "en",
+  "level": "beginner",
+  "cover_image_id": "course_cover_animal_english_words",
+  "units": [
+    {
+      "id": "zoo-animals",
+      "title": "Zoo Animals",
+      "steps": [
+        {
+          "id": "lion-word",
+          "type": "word",
+          "text": "lion",
+          "translation": "獅子",
+          "image_asset_id": "course_cover_animal_english_words",
+          "audio_asset_id": null
+        },
+        {
+          "id": "bird-word",
+          "type": "word",
+          "text": "bird",
+          "translation": "鳥",
+          "image_asset_id": "course_cover_animal_english_words",
+          "audio_asset_id": null
+        }
+      ],
+      "practice": [
+        {
+          "id": "pick-lion",
+          "type": "single_choice",
+          "prompt": "Which one is lion?",
+          "correct_answer": "lion"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,12 @@
 
 主要規劃文件位於 [`docs`](docs)。
 
+第一批內容與資源：
+
+- `assets/asset_manifest.json`
+- `assets/images/course-covers/animal-english-words-cover.png`
+- `content/courses/animal-english-words.json`
+
 ## 開發啟動
 
 啟動 PostgreSQL：
