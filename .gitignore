@@ -1,0 +1,26 @@
+# OS
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Rust
+target/
+
+# Database
+*.sqlite
+*.db
