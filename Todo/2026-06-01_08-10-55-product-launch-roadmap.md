@@ -19,6 +19,9 @@ Status: Open
 
 ## P0 上線基礎與產品定位
 
+- [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/產品需求PRD.md` 的所有 page/API/database 對應，並與各頁資料夾交叉檢查。
+- [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/法規與上架檢查.md` 的 SDK inventory、Data Safety、App Store privacy labels 初稿。
+- [ ] 2026-06-01 08:32:25 +08:00 P0 完成 FutureLight port migration，禁止使用舊 `5173 / 4000 / 5433`。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義 FutureLight 第一版目標年齡層，至少拆成 3-5、6-8、9-11 三個產品模式，對齊 App Store Kids age bands 與 Google Play Families 申報。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義第一版核心承諾：兒童語言啟蒙、可聽可說可玩、家長可追蹤、無廣告、低資料收集。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 建立競品矩陣，欄位包含價格、年齡層、離線能力、發音回饋、課程量、家長中心、隱私賣點、App Store/Google Play 文字定位。

@@ -43,6 +43,10 @@
 - `產品上線規劃.md`：定義 FutureLight 必須做到可上線產品，而不是基本可跑 demo。
 - `競品研究蒐集.md`：整理 GitHub、Google Search、X/Twitter、App Store、Google Play 與官方政策的研究結論。
 - `環境與Port規劃.md`：定義 FutureLight 必須遵守的 port 分配，避免任意啟動舊 port。
+- `產品需求PRD.md`：把可上線產品拆成角色、頁面、API、資料模型、隱私、安全、商業化與上線指標。
+- `競品矩陣.md`：把 Lingokids、Studycat、Khan Academy Kids、Duolingo ABC、開源 SRS / 語言學習專案轉成產品決策。
+- `法規與上架檢查.md`：整理 Apple Kids Category、Google Play Families、COPPA、Data Safety、SDK inventory 與上架 blocker。
+- `技術落地藍圖.md`：定義 React、Rust、PostgreSQL、AI 素材管線、測試、CI/CD、部署與 port migration 落地順序。
 
 ## 功能設計閱讀順序
 
