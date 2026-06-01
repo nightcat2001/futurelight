@@ -27,6 +27,22 @@
 | HyperFrames | Skill 已存在 | 可建立 HTML/GSAP-based video composition |
 | Suno | 未找到本機 skill | 先作為外部音樂產製節點，音檔進 `assets/audio/music` |
 
+## Skill Intake 規則
+
+每次開始 AI 素材、影片、字幕、音效或剪輯任務前，Codex 必須先讀對應 skill，再編輯文件或產生素材。這是工作規則，不是可選建議。
+
+| 任務 | 必讀 skill | 先想清楚的問題 | 不可違反 |
+| --- | --- | --- | --- |
+| Remotion 影片 | `remotion-best-practices` | composition 尺寸、fps、duration、frame-based timing、素材來源 | 不用 CSS animation / transition 當影片動畫；素材用 `public/` + `staticFile()` |
+| HyperFrames 影片 | `hyperframes`，必要時加 `hyperframes-cli` / `hyperframes-media` | audience、platform、節奏、hero frame、design.md、track/time 設計 | 不跳過設計系統；不先做動畫再猜 layout；standalone composition 不包 `<template>` |
+| Image2.0 / GPT Image 2 | `gpt-image-2` 或 `gpt-image-edit` | 圖像用途、尺寸、是否需要文字、角色一致性、是否有參考圖 | 文字要短且明確；修改圖要寫保留項；輸出不可只留在暫存 |
+| Seedance | `seedance-v2` | 4-15 秒鏡頭目的、口型/音訊、參考圖/影片/音訊、比例 | 不要求超過 15 秒單支影片；穩定角色身份要用 image reference |
+| Windows RunComfy | `gpt-image-2` / `seedance-v2` + `docs/RunComfy執行方案.md` | token 是否在環境變數、輸入 JSON、輸出目錄 | 不把 token 寫入 repo；Windows 不直接假設 `@runcomfy/cli` 可本機安裝 |
+| 專案工作 | `workspace-todo-guardian` | 先讀 `Todo`，確認 P0/P1/P2 與後續 todo | 不跳過 Todo；新增後續工作必須寫回 `Todo` |
+| 服務 / port | `workspace-port-guard` | 是否會啟動服務、改 port、開 localhost、改 Docker | 不使用隨機 port；不啟動舊 `5173 / 4000 / 5433` |
+
+本輪已確認：Remotion、HyperFrames、GPT Image 2、Seedance、workspace todo、workspace port guard skill 都已存在於本機環境，不需要重新安裝。若未來某台機器缺少 skill，才使用 `skill-installer` 或對應 plugin 安裝流程。
+
 ## RunComfy 限制
 
 目前執行：

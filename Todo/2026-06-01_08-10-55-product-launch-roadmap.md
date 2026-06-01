@@ -23,6 +23,7 @@ Status: Open
 - [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/產品需求PRD.md` 的所有 page/API/database 對應，並與各頁資料夾交叉檢查。
 - [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/法規與上架檢查.md` 的 SDK inventory、Data Safety、App Store privacy labels 初稿。
 - [ ] 2026-06-01 08:50:35 +08:00 P0 依 `docs/國際市場研究-德英美.md` 補齊 `market_region`、`english_variant`、地區同意邏輯、德英美商店文案與音訊口音策略。
+- [ ] 2026-06-01 09:01:30 +08:00 P0 每次 AI 素材、影片、文檔、服務啟動任務前，先讀對應 skill 並在任務規格中落地限制；目前規則已補入 `docs/AI協作製作流程.md` 與 `docs/外掛使用規劃.md`。
 - [ ] 2026-06-01 08:32:25 +08:00 P0 完成 FutureLight port migration，禁止使用舊 `5173 / 4000 / 5433`。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義 FutureLight 第一版目標年齡層，至少拆成 3-5、6-8、9-11 三個產品模式，對齊 App Store Kids age bands 與 Google Play Families 申報。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義第一版核心承諾：兒童語言啟蒙、可聽可說可玩、家長可追蹤、無廣告、低資料收集。
