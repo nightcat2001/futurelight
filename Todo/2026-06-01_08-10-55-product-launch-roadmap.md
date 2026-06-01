@@ -1,7 +1,9 @@
 # FutureLight Product Launch Roadmap Todo
 
 Created: 2026-06-01 08:10:55 +08:00
-Status: Open
+Status: Superseded
+
+Superseded: 2026-06-01 10:05:19 +08:00 by `2026-06-01_10-05-19-real-product-backlog.md`.
 
 本代辦目標不是「基本可跑」，而是規劃到 FutureLight 可以正式上線、通過兒童產品審核、持續新增課程、追蹤學習成效、讓家長放心付費與使用的產品狀態。
 

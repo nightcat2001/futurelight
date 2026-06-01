@@ -20,5 +20,6 @@ Created: 2026-06-01 07:56:31 +08:00
 
 ## Current Open Todos
 
-- 2026-06-01 08:10:55 +08:00 See `2026-06-01_08-10-55-product-launch-roadmap.md` for the full launch-grade product roadmap.
+- 2026-06-01 10:05:19 +08:00 See `2026-06-01_10-05-19-real-product-backlog.md` for the current real-product backlog.
+- 2026-06-01 10:05:19 +08:00 `2026-06-01_08-10-55-product-launch-roadmap.md` is superseded by the real-product backlog because the new file is ordered by execution dependency and no-mock release gates.
 - 2026-06-01 08:10:55 +08:00 `2026-06-01_08-05-36-project-roadmap.md` is superseded because it only planned a basic runnable product.
