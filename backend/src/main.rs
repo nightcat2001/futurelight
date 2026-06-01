@@ -53,9 +53,9 @@ async fn main() {
     let port = env::var("PORT")
         .ok()
         .and_then(|value| value.parse::<u16>().ok())
-        .unwrap_or(4000);
+        .unwrap_or(37200);
     let database_url = env::var("DATABASE_URL").unwrap_or_else(|_| {
-        "postgres://futurelight:futurelight@localhost:5433/futurelight".to_string()
+        "postgres://futurelight:futurelight@localhost:37432/futurelight".to_string()
     });
 
     let state = AppState { database_url };

@@ -22,7 +22,7 @@ styles["Normal"].font.size = Pt(10.5)
 
 title = doc.add_paragraph()
 title.alignment = WD_ALIGN_PARAGRAPH.LEFT
-run = title.add_run("FutureLight MVP Implementation Brief")
+run = title.add_run("FutureLight Real Product Implementation Brief")
 run.font.name = "Arial"
 run.font.size = Pt(22)
 run.font.bold = True
@@ -35,7 +35,7 @@ doc.add_heading("Current Build", level=1)
 for item in [
     "React/Vite frontend renders the first learning dashboard and calls the Rust API.",
     "Rust/Axum backend exposes health, DB health, page summary, and home summary endpoints.",
-    "PostgreSQL runs through Docker Compose on localhost:5433.",
+    "PostgreSQL runs through Docker Compose on localhost:37432.",
     "imagegen produced the first course cover and it is used in the frontend.",
     "Custom Codex plugins check asset and content readiness.",
 ]:
@@ -63,7 +63,7 @@ for row in rows:
 
 doc.add_heading("Next Implementation Slice", level=1)
 for item in [
-    "Replace mock API responses with PostgreSQL-backed tables and seed data.",
+    "Replace temporary fixed API responses with PostgreSQL-backed tables and seed data.",
     "Implement React route structure for the twelve documented pages.",
     "Add sound preference state and persistent user settings.",
     "Expand course content importer from spreadsheet inventory.",

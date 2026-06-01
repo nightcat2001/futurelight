@@ -29,13 +29,17 @@ Status: Open
 
 ## Phase 0：立即解除 Blocker
 
-- [ ] 2026-06-01 10:05:19 +08:00 P0-BLOCKER-001 遷移所有本機 port 設定到 registry 指定值：frontend `37173`、API `37200`、PostgreSQL `37432`。
+- [x] 2026-06-01 10:05:19 +08:00 P0-BLOCKER-001 遷移所有本機 port 設定到 registry 指定值：frontend `37173`、API `37200`、PostgreSQL `37432`。
+  - Completed: 2026-06-01 10:10:18 +08:00
   - 驗收：`frontend/vite.config.ts`、backend env/default、`docker-compose.yml`、`.env.example`、README 全部一致。
   - 驗收：Vite 使用 `strictPort: true` 或等效嚴格模式。
   - 驗收：啟動前跑 workspace port policy check；未完成前不得啟動服務。
-- [ ] 2026-06-01 10:05:19 +08:00 P0-BLOCKER-002 建立 no-mock enforcement checklist，放進 PR/交付檢查流程。
+  - 驗收證據：`check-port-policy.ps1` 通過、`npm.cmd run build` 通過、`cargo check` 通過；未啟動任何服務。
+- [x] 2026-06-01 10:05:19 +08:00 P0-BLOCKER-002 建立 no-mock enforcement checklist，放進 PR/交付檢查流程。
+  - Completed: 2026-06-01 10:12:27 +08:00
   - 驗收：前端頁面、Rust API、DB、AI 素材、音效、影片、瀏覽器驗證都列出「不可接受 mock」條件。
   - 驗收：若功能未完成，UI 必須 disabled / coming soon / blocked，不可假成功。
+  - 驗收證據：新增 `docs/交付完成標準.md` 與 `.github/pull_request_template.md`，並更新 `docs/README.md`。
 - [ ] 2026-06-01 10:05:19 +08:00 P0-BLOCKER-003 建立 repo 現況審計表。
   - 驗收：列出目前 React/Rust/PostgreSQL/asset/content 的真實完成度。
   - 驗收：列出所有硬編資料、固定 JSON、未接 API 按鈕、缺檔素材、缺測試項。

@@ -19,7 +19,7 @@ const workbook = Workbook.create()
 const summary = workbook.worksheets.add('Summary')
 summary.getRange('A1:E1').values = [['Area', 'Count', 'Ready', 'Needs Work', 'Notes']]
 summary.getRange('A2:E5').values = [
-  ['Courses', 1, 1, 0, 'One draft MVP course is available for implementation tests'],
+  ['Courses', 1, 1, 0, 'One draft course is available for implementation tests'],
   ['Images', manifest.images.length, 1, 0, 'First imagegen cover is available'],
   ['Audio IDs', manifest.audio.length, 0, manifest.audio.length, 'Sound IDs are planned; files still need production'],
   ['Practice Sets', 1, 1, 0, 'One sample practice question exists'],

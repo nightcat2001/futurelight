@@ -29,13 +29,13 @@ AI 製作管線：
 - `C:\Users\USER\Desktop\work\config\port-registry.json`
 - `docs/環境與Port規劃.md`
 
-FutureLight 在總 port registry 中已分配：
+FutureLight 在總 port registry 中已分配，repo 設定必須維持一致：
 
 - Frontend：`37173`
 - Backend API：`37200`
 - PostgreSQL：`37432`
 
-目前 repo 內仍有歷史舊設定 `5173 / 4000 / 5433`，不得直接用舊 port 啟動。必須先完成 port migration，再啟動服務。
+歷史舊設定 `5173 / 4000 / 5433` 不得再作為 FutureLight 啟動依據。
 
 遷移完成後，啟動 PostgreSQL：
 

@@ -44,6 +44,7 @@
 - `競品研究蒐集.md`：整理 GitHub、Google Search、X/Twitter、App Store、Google Play 與官方政策的研究結論。
 - `環境與Port規劃.md`：定義 FutureLight 必須遵守的 port 分配，避免任意啟動舊 port。
 - `產品需求PRD.md`：把可上線產品拆成角色、頁面、API、資料模型、隱私、安全、商業化與上線指標。
+- `交付完成標準.md`：定義 no-mock 完成標準、PR/交付檢查、真實功能驗收證據。
 - `競品矩陣.md`：把 Lingokids、Studycat、Khan Academy Kids、Duolingo ABC、開源 SRS / 語言學習專案轉成產品決策。
 - `國際市場研究-德英美.md`：補齊德國、英國、美國的兒童法規、競品、口音、商店上架與產品落地差異。
 - `法規與上架檢查.md`：整理 Apple Kids Category、Google Play Families、COPPA、Data Safety、SDK inventory 與上架 blocker。

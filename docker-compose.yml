@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: futurelight
       POSTGRES_DB: futurelight
     ports:
-      - "5433:5432"
+      - "37432:5432"
     volumes:
       - futurelight-postgres-data:/var/lib/postgresql/data
     healthcheck:
