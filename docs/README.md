@@ -40,6 +40,9 @@
 - `外掛使用規劃.md`：整理 Browser、imagegen、verified-delivery、文件/試算表能力與 FutureLight 自訂外掛。
 - `AI協作製作流程.md`：整理 Codex、Image2.0、Seedance、Remotion、Suno 的製作分工與素材落地流程。
 - `RunComfy執行方案.md`：定義 Windows 開發環境中用 Docker 執行 Seedance / Image2.0 的方式。
+- `產品上線規劃.md`：定義 FutureLight 必須做到可上線產品，而不是基本可跑 demo。
+- `競品研究蒐集.md`：整理 GitHub、Google Search、X/Twitter、App Store、Google Play 與官方政策的研究結論。
+- `環境與Port規劃.md`：定義 FutureLight 必須遵守的 port 分配，避免任意啟動舊 port。
 
 ## 功能設計閱讀順序
 

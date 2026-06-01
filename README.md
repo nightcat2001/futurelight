@@ -22,7 +22,22 @@ AI 製作管線：
 
 ## 開發啟動
 
-啟動 PostgreSQL：
+啟動前必須先讀：
+
+- `Todo/README.md`
+- `Todo/*.md`
+- `C:\Users\USER\Desktop\work\config\port-registry.json`
+- `docs/環境與Port規劃.md`
+
+FutureLight 在總 port registry 中已分配：
+
+- Frontend：`37173`
+- Backend API：`37200`
+- PostgreSQL：`37432`
+
+目前 repo 內仍有歷史舊設定 `5173 / 4000 / 5433`，不得直接用舊 port 啟動。必須先完成 port migration，再啟動服務。
+
+遷移完成後，啟動 PostgreSQL：
 
 ```bash
 docker compose up -d postgres
@@ -45,7 +60,7 @@ npm run dev
 
 預設網址：
 
-- Frontend: http://localhost:5173
-- Backend: http://localhost:4000
-- PostgreSQL: localhost:5433
-- Health: http://localhost:4000/health
+- Frontend: http://localhost:37173
+- Backend: http://localhost:37200
+- PostgreSQL: localhost:37432
+- Health: http://localhost:37200/health
