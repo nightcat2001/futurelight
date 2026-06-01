@@ -16,11 +16,13 @@ Status: Open
 - 2026-06-01 08:10:55 +08:00 App Store / Google Play 競品觀察：Shimmy、Galaxy Kids、Cambly Kids、LearnEnglish Kids、Studycat 等重點包含離線內容、星星貼紙、家長儀表板、發音回饋、主題課程、互動故事與遊戲化。
 - 2026-06-01 08:10:55 +08:00 GitHub 開源參考：LibreLingo、KoalaCards、Wordpecker、spaced repetition topics 顯示產品級語言學習需有 spaced repetition、active recall、進度追蹤、語音/TTS、內容管線與授權管理。
 - 2026-06-01 08:10:55 +08:00 X / Twitter indexed search：公開可索引結果較不穩定，先把 X 作為競品聲量、家長痛點、上線後回饋蒐集與社群發布渠道，不作為唯一產品依據。
+- 2026-06-01 08:50:35 +08:00 德國 / 英國 / 美國補充研究：德國需 GDPR Article 8、DSGVO 與 BzKJ/JMStV 思維；英國需 ICO Children's Code 與 Online Safety 風險思維；美國需 COPPA、FTC 2025 更新與學校模式 FERPA 邊界。
 
 ## P0 上線基礎與產品定位
 
 - [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/產品需求PRD.md` 的所有 page/API/database 對應，並與各頁資料夾交叉檢查。
 - [ ] 2026-06-01 08:32:25 +08:00 P0 補齊 `docs/法規與上架檢查.md` 的 SDK inventory、Data Safety、App Store privacy labels 初稿。
+- [ ] 2026-06-01 08:50:35 +08:00 P0 依 `docs/國際市場研究-德英美.md` 補齊 `market_region`、`english_variant`、地區同意邏輯、德英美商店文案與音訊口音策略。
 - [ ] 2026-06-01 08:32:25 +08:00 P0 完成 FutureLight port migration，禁止使用舊 `5173 / 4000 / 5433`。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義 FutureLight 第一版目標年齡層，至少拆成 3-5、6-8、9-11 三個產品模式，對齊 App Store Kids age bands 與 Google Play Families 申報。
 - [ ] 2026-06-01 08:10:55 +08:00 P0 定義第一版核心承諾：兒童語言啟蒙、可聽可說可玩、家長可追蹤、無廣告、低資料收集。
