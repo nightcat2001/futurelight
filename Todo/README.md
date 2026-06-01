@@ -20,4 +20,5 @@ Created: 2026-06-01 07:56:31 +08:00
 
 ## Current Open Todos
 
-- 2026-06-01 08:05:36 +08:00 See `2026-06-01_08-05-36-project-roadmap.md` for current P0/P1/P2 project roadmap items.
+- 2026-06-01 08:10:55 +08:00 See `2026-06-01_08-10-55-product-launch-roadmap.md` for the full launch-grade product roadmap.
+- 2026-06-01 08:10:55 +08:00 `2026-06-01_08-05-36-project-roadmap.md` is superseded because it only planned a basic runnable product.
