@@ -46,7 +46,7 @@
 | 點擊我學會了 | `learning_step_complete` | 步驟完成成功後播放 |
 | 完成最後一步 | `learning_unit_complete` | 單元完成後播放 |
 | 音檔載入失敗 | `ui_error_soft` | 顯示重試按鈕，不自動重複播放錯誤音 |
-| 跟讀完成 | `learning_step_complete` | MVP 只代表完成，不代表發音正確 |
+| 跟讀完成 | `learning_step_complete` | 只代表真實跟讀流程完成，不代表發音正確 |
 
 ## 使用者流程
 

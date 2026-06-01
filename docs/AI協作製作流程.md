@@ -31,6 +31,17 @@
 
 每次開始 AI 素材、影片、字幕、音效或剪輯任務前，Codex 必須先讀對應 skill，再編輯文件或產生素材。這是工作規則，不是可選建議。
 
+### No Mock 規則
+
+所有 skill 執行都必須產出可落地、可追蹤、可驗證的真實功能或真實資源。Mock、硬編成功、假資料、假按鈕、未連資料流的展示頁，不可被標記為完成。
+
+- Remotion / HyperFrames：必須有真實 composition、真實素材路徑、可 render 或可預覽的輸出。
+- Image2.0 / imagegen：必須產出實際檔案，放進 `assets/images` 並登記 manifest。
+- Seedance：必須產出實際影片檔或留下 RunComfy request / blocker，放進 `assets/video/generated` 並登記 manifest。
+- Rust API：不可只回固定 JSON 當完成；必須連接 service/repository/DB 或明確標為尚未完成。
+- React UI：按鈕必須有真實導向或真實 mutation；未完成操作要顯示 disabled / coming soon，不能假裝成功。
+- PostgreSQL：需要 migration、seed policy 與測試資料來源，不把硬編資料當 production flow。
+
 | 任務 | 必讀 skill | 先想清楚的問題 | 不可違反 |
 | --- | --- | --- | --- |
 | Remotion 影片 | `remotion-best-practices` | composition 尺寸、fps、duration、frame-based timing、素材來源 | 不用 CSS animation / transition 當影片動畫；素材用 `public/` + `staticFile()` |
