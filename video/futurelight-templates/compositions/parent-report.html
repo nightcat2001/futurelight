@@ -1,0 +1,223 @@
+<template id="parent-report-template">
+  <div id="parent-report" data-composition-id="parent-report" data-width="1920" data-height="1080">
+    <div id="parent-report-scene" class="scene-content clip" data-start="0" data-duration="7" data-track-index="0">
+      <div class="wash" data-layout-ignore></div>
+      <header class="report-header">
+        <span>Parent Weekly Report</span>
+        <strong>Privacy-first summary template</strong>
+      </header>
+      <section class="headline-zone">
+        <p class="eyebrow">Learning signals</p>
+        <h2>Progress without pressure</h2>
+        <p class="body-copy">Designed for a parent digest: clear momentum, no ranking, no child-facing urgency.</p>
+      </section>
+      <section class="metrics-grid">
+        <article class="metric primary">
+          <span class="metric-label">Practice streak</span>
+          <strong>4</strong>
+          <span class="metric-note">sessions this week</span>
+        </article>
+        <article class="metric">
+          <span class="metric-label">Words revisited</span>
+          <strong>18</strong>
+          <span class="metric-note">reviewed calmly</span>
+        </article>
+        <article class="metric">
+          <span class="metric-label">Rewards earned</span>
+          <strong>3</strong>
+          <span class="metric-note">activity mastery badges</span>
+        </article>
+      </section>
+      <section class="chart-zone">
+        <div class="bar-row"><span>Colors</span><i style="width: 82%"></i></div>
+        <div class="bar-row"><span>Food</span><i style="width: 64%"></i></div>
+        <div class="bar-row"><span>Animals</span><i style="width: 58%"></i></div>
+      </section>
+    </div>
+
+    <style>
+      #parent-report {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+        color: #1d2733;
+        font-family: sans-serif;
+      }
+
+      .scene-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 76px;
+        row-gap: 54px;
+        width: 100%;
+        height: 100%;
+        padding: 92px 118px 104px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 85% 20%, rgba(47, 191, 113, 0.18), rgba(47, 191, 113, 0) 38%),
+          radial-gradient(circle at 28% 86%, rgba(47, 128, 237, 0.15), rgba(47, 128, 237, 0) 40%),
+          #fffdf7;
+      }
+
+      .wash {
+        position: absolute;
+        right: -180px;
+        top: -120px;
+        width: 780px;
+        height: 780px;
+        border-radius: 50%;
+        background: rgba(155, 140, 242, 0.18);
+        filter: blur(34px);
+      }
+
+      .report-header {
+        position: relative;
+        z-index: 2;
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 34px;
+        border-bottom: 5px solid #1d2733;
+        font-family: monospace;
+        font-size: 25px;
+        color: #607087;
+      }
+
+      .report-header strong {
+        color: #2f80ed;
+        font-weight: 900;
+      }
+
+      .headline-zone {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .eyebrow {
+        width: max-content;
+        padding: 14px 20px;
+        border-radius: 999px;
+        background: #2f80ed;
+        color: #fffdf7;
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      h2 {
+        max-width: 720px;
+        font-family: serif;
+        font-size: 112px;
+        font-weight: 900;
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .body-copy {
+        max-width: 680px;
+        color: #344358;
+        font-size: 38px;
+        line-height: 1.25;
+        font-weight: 500;
+      }
+
+      .metrics-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-self: center;
+      }
+
+      .metric {
+        min-height: 304px;
+        padding: 30px;
+        border: 5px solid #1d2733;
+        border-radius: 32px;
+        background: #fffdf7;
+        box-shadow: 12px 14px 0 rgba(29, 39, 51, 0.1);
+      }
+
+      .metric.primary {
+        background: #1d2733;
+        color: #fffdf7;
+      }
+
+      .metric-label,
+      .metric-note {
+        display: block;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1.12;
+      }
+
+      .metric strong {
+        display: block;
+        margin: 18px 0 14px;
+        font-family: serif;
+        font-size: 92px;
+        line-height: 0.86;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .chart-zone {
+        position: absolute;
+        right: 118px;
+        bottom: 92px;
+        z-index: 3;
+        width: 780px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding: 34px;
+        border: 5px solid #1d2733;
+        border-radius: 34px;
+        background: rgba(255, 253, 247, 0.92);
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+        gap: 20px;
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .bar-row i {
+        display: block;
+        height: 28px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #2f80ed, #2fbf71, #f2c94c);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(".report-header", { y: -46, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 0.16);
+        tl.fromTo(".eyebrow", { x: -54, opacity: 0 }, { x: 0, opacity: 1, duration: 0.38, ease: "expo.out" }, 0.44);
+        tl.fromTo("h2", { y: 64, opacity: 0 }, { y: 0, opacity: 1, duration: 0.62, ease: "back.out(1.05)" }, 0.68);
+        tl.fromTo(".body-copy", { x: -36, opacity: 0 }, { x: 0, opacity: 1, duration: 0.46, ease: "power2.out" }, 1.02);
+        tl.fromTo(".metric", { y: 86, scale: 0.94 }, { y: 0, scale: 1, duration: 0.54, stagger: 0.12, ease: "power4.out" }, 0.9);
+        tl.fromTo(".chart-zone", { x: 78, scale: 0.98 }, { x: 0, scale: 1, duration: 0.55, ease: "sine.out" }, 1.64);
+        tl.fromTo(".bar-row i", { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.72, stagger: 0.12, ease: "power2.out" }, 1.92);
+        tl.to(".wash", { x: -34, y: 24, scale: 1.06, duration: 2.3, repeat: 2, yoyo: true, ease: "sine.inOut" }, 0);
+
+        window.__timelines["parent-report"] = tl;
+      })();
+    </script>
+  </div>
+</template>

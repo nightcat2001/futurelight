@@ -1,0 +1,235 @@
+<template id="word-review-template">
+  <div id="word-review" data-composition-id="word-review" data-width="1920" data-height="1080">
+    <div id="word-review-scene" class="scene-content clip" data-start="0" data-duration="7" data-track-index="0">
+      <div class="paper-grid" data-layout-ignore></div>
+      <div class="review-ribbon">Word Review</div>
+      <section class="card-stage">
+        <div class="word-card-wrap" data-layout-allow-overflow>
+          <img src="../assets/images/word-cards/apple-word-card.png" alt="" />
+        </div>
+        <div class="correct-burst" data-layout-ignore></div>
+      </section>
+      <section class="practice-panel">
+        <p class="panel-kicker">Listen and choose</p>
+        <h2>apple</h2>
+        <div class="sound-bars" data-layout-ignore>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="choice-list">
+          <span class="choice selected">apple</span>
+          <span class="choice">banana</span>
+          <span class="choice">orange</span>
+        </div>
+      </section>
+      <div class="footer-note">Reusable template for word-card practice clips</div>
+    </div>
+
+    <style>
+      #word-review {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+        color: #1d2733;
+        font-family: sans-serif;
+      }
+
+      .scene-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 78px;
+        width: 100%;
+        height: 100%;
+        padding: 104px 118px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.18), rgba(255, 107, 107, 0) 38%),
+          radial-gradient(circle at 82% 22%, rgba(155, 140, 242, 0.22), rgba(155, 140, 242, 0) 38%),
+          #fffdf7;
+      }
+
+      .paper-grid {
+        position: absolute;
+        inset: 52px;
+        border: 4px solid rgba(29, 39, 51, 0.1);
+        border-radius: 52px;
+        background-image:
+          linear-gradient(rgba(96, 112, 135, 0.12) 2px, rgba(96, 112, 135, 0) 2px),
+          linear-gradient(90deg, rgba(96, 112, 135, 0.1) 2px, rgba(96, 112, 135, 0) 2px);
+        background-size: 96px 96px;
+      }
+
+      .review-ribbon {
+        position: absolute;
+        top: 70px;
+        left: 118px;
+        z-index: 3;
+        padding: 14px 22px;
+        border-radius: 22px;
+        background: #2f80ed;
+        color: #fffdf7;
+        font-family: monospace;
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .card-stage {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .word-card-wrap {
+        width: 700px;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border: 6px solid #1d2733;
+        border-radius: 48px;
+        background: #fffdf7;
+        box-shadow: -22px 26px 0 rgba(47, 191, 113, 0.18), 24px -20px 0 rgba(242, 201, 76, 0.25);
+      }
+
+      .word-card-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .correct-burst {
+        position: absolute;
+        right: 42px;
+        top: 172px;
+        width: 156px;
+        height: 156px;
+        border: 12px solid #2fbf71;
+        border-radius: 50%;
+        background: rgba(242, 201, 76, 0.58);
+        box-shadow: 0 0 0 20px rgba(47, 191, 113, 0.13);
+      }
+
+      .practice-panel {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 34px;
+        min-width: 0;
+      }
+
+      .panel-kicker {
+        font-family: monospace;
+        font-size: 26px;
+        color: #607087;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: #1d2733;
+        font-family: serif;
+        font-size: 154px;
+        line-height: 0.92;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .sound-bars {
+        display: flex;
+        align-items: end;
+        gap: 16px;
+        height: 88px;
+      }
+
+      .sound-bars span {
+        display: block;
+        width: 28px;
+        border-radius: 999px;
+        background: #2f80ed;
+      }
+
+      .sound-bars span:nth-child(1) {
+        height: 40px;
+      }
+
+      .sound-bars span:nth-child(2) {
+        height: 74px;
+        background: #2fbf71;
+      }
+
+      .sound-bars span:nth-child(3) {
+        height: 58px;
+        background: #f2c94c;
+      }
+
+      .sound-bars span:nth-child(4) {
+        height: 84px;
+        background: #ff6b6b;
+      }
+
+      .choice-list {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        max-width: 620px;
+      }
+
+      .choice {
+        display: block;
+        padding: 24px 32px;
+        border: 5px solid #1d2733;
+        border-radius: 30px;
+        background: #fffdf7;
+        box-shadow: 9px 9px 0 rgba(29, 39, 51, 0.1);
+        font-size: 36px;
+        font-weight: 900;
+      }
+
+      .choice.selected {
+        background: #2fbf71;
+        color: #fffdf7;
+      }
+
+      .footer-note {
+        position: absolute;
+        left: 118px;
+        bottom: 66px;
+        z-index: 3;
+        color: #607087;
+        font-size: 26px;
+        font-weight: 700;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(".paper-grid", { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.55, ease: "sine.out" }, 0.18);
+        tl.fromTo(".review-ribbon", { x: -78, opacity: 0 }, { x: 0, opacity: 1, duration: 0.42, ease: "power4.out" }, 0.28);
+        tl.fromTo(".word-card-wrap", { x: -92, y: 48, opacity: 0, rotationY: 9, scale: 0.92 }, { x: 0, y: 0, opacity: 1, rotationY: 5, scale: 1, duration: 0.72, ease: "expo.out" }, 0.44);
+        tl.to(".word-card-wrap img", { scale: 1.04, duration: 6.2, ease: "none" }, 0.58);
+        tl.fromTo(".panel-kicker", { y: -36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.36, ease: "power2.out" }, 0.72);
+        tl.fromTo("h2", { scale: 0.86, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 0.92);
+        tl.fromTo(".sound-bars span", { scaleY: 0.2, opacity: 0 }, { scaleY: 1, opacity: 1, duration: 0.5, stagger: 0.08, ease: "elastic.out(1, 0.8)" }, 1.22);
+        tl.fromTo(".choice", { x: 80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.42, stagger: 0.12, ease: "power3.out" }, 1.46);
+        tl.fromTo(".correct-burst", { opacity: 0, scale: 0.25, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.52, ease: "back.out(1.9)" }, 2.35);
+        tl.fromTo(".footer-note", { y: 38, opacity: 0 }, { y: 0, opacity: 1, duration: 0.46, ease: "power2.out" }, 2.72);
+        tl.to(".correct-burst", { scale: 1.08, repeat: 3, yoyo: true, duration: 0.7, ease: "sine.inOut" }, 3.0);
+
+        window.__timelines["word-review"] = tl;
+      })();
+    </script>
+  </div>
+</template>

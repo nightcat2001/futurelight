@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-06-01 13:48:51 +08:00",
+  "model": "bytedance/seedance-v2/pro",
+  "status": "blocked",
+  "blocker": "RunComfy CLI is not installed and no RUNCOMFY_TOKEN or local RunComfy token file is available on this machine.",
+  "required_next_step": "Install the RunComfy CLI and authenticate with runcomfy login, or set RUNCOMFY_TOKEN, then submit this request.",
+  "intended_output": "assets/video/generated/guide-color-intro-5s.mp4",
+  "reference_assets": [
+    "assets/images/course-covers/color-english-words-cover.png",
+    "assets/images/characters/guide-happy.png",
+    "assets/images/characters/guide-thinking.png",
+    "assets/images/badges/activity-mastery-badge.png"
+  ],
+  "runcomfy_command": "runcomfy run bytedance/seedance-v2/pro --input <input-json> --output-dir C:\\Users\\USER\\Desktop\\work\\futurelight\\assets\\video\\generated",
+  "input": {
+    "prompt": "FutureLight children's English learning micro-intro. A warm friendly guide character invites children into a color words lesson with a red apple, blue kite, and yellow star. Gentle camera push-in, soft daylight, rounded storybook illustration style, child-safe, no logos, no text overlays, no gambling or purchase cues. Calm cheerful narration and light classroom ambience.",
+    "image_url": [],
+    "video_url": [],
+    "audio_url": [],
+    "aspect_ratio": "16:9",
+    "duration": 5,
+    "resolution": "720p",
+    "generate_audio": true,
+    "seed": 37173
+  }
+}

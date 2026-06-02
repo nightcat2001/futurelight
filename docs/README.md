@@ -45,9 +45,16 @@
 - `環境與Port規劃.md`：定義 FutureLight 必須遵守的 port 分配，避免任意啟動舊 port。
 - `產品需求PRD.md`：把可上線產品拆成角色、頁面、API、資料模型、隱私、安全、商業化與上線指標。
 - `交付完成標準.md`：定義 no-mock 完成標準、PR/交付檢查、真實功能驗收證據。
+- `交付驗證命令清單.md`：定義每次交付必跑命令，包含 port policy、migration、Rust fmt/clippy/test、frontend build/lint、content/asset checker、secret scan。
+- `art-bible.md`：定義 FutureLight 視覺規範，包含角色比例、色彩、插畫風格、禁用元素、年齡層差異與圖卡版型。
 - `競品矩陣.md`：把 Lingokids、Studycat、Khan Academy Kids、Duolingo ABC、開源 SRS / 語言學習專案轉成產品決策。
 - `國際市場研究-德英美.md`：補齊德國、英國、美國的兒童法規、競品、口音、商店上架與產品落地差異。
 - `法規與上架檢查.md`：整理 Apple Kids Category、Google Play Families、COPPA、Data Safety、SDK inventory 與上架 blocker。
+- `store-metadata-draft.md`：整理 App Store Connect / Google Play Console metadata、age rating、privacy label、Data Safety、Families/Kids review notes 草稿。
+- `store-listing-copy-de-uk-us.md`：整理德國、英國、美國 store listing 文案、定位、隱私承諾、截圖與 feature graphic 需求。
+- `security-baseline.md`: documents the implemented local backend security baseline for CORS, Origin guard, rate limiting, password/token handling, SQL query safety, and request validation.
+- `deployment-plan.md`: documents the planned staging/production topology, runtime config, release flow, backup/restore, monitoring, rollback, and launch blockers.
+- `operations-support-plan.md`: documents planned support channels, privacy/support request triage, refunds, content reports, review rejection handling, escalations, and support metrics.
 - `技術落地藍圖.md`：定義 React、Rust、PostgreSQL、AI 素材管線、測試、CI/CD、部署與 port migration 落地順序。
 
 ## 功能設計閱讀順序

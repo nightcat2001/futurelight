@@ -1,0 +1,242 @@
+<template id="course-intro-template">
+  <div id="course-intro" data-composition-id="course-intro" data-width="1920" data-height="1080">
+    <div id="course-intro-scene" class="scene-content clip" data-start="0" data-duration="7" data-track-index="0">
+      <div class="grain" data-layout-ignore></div>
+      <div class="orb sky" data-layout-ignore></div>
+      <div class="orb leaf" data-layout-ignore></div>
+      <div class="label-row">
+        <span class="kicker">FutureLight Course Intro</span>
+        <span class="timer">00:07 template</span>
+      </div>
+      <section class="copy-zone">
+        <p class="eyebrow">First lesson arc</p>
+        <h1>Color Words</h1>
+        <p class="subtitle">A calm opening for red, blue, and yellow with room for app-rendered narration.</p>
+        <div class="lesson-pills">
+          <span>red apple</span>
+          <span>blue kite</span>
+          <span>yellow star</span>
+        </div>
+      </section>
+      <section class="visual-zone">
+        <div class="cover-frame" data-layout-allow-overflow>
+          <img src="../assets/images/course-covers/color-english-words-cover.png" alt="" />
+        </div>
+        <div class="guide-card">
+          <img src="../assets/images/characters/guide-happy.png" alt="" />
+        </div>
+      </section>
+      <div class="bottom-rule" data-layout-ignore></div>
+    </div>
+
+    <style>
+      #course-intro {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+        color: #1d2733;
+        font-family: sans-serif;
+      }
+
+      #course-intro .scene-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: 84px;
+        width: 100%;
+        height: 100%;
+        padding: 92px 116px 104px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 15% 20%, rgba(242, 201, 76, 0.24), rgba(242, 201, 76, 0) 34%),
+          radial-gradient(circle at 84% 16%, rgba(47, 128, 237, 0.18), rgba(47, 128, 237, 0) 36%),
+          linear-gradient(180deg, #fffdf7 0%, #fff8e6 100%);
+      }
+
+      .grain {
+        position: absolute;
+        inset: 0;
+        opacity: 0.28;
+        background-image:
+          linear-gradient(rgba(29, 39, 51, 0.05) 1px, rgba(29, 39, 51, 0) 1px),
+          linear-gradient(90deg, rgba(29, 39, 51, 0.04) 1px, rgba(29, 39, 51, 0) 1px);
+        background-size: 72px 72px;
+      }
+
+      .orb {
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        filter: blur(22px);
+      }
+
+      .orb.sky {
+        right: 360px;
+        top: 64px;
+        background: rgba(47, 128, 237, 0.18);
+      }
+
+      .orb.leaf {
+        left: 72px;
+        bottom: 76px;
+        background: rgba(47, 191, 113, 0.16);
+      }
+
+      .label-row {
+        position: absolute;
+        top: 58px;
+        left: 116px;
+        right: 116px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: monospace;
+        font-size: 22px;
+        color: #607087;
+        letter-spacing: 0;
+      }
+
+      .kicker {
+        color: #1d2733;
+        text-transform: uppercase;
+      }
+
+      .copy-zone {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        min-width: 0;
+      }
+
+      .eyebrow {
+        width: max-content;
+        padding: 14px 20px;
+        border: 3px solid #2fbf71;
+        border-radius: 999px;
+        background: #fffdf7;
+        color: #1d2733;
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 720px;
+        color: #1d2733;
+        font-family: serif;
+        font-size: 136px;
+        font-weight: 900;
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        max-width: 650px;
+        color: #344358;
+        font-size: 40px;
+        line-height: 1.22;
+        font-weight: 500;
+      }
+
+      .lesson-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        max-width: 710px;
+      }
+
+      .lesson-pills span {
+        padding: 17px 24px;
+        border: 3px solid #1d2733;
+        border-radius: 28px;
+        background: #fffdf7;
+        box-shadow: 8px 8px 0 rgba(29, 39, 51, 0.1);
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .visual-zone {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .cover-frame {
+        width: 900px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border: 5px solid #1d2733;
+        border-radius: 42px;
+        background: #fffdf7;
+        box-shadow: 28px 34px 0 rgba(47, 128, 237, 0.16);
+        transform-origin: center;
+      }
+
+      .cover-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .guide-card {
+        position: absolute;
+        right: 12px;
+        bottom: 80px;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border: 5px solid #1d2733;
+        border-radius: 34px;
+        background: #f2c94c;
+        box-shadow: 16px 18px 0 rgba(29, 39, 51, 0.12);
+      }
+
+      .guide-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .bottom-rule {
+        position: absolute;
+        left: 116px;
+        right: 116px;
+        bottom: 64px;
+        height: 5px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #2f80ed, #2fbf71, #f2c94c, #ff6b6b);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo(".label-row", { y: -34, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 0.16);
+        tl.fromTo(".eyebrow", { x: -70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 0.36);
+        tl.fromTo("h1", { y: 72, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.15)" }, 0.58);
+        tl.fromTo(".subtitle", { x: -42, opacity: 0 }, { x: 0, opacity: 1, duration: 0.52, ease: "power2.out" }, 0.9);
+        tl.fromTo(".lesson-pills span", { y: 42, opacity: 0, rotation: -2 }, { y: 0, opacity: 1, rotation: 0, duration: 0.42, stagger: 0.11, ease: "back.out(1.5)" }, 1.18);
+        tl.fromTo(".cover-frame", { y: 82, opacity: 0, rotationY: -10, scale: 0.94 }, { y: 0, opacity: 1, rotationY: -5, scale: 1, duration: 0.78, ease: "power4.out" }, 0.48);
+        tl.to(".cover-frame img", { scale: 1.035, duration: 6.1, ease: "none" }, 0.68);
+        tl.fromTo(".guide-card", { x: 84, y: 42, opacity: 0, scale: 0.82 }, { x: 0, y: 0, opacity: 1, scale: 1, duration: 0.58, ease: "elastic.out(1, 0.75)" }, 1.36);
+        tl.fromTo(".bottom-rule", { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.8, ease: "power2.out" }, 1.52);
+        tl.to(".orb.sky", { x: -24, y: 18, scale: 1.05, duration: 2.1, repeat: 2, yoyo: true, ease: "sine.inOut" }, 0);
+        tl.to(".orb.leaf", { x: 22, y: -26, scale: 1.07, duration: 2.4, repeat: 2, yoyo: true, ease: "sine.inOut" }, 0.2);
+
+        window.__timelines["course-intro"] = tl;
+      })();
+    </script>
+  </div>
+</template>

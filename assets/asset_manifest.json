@@ -7,74 +7,181 @@
       "recommended_size": "1600x900",
       "source": "imagegen",
       "prompt_summary": "Children language learning course cover for English animal words"
+    },
+    {
+      "id": "course_cover_color_english_words",
+      "type": "course_cover",
+      "path": "assets/images/course-covers/color-english-words-cover.png",
+      "recommended_size": "1600x900",
+      "status": "approved",
+      "source": "imagegen",
+      "prompt_summary": "FutureLight color words course cover with red apple, blue kite, yellow star, and guide character",
+      "metadata": {
+        "art_bible": "docs/art-bible.md",
+        "generated_at": "2026-06-01",
+        "license_status": "project-generated-review-required-before-store",
+        "model": "built-in image_gen",
+        "reviewer": "codex visual check",
+        "use": "Color words course cover"
+      }
+    },
+    {
+      "id": "word_card_apple",
+      "type": "word_card",
+      "path": "assets/images/word-cards/apple-word-card.png",
+      "recommended_size": "4:3",
+      "status": "approved",
+      "source": "imagegen",
+      "prompt_summary": "FutureLight apple word card with one clear red apple on a light background",
+      "metadata": {
+        "art_bible": "docs/art-bible.md",
+        "generated_at": "2026-06-01",
+        "license_status": "project-generated-review-required-before-store",
+        "model": "built-in image_gen",
+        "reviewer": "codex visual check",
+        "use": "Food course apple word card"
+      }
+    },
+    {
+      "id": "badge_activity_mastery",
+      "type": "reward_badge",
+      "path": "assets/images/badges/activity-mastery-badge.png",
+      "recommended_size": "1024x1024",
+      "status": "approved",
+      "source": "imagegen",
+      "prompt_summary": "Activity Mastery reward badge with rounded shield, star, and leaf motif",
+      "metadata": {
+        "art_bible": "docs/art-bible.md",
+        "generated_at": "2026-06-01",
+        "license_status": "project-generated-review-required-before-store",
+        "model": "built-in image_gen",
+        "reviewer": "codex visual check",
+        "use": "Activity mastery reward badge"
+      }
+    },
+    {
+      "id": "guide_happy",
+      "type": "character_expression",
+      "path": "assets/images/characters/guide-happy.png",
+      "recommended_size": "1024x1024",
+      "status": "approved",
+      "source": "imagegen",
+      "prompt_summary": "FutureLight guide character happy encouragement expression",
+      "metadata": {
+        "art_bible": "docs/art-bible.md",
+        "generated_at": "2026-06-01",
+        "license_status": "project-generated-review-required-before-store",
+        "model": "built-in image_gen",
+        "reviewer": "codex visual check",
+        "use": "Guide character happy expression"
+      }
+    },
+    {
+      "id": "guide_thinking",
+      "type": "character_expression",
+      "path": "assets/images/characters/guide-thinking.png",
+      "recommended_size": "1024x1024",
+      "status": "approved",
+      "source": "imagegen",
+      "prompt_summary": "FutureLight guide character thinking encouragement expression",
+      "metadata": {
+        "art_bible": "docs/art-bible.md",
+        "generated_at": "2026-06-01",
+        "license_status": "project-generated-review-required-before-store",
+        "model": "built-in image_gen",
+        "reviewer": "codex visual check",
+        "use": "Guide character thinking expression"
+      }
     }
   ],
   "audio": [
     {
       "id": "ui_click",
       "type": "ui_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/ui_click.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Short soft click for primary UI taps"
     },
     {
       "id": "ui_toggle",
       "type": "ui_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/ui_toggle.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Two-note toggle confirmation"
     },
     {
       "id": "ui_error_soft",
       "type": "ui_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/ui_error_soft.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Gentle descending error cue"
     },
     {
       "id": "learning_step_complete",
       "type": "feedback_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/learning_step_complete.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Bright short completion cue for one learning step"
     },
     {
       "id": "learning_unit_complete",
       "type": "feedback_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/learning_unit_complete.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Ascending arpeggio for completing a lesson unit"
     },
     {
       "id": "answer_correct",
       "type": "practice_feedback",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/answer_correct.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Positive two-note answer confirmation"
     },
     {
       "id": "answer_wrong_soft",
       "type": "practice_feedback",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/answer_wrong_soft.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Soft non-punitive incorrect-answer cue"
     },
     {
       "id": "reward_star",
       "type": "reward_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/reward_star.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Sparkle cue for a star reward"
     },
     {
       "id": "reward_badge",
       "type": "reward_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/reward_badge.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Layered sparkle cue for badge unlock"
     },
     {
       "id": "mission_complete",
       "type": "reward_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/mission_complete.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Longer celebratory completion phrase"
     },
     {
       "id": "page_success",
       "type": "ui_effect",
-      "path": null,
-      "status": "planned"
+      "path": "assets/audio/ui/page_success.wav",
+      "status": "approved",
+      "source": "procedural-synthesis",
+      "prompt_summary": "Positive page-level success cue"
     }
   ]
 }

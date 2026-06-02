@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+        color: #1d2733;
+        font-family: sans-serif;
+      }
+
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+      }
+
+      .composition-host {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #fffdf7;
+      }
+
+      .light-wipe {
+        position: absolute;
+        inset: -80px;
+        z-index: 20;
+        opacity: 0;
+        transform-origin: left center;
+        background:
+          radial-gradient(circle at 22% 42%, rgba(242, 201, 76, 0.78), rgba(242, 201, 76, 0) 35%),
+          radial-gradient(circle at 72% 55%, rgba(47, 128, 237, 0.34), rgba(47, 128, 237, 0) 46%),
+          linear-gradient(100deg, rgba(255, 253, 247, 0), rgba(255, 253, 247, 0.96) 45%, rgba(255, 253, 247, 0));
+        filter: blur(12px);
+      }
+
+      #final-fade {
+        position: absolute;
+        inset: 0;
+        z-index: 30;
+        opacity: 0;
+        background: #fffdf7;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="28"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="course-intro-host"
+        class="composition-host clip"
+        data-composition-id="course-intro"
+        data-composition-src="compositions/course-intro.html"
+        data-start="0"
+        data-duration="7"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="word-review-host"
+        class="composition-host clip"
+        data-composition-id="word-review"
+        data-composition-src="compositions/word-review.html"
+        data-start="7"
+        data-duration="7"
+        data-track-index="2"
+      ></div>
+
+      <div
+        id="parent-report-host"
+        class="composition-host clip"
+        data-composition-id="parent-report"
+        data-composition-src="compositions/parent-report.html"
+        data-start="14"
+        data-duration="7"
+        data-track-index="3"
+      ></div>
+
+      <div
+        id="social-short-host"
+        class="composition-host clip"
+        data-composition-id="social-short"
+        data-composition-src="compositions/social-short.html"
+        data-start="21"
+        data-duration="7"
+        data-track-index="4"
+      ></div>
+
+      <div id="transition-1" class="light-wipe clip" data-start="6.62" data-duration="0.76" data-track-index="10"></div>
+      <div id="transition-2" class="light-wipe clip" data-start="13.62" data-duration="0.76" data-track-index="11"></div>
+      <div id="transition-3" class="light-wipe clip" data-start="20.62" data-duration="0.76" data-track-index="12"></div>
+      <div id="final-fade" class="clip" data-start="27.5" data-duration="0.5" data-track-index="13"></div>
+
+      <audio
+        id="intro-audio"
+        data-start="0.65"
+        data-duration="1.4"
+        data-track-index="20"
+        data-volume="0.45"
+        src="assets/audio/ui/learning_unit_complete.wav"
+      ></audio>
+      <audio
+        id="review-audio"
+        data-start="8.5"
+        data-duration="0.9"
+        data-track-index="21"
+        data-volume="0.42"
+        src="assets/audio/ui/answer_correct.wav"
+      ></audio>
+      <audio
+        id="report-audio"
+        data-start="16.7"
+        data-duration="0.9"
+        data-track-index="22"
+        data-volume="0.34"
+        src="assets/audio/ui/page_success.wav"
+      ></audio>
+      <audio
+        id="social-audio"
+        data-start="24.4"
+        data-duration="1.7"
+        data-track-index="23"
+        data-volume="0.42"
+        src="assets/audio/ui/mission_complete.wav"
+      ></audio>
+      <audio
+        id="transition-audio"
+        data-start="6.68"
+        data-duration="0.3"
+        data-track-index="24"
+        data-volume="0.26"
+        src="assets/audio/ui/ui_click.wav"
+      ></audio>
+    </div>
+
+    <script>
+      (() => {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        ["#transition-1", "#transition-2", "#transition-3"].forEach((selector, index) => {
+          const at = 6.62 + index * 7;
+          tl.fromTo(
+            selector,
+            { opacity: 0, scaleX: 0.08, x: -240 },
+            { opacity: 0.92, scaleX: 1.08, x: 0, duration: 0.3, ease: "sine.inOut" },
+            at,
+          );
+          tl.to(selector, { opacity: 0, scaleX: 1.18, x: 120, duration: 0.46, ease: "power1.out" }, at + 0.3);
+        });
+
+        tl.to("#final-fade", { opacity: 0.96, duration: 0.5, ease: "sine.inOut" }, 27.5);
+
+        window.__timelines["main"] = tl;
+      })();
+    </script>
+  </body>
+</html>
