@@ -88,6 +88,19 @@ cd backend
 cargo run -- migrate
 ```
 
+Run the local privacy retention cleanup job without starting the API server:
+
+```bash
+cd backend
+cargo run -- retention-cleanup
+```
+
+Retention cleanup defaults:
+
+- `SESSION_RETENTION_DAYS=7`
+- `REVOKED_CONSENT_EVIDENCE_RETENTION_DAYS=365`
+- `DETACHED_AUDIT_LOG_RETENTION_DAYS=2555`
+
 The API also runs pending migrations on startup by default. Set `RUN_MIGRATIONS=false` only for diagnostic work where database access is intentionally unavailable.
 
 Security-related local defaults:

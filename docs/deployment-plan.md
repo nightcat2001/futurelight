@@ -45,6 +45,17 @@ Status: Plan ready, implementation not started
 - Keep asset source files in versioned object storage or a reviewed artifact archive.
 - Document recovery time objective and recovery point objective before launch.
 
+## Privacy Retention Job
+
+- Local command exists: `cargo run -- retention-cleanup`.
+- Production should schedule the same backend command at least daily after deployment.
+- Current defaults:
+  - `SESSION_RETENTION_DAYS=7`
+  - `REVOKED_CONSENT_EVIDENCE_RETENTION_DAYS=365`
+  - `DETACHED_AUDIT_LOG_RETENTION_DAYS=2555`
+- The job deletes expired parent sessions, minimizes old revoked consent evidence, and deletes old detached audit logs after parent/child deletion has removed direct ownership links.
+- Production still needs provider-specific backup deletion propagation and a restore rehearsal before launch.
+
 ## Monitoring And Alerts
 
 - Uptime checks:
@@ -72,5 +83,5 @@ Status: Plan ready, implementation not started
 - Core CI exists in `.github/workflows/verify.yml` for frontend build/lint, Rust migration/fmt/clippy/test/content check, content/asset check, and secret scan. Production deployment/CD is not implemented yet.
 - Production hosting provider, domains, certificates, and object storage are not selected.
 - Production shared/edge rate limiting is not implemented; current backend limit is process-local.
-- Retention jobs, backup deletion propagation, production export delivery/status tracking, password reset, and reviewed legal copy remain incomplete.
+- Local DB retention cleanup exists, but production scheduling, backup deletion propagation, production export delivery/status tracking, password reset, and reviewed legal copy remain incomplete.
 - Native app permissions, SDK inventory finalization, privacy/support URLs, and final store assets remain incomplete.

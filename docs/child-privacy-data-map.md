@@ -83,9 +83,9 @@ Official references checked on 2026-06-01:
 ## Release Blockers
 
 - Write public privacy policy and direct parent notice from this data map.
-- Add retention-window enforcement jobs.
+- Schedule the implemented `cargo run -- retention-cleanup` job in production and tune retention windows after legal review.
 - Add consent versioning, region, notice URL/hash, and lawful-basis metadata.
 - Complete P0-LEGAL-002 for COPPA / GDPR Article 8 / UK Children's Code checklist.
 - Keep `docs/sdk-inventory.md` current before adding analytics, crash reporting, payments, speech, AI, push, mobile permissions, or any third-party processor.
-- Define backup retention and deletion propagation.
+- Define backup retention and deletion propagation with the selected production PostgreSQL/object-storage providers.
 - Do not implement voice recording or speech APIs until explicit consent, processor review, and short-retention rules are implemented.

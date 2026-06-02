@@ -2,7 +2,9 @@ use std::net::SocketAddr;
 
 use backend::{
     config::{AppCommand, AppConfig},
-    content_checker, migrations, routes,
+    content_checker, migrations,
+    repositories::retention::RetentionRepository,
+    routes,
     state::AppState,
 };
 use tower_http::trace::TraceLayer;
@@ -47,6 +49,24 @@ async fn main() {
                     .expect("run database migrations");
                 return;
             }
+            AppCommand::RetentionCleanup => {
+                let report = RetentionRepository::new(config.database_url)
+                    .run_cleanup(
+                        env_i32("SESSION_RETENTION_DAYS").unwrap_or(7),
+                        env_i32("REVOKED_CONSENT_EVIDENCE_RETENTION_DAYS").unwrap_or(365),
+                        env_i32("DETACHED_AUDIT_LOG_RETENTION_DAYS").unwrap_or(2555),
+                    )
+                    .await
+                    .expect("run retention cleanup");
+
+                println!(
+                    "Retention cleanup passed: {} expired session(s) deleted, {} revoked consent evidence record(s) minimized, {} detached audit log(s) deleted.",
+                    report.expired_sessions_deleted,
+                    report.revoked_consent_evidence_minimized,
+                    report.detached_audit_logs_deleted
+                );
+                return;
+            }
         }
     }
 
@@ -66,4 +86,11 @@ async fn main() {
         .await
         .expect("bind backend listener");
     axum::serve(listener, app).await.expect("serve backend");
+}
+
+fn env_i32(key: &str) -> Option<i32> {
+    std::env::var(key)
+        .ok()
+        .and_then(|value| value.parse::<i32>().ok())
+        .filter(|value| *value >= 0)
 }

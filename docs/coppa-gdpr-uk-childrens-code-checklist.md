@@ -36,7 +36,7 @@ Official references checked on 2026-06-01:
 | Parent Gate | Settings save, data export, consent revoke, child data deletion, and child profile deletion require password-backed Parent Gate. | Implemented | Add platform-native gate/passcode option for mobile. |
 | High privacy default | No child-flow ads, analytics SDKs, microphone, camera, precise location, phone number, advertising ID, or device serial collection today. | Implemented baseline | Enforce through automated SDK/permission inventory before mobile release. |
 | Data minimisation | Child profile uses nickname, age band, market, and language variant; no birthday, real name, location, voice, photo, or contact fields are required today. | Implemented baseline | Add privacy review for avatar, voice, AI, analytics, payments, and push. |
-| Retention/deletion policy | Cascading child deletion exists. | Partial | Written retention schedule, cleanup jobs, and backup retention rules missing. |
+| Retention/deletion policy | Cascading child deletion exists. Local DB retention cleanup command exists for expired sessions, old revoked consent evidence minimization, and old detached audit log deletion. | Partial | Production schedule, final legal retention windows, and backup retention rules missing. |
 | Security safeguards | Bearer auth, hashed passwords, hashed tokens, ownership checks, parent gate, configured CORS, Origin guard, and process-local rate limiting exist. | Implemented local baseline | Add production edge/shared-store rate limiting, password reset, and production secret management. |
 | Public privacy policy and direct notice | Internal data map exists. | Missing | Draft parent notice, child-friendly privacy copy, privacy policy URL, and store disclosure text. |
 
@@ -53,7 +53,7 @@ Learning data writes now follow this sequence:
 ## Release Blockers
 
 - Convert this checklist into public privacy policy and direct parent notice.
-- Add retention schedule and automated deletion jobs.
+- Schedule `cargo run -- retention-cleanup` in production and set legally reviewed retention windows.
 - Add consent versioning and notice evidence.
 - Keep `docs/sdk-inventory.md` current before adding any third-party SDK, mobile permission, or external child-data processor.
 - Complete app-store privacy labels and Google Play Data Safety from the final data map.

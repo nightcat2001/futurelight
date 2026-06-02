@@ -130,6 +130,16 @@ Invoke-DeliveryStep 'Backend content publish check' {
   }
 }
 
+Invoke-DeliveryStep 'Backend privacy retention cleanup' {
+  Push-Location $backend
+  try {
+    $env:DATABASE_URL = $DatabaseUrl
+    cargo run -- retention-cleanup
+  } finally {
+    Pop-Location
+  }
+}
+
 Invoke-DeliveryStep 'Frontend build' {
   Push-Location $frontend
   try {

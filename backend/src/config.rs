@@ -6,6 +6,7 @@ use crate::security::SecurityConfig;
 pub enum AppCommand {
     CheckContent,
     Migrate,
+    RetentionCleanup,
 }
 
 #[derive(Debug, Clone)]
@@ -32,6 +33,7 @@ impl AppConfig {
         let command = env::args().nth(1).and_then(|value| match value.as_str() {
             "check-content" => Some(AppCommand::CheckContent),
             "migrate" => Some(AppCommand::Migrate),
+            "retention-cleanup" => Some(AppCommand::RetentionCleanup),
             _ => None,
         });
         let allowed_origins = env::var("ALLOWED_ORIGINS")

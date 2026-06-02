@@ -15,16 +15,18 @@ Status: Implemented local baseline, not final production review
 - Bearer session tokens are generated with OS randomness, stored only as SHA-256 hashes in PostgreSQL, expire after 30 days, and are revoked on logout.
 - SQL injection risk is controlled by `tokio-postgres` parameterized queries. Content/admin ID inputs are validated before use.
 - JSON request fields are validated in service layers before writes, including auth, child profile, content-admin, progress, privacy, market-region, and English-variant values.
+- The backend exposes a real privacy retention cleanup command, `cargo run -- retention-cleanup`, for scheduler use. It deletes expired parent sessions, minimizes old revoked consent evidence, and removes old detached audit logs.
 
 ## Current Limits
 
 - Rate limiting is process-local and resets on backend restart. Production needs shared enforcement at the API edge or a shared store.
 - Origin checks protect browser CSRF-style requests but do not replace bearer auth.
-- Password reset, email verification, production audit policy, backup deletion propagation, and retention jobs are still open product work.
+- Password reset, email verification, production audit policy, production retention scheduling, and backup deletion propagation are still open product work.
 - Production deployment must set `ALLOWED_ORIGINS` to the exact app/store domains before public exposure.
 
 ## Verification
 
 - `cargo test --test security_baseline -- --nocapture`
+- `cargo test --test retention_cleanup -- --nocapture`
 - `cargo test`
 - `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\verify-delivery.ps1`
