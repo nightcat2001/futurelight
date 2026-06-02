@@ -39,6 +39,10 @@ const MIGRATIONS: &[(&str, &str)] = &[
         "0009_market_variant_content_selection",
         include_str!("../migrations/0009_market_variant_content_selection.sql"),
     ),
+    (
+        "0010_data_export_request_tracking",
+        include_str!("../migrations/0010_data_export_request_tracking.sql"),
+    ),
 ];
 
 pub async fn run_migrations(

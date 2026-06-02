@@ -5,7 +5,7 @@ use axum::{
 };
 
 use crate::{
-    domain::{AuditLogRecord, ConsentRecord, DataExportResponse},
+    domain::{AuditLogRecord, ConsentRecord, DataExportRequestRecord, DataExportResponse},
     errors::ApiError,
     repositories::{auth::ParentAuthRepository, privacy::PrivacyRepository},
     services::{
@@ -56,6 +56,15 @@ pub async fn request_data_export(
     Ok(Json(
         service.request_data_export(&parent.id, request).await?,
     ))
+}
+
+pub async fn list_data_export_requests(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+) -> Result<Json<Vec<DataExportRequestRecord>>, ApiError> {
+    let parent = authenticated_parent(&state, &headers).await?;
+    let service = PrivacyService::new(PrivacyRepository::new(state.database_url));
+    Ok(Json(service.list_data_export_requests(&parent.id).await?))
 }
 
 pub async fn delete_parent_account(

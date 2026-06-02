@@ -104,7 +104,7 @@ pub fn router(state: AppState) -> Router {
         )
         .route(
             "/api/privacy/data-export-requests",
-            axum::routing::post(privacy::request_data_export),
+            get(privacy::list_data_export_requests).post(privacy::request_data_export),
         )
         .route(
             "/api/privacy/parent-account",

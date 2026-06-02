@@ -83,5 +83,5 @@ Status: Plan ready, implementation not started
 - Core CI exists in `.github/workflows/verify.yml` for frontend build/lint, Rust migration/fmt/clippy/test/content check, content/asset check, and secret scan. Production deployment/CD is not implemented yet.
 - Production hosting provider, domains, certificates, and object storage are not selected.
 - Production shared/edge rate limiting is not implemented; current backend limit is process-local.
-- Local DB retention cleanup exists, but production scheduling, backup deletion propagation, production export delivery/status tracking, password reset, and reviewed legal copy remain incomplete.
+- Local DB retention cleanup and DB-backed export request status tracking exist, but production scheduling, backup deletion propagation, off-box export delivery, password reset, and reviewed legal copy remain incomplete.
 - Native app permissions, SDK inventory finalization, privacy/support URLs, and final store assets remain incomplete.

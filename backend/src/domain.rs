@@ -267,7 +267,25 @@ pub struct DataExportPackage {
 }
 
 #[derive(Debug, Clone, Serialize)]
+pub struct DataExportRequestRecord {
+    pub id: String,
+    pub parent_account_id: String,
+    pub child_id: Option<String>,
+    pub status: String,
+    pub scope: String,
+    pub requested_at: String,
+    pub completed_at: Option<String>,
+    pub expires_at: Option<String>,
+    pub package_format_version: Option<i32>,
+    pub download_available: bool,
+    pub audit_log_id: Option<String>,
+    pub error_code: Option<String>,
+    pub metadata: Value,
+}
+
+#[derive(Debug, Clone, Serialize)]
 pub struct DataExportResponse {
     pub audit_log: AuditLogRecord,
+    pub request: DataExportRequestRecord,
     pub package: DataExportPackage,
 }

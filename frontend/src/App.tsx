@@ -201,7 +201,24 @@ type DataExportPackage = {
 
 type DataExportResponse = {
   audit_log: AuditLogRecord
+  request: DataExportRequestRecord
   package: DataExportPackage
+}
+
+type DataExportRequestRecord = {
+  id: string
+  parent_account_id: string
+  child_id: string | null
+  status: string
+  scope: string
+  requested_at: string
+  completed_at: string | null
+  expires_at: string | null
+  package_format_version: number | null
+  download_available: boolean
+  audit_log_id: string | null
+  error_code: string | null
+  metadata: unknown
 }
 
 type ChildProfile = {
@@ -3226,6 +3243,7 @@ function ParentPrivacyPanel({
   onChildrenChanged: () => Promise<void>
 }) {
   const [consents, setConsents] = useState<ConsentRecord[]>([])
+  const [exportRequests, setExportRequests] = useState<DataExportRequestRecord[]>([])
   const [privacyBusy, setPrivacyBusy] = useState(false)
   const [privacyError, setPrivacyError] = useState<string | null>(null)
   const [privacyMessage, setPrivacyMessage] = useState<string | null>(null)
@@ -3238,27 +3256,38 @@ function ParentPrivacyPanel({
   useEffect(() => {
     const controller = new AbortController()
 
-    async function loadConsents() {
+    async function loadPrivacyRecords() {
       if (!authToken) {
         setConsents([])
+        setExportRequests([])
         return
       }
 
       try {
-        setConsents(await fetchConsents(authToken, controller.signal))
+        const [nextConsents, nextExportRequests] = await Promise.all([
+          fetchConsents(authToken, controller.signal),
+          fetchDataExportRequests(authToken, controller.signal),
+        ])
+        setConsents(nextConsents)
+        setExportRequests(nextExportRequests)
       } catch (error) {
         if (controller.signal.aborted) return
         setPrivacyError(readableApiError(error))
       }
     }
 
-    loadConsents()
+    loadPrivacyRecords()
     return () => controller.abort()
   }, [authToken, children.length])
 
   async function reloadConsents() {
     if (!authToken) return
     setConsents(await fetchConsents(authToken))
+  }
+
+  async function reloadExportRequests() {
+    if (!authToken) return
+    setExportRequests(await fetchDataExportRequests(authToken))
   }
 
   async function requestExport() {
@@ -3273,7 +3302,10 @@ function ParentPrivacyPanel({
         selectedExportChildId === 'all' ? null : selectedExportChildId,
       )
       downloadDataExport(audit.package)
-      setPrivacyMessage(`${audit.audit_log.action.replaceAll('_', ' ')} and downloaded.`)
+      await reloadExportRequests()
+      setPrivacyMessage(
+        `${audit.audit_log.action.replaceAll('_', ' ')} and downloaded. Request ${audit.request.status}.`,
+      )
     } catch (error) {
       setPrivacyError(readableApiError(error))
     } finally {
@@ -3412,6 +3444,34 @@ function ParentPrivacyPanel({
 
       {privacyMessage && <p className="result-banner">{privacyMessage}</p>}
       {privacyError && <p className="form-error">{privacyError}</p>}
+
+      <section className="consent-panel">
+        <div className="route-heading compact-heading">
+          <p className="eyebrow">Exports</p>
+          <h2>Recent Export Requests</h2>
+        </div>
+        {exportRequests.length === 0 && <p className="panel-note">No export requests yet.</p>}
+        {exportRequests.length > 0 && (
+          <div className="consent-list">
+            {exportRequests.map((request) => (
+              <article className="consent-row" key={request.id}>
+                <div>
+                  <strong>{request.status}</strong>
+                  <span>
+                    {request.child_id
+                      ? `${childName(children, request.child_id)} export`
+                      : 'Account export'}
+                    {' - '}
+                    {formatDateTime(request.requested_at)}
+                    {request.expires_at ? ` - expires ${formatDateTime(request.expires_at)}` : ''}
+                  </span>
+                </div>
+                <span>{request.download_available ? 'downloaded' : 'not ready'}</span>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
 
       <section className="consent-panel">
         <div className="route-heading compact-heading">
@@ -3923,6 +3983,13 @@ function fetchConsents(token: string, signal?: AbortSignal) {
   })
 }
 
+function fetchDataExportRequests(token: string, signal?: AbortSignal) {
+  return requestJson<DataExportRequestRecord[]>('/api/privacy/data-export-requests', {
+    headers: bearerHeaders(token),
+    signal,
+  })
+}
+
 function requestDataExport(token: string, childId: string | null) {
   return requestJson<DataExportResponse>('/api/privacy/data-export-requests', {
     body: JSON.stringify({ child_id: childId }),
@@ -3968,6 +4035,18 @@ function downloadDataExport(exportPackage: DataExportPackage) {
   anchor.click()
   anchor.remove()
   URL.revokeObjectURL(url)
+}
+
+function formatDateTime(value: string) {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return value
+  return date.toLocaleString(undefined, {
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
 }
 
 function recordPrivacyConsent(token: string, child: ChildProfile, form: ChildForm) {

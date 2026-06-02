@@ -662,6 +662,14 @@ async fn parent_child_learning_and_privacy_flow_persists_and_rejects_invalid_acc
         .await
         .expect("generate data export");
     assert_eq!(export.audit_log.action, "data_export_generated");
+    assert_eq!(export.request.status, "completed");
+    assert_eq!(export.request.scope, "child");
+    assert_eq!(export.request.child_id.as_deref(), Some(child.id.as_str()));
+    assert_eq!(
+        export.request.audit_log_id.as_deref(),
+        Some(export.audit_log.id.as_str())
+    );
+    assert!(export.request.download_available);
     assert_eq!(export.package.export_format_version, 1);
     assert_eq!(
         export.package.scope.child_id.as_deref(),
@@ -674,6 +682,16 @@ async fn parent_child_learning_and_privacy_flow_persists_and_rejects_invalid_acc
     assert_eq!(export.package.attempts.len(), 1);
     assert_eq!(export.package.progress_records.len(), 1);
     assert_eq!(export.package.rewards.len(), 1);
+
+    let export_requests = privacy
+        .list_data_export_requests(&registered.parent.id)
+        .await
+        .expect("list export requests");
+    assert!(
+        export_requests
+            .iter()
+            .any(|request| request.id == export.request.id)
+    );
 
     let wrong_parent_export = privacy
         .request_data_export(

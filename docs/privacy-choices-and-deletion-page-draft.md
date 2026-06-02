@@ -19,6 +19,12 @@ Current Parent Center controls:
 
 The current product can generate a parent-gated JSON export package containing parent account profile fields, child profiles, consent records, learning sessions, attempts, progress records, rewards, and audit logs. Password and session hashes are excluded.
 
+## Export Request Status
+
+The current product records each export in PostgreSQL `data_export_requests` with request id, status, scope, requested time, completed time, expiry time, audit log link, and non-PII package counts. The Parent Trust Center shows recent export requests after the parent passes Parent Gate and downloads the JSON package.
+
+Production still needs off-box delivery, support visibility, and reviewed expiry rules before public launch.
+
 Production blocker:
 
 - Export delivery/status tracking and expiry are not implemented.

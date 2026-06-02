@@ -2,7 +2,7 @@ use serde::Deserialize;
 use serde_json::Value;
 
 use crate::{
-    domain::{AuditLogRecord, ConsentRecord, DataExportResponse},
+    domain::{AuditLogRecord, ConsentRecord, DataExportRequestRecord, DataExportResponse},
     errors::ApiError,
     repositories::privacy::PrivacyRepository,
 };
@@ -112,6 +112,16 @@ impl PrivacyService {
             .await
             .map_err(map_database_error)?
             .ok_or(ApiError::NotFound)
+    }
+
+    pub async fn list_data_export_requests(
+        &self,
+        parent_account_id: &str,
+    ) -> Result<Vec<DataExportRequestRecord>, ApiError> {
+        self.repository
+            .list_data_export_requests(parent_account_id)
+            .await
+            .map_err(map_database_error)
     }
 
     pub async fn delete_child_data(

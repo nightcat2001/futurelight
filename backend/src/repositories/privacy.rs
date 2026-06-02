@@ -3,8 +3,8 @@ use tokio_postgres::{Client, NoTls};
 
 use crate::domain::{
     AttemptRecord, AuditLogRecord, ChildProfile, ConsentRecord, DataExportPackage,
-    DataExportResponse, DataExportScope, LearningSession, ParentAccount, ProgressRecord,
-    RewardRecord,
+    DataExportRequestRecord, DataExportResponse, DataExportScope, LearningSession, ParentAccount,
+    ProgressRecord, RewardRecord,
 };
 
 pub struct PrivacyRepository {
@@ -162,7 +162,107 @@ impl PrivacyRepository {
             )
             .await?;
 
-        Ok(audit_log.map(|audit_log| DataExportResponse { audit_log, package }))
+        let Some(audit_log) = audit_log else {
+            return Ok(None);
+        };
+
+        let client = self.connect().await?;
+        let request = client
+            .query_one(
+                r#"
+                INSERT INTO data_export_requests (
+                    parent_account_id,
+                    child_id,
+                    status,
+                    scope,
+                    completed_at,
+                    expires_at,
+                    package_format_version,
+                    download_available,
+                    audit_log_id,
+                    metadata
+                )
+                VALUES (
+                    $1::text::uuid,
+                    $2::text::uuid,
+                    'completed',
+                    CASE WHEN $2::text IS NULL THEN 'parent_account' ELSE 'child' END,
+                    now(),
+                    now() + interval '7 days',
+                    $3,
+                    true,
+                    $4::text::uuid,
+                    $5
+                )
+                RETURNING id::text,
+                    parent_account_id::text,
+                    child_id::text,
+                    status,
+                    scope,
+                    requested_at::text,
+                    completed_at::text,
+                    expires_at::text,
+                    package_format_version,
+                    download_available,
+                    audit_log_id::text,
+                    error_code,
+                    metadata
+                "#,
+                &[
+                    &parent_account_id,
+                    &child_id,
+                    &(package.export_format_version as i32),
+                    &audit_log.id,
+                    &serde_json::json!({
+                        "children": package.children.len(),
+                        "consents": package.consents.len(),
+                        "learning_sessions": package.learning_sessions.len(),
+                        "attempts": package.attempts.len(),
+                        "progress_records": package.progress_records.len(),
+                        "rewards": package.rewards.len(),
+                    }),
+                ],
+            )
+            .await?;
+
+        Ok(Some(DataExportResponse {
+            audit_log,
+            request: export_request_from_row(&request),
+            package,
+        }))
+    }
+
+    pub async fn list_data_export_requests(
+        &self,
+        parent_account_id: &str,
+    ) -> Result<Vec<DataExportRequestRecord>, tokio_postgres::Error> {
+        let client = self.connect().await?;
+        let rows = client
+            .query(
+                r#"
+                SELECT id::text,
+                    parent_account_id::text,
+                    child_id::text,
+                    status,
+                    scope,
+                    requested_at::text,
+                    completed_at::text,
+                    expires_at::text,
+                    package_format_version,
+                    download_available,
+                    audit_log_id::text,
+                    error_code,
+                    metadata
+                FROM data_export_requests
+                WHERE parent_account_id = $1::text::uuid
+                ORDER BY requested_at DESC
+                LIMIT 20
+                "#,
+                &[&parent_account_id],
+            )
+            .await?;
+
+        Ok(rows.iter().map(export_request_from_row).collect())
     }
 
     async fn build_data_export(
@@ -634,5 +734,23 @@ fn audit_from_row(row: &tokio_postgres::Row) -> AuditLogRecord {
         entity_id: row.get("entity_id"),
         metadata: row.get("metadata"),
         created_at: row.get("created_at"),
+    }
+}
+
+fn export_request_from_row(row: &tokio_postgres::Row) -> DataExportRequestRecord {
+    DataExportRequestRecord {
+        id: row.get("id"),
+        parent_account_id: row.get("parent_account_id"),
+        child_id: row.get("child_id"),
+        status: row.get("status"),
+        scope: row.get("scope"),
+        requested_at: row.get("requested_at"),
+        completed_at: row.get("completed_at"),
+        expires_at: row.get("expires_at"),
+        package_format_version: row.get("package_format_version"),
+        download_available: row.get("download_available"),
+        audit_log_id: row.get("audit_log_id"),
+        error_code: row.get("error_code"),
+        metadata: row.get("metadata"),
     }
 }
