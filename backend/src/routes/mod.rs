@@ -10,6 +10,7 @@ pub mod health;
 pub mod pages;
 pub mod privacy;
 pub mod progress;
+pub mod support;
 
 pub fn router(state: AppState) -> Router {
     Router::new()
@@ -116,6 +117,10 @@ pub fn router(state: AppState) -> Router {
         )
         .route("/api/pages", get(pages::pages))
         .route("/api/home/summary", get(pages::home_summary))
+        .route(
+            "/api/support/requests",
+            get(support::list_requests).post(support::create_request),
+        )
         .with_state(state)
 }
 

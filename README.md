@@ -137,7 +137,7 @@ Current frontend routes:
 - `/courses` (course, lesson, and activity exploration)
 - `/learn` (market/variant-aware learning session, attempt recording, progress and rewards refresh)
 - `/practice` (market/variant-aware single-choice practice attempt flow with reward display)
-- `/parent` (parent sign-up, login, gated settings, DB-backed sound preferences, child profile CRUD, learning summaries, consent, downloadable export with request status tracking, child deletion, and parent account deletion controls)
+- `/parent` (parent sign-up, login, gated settings, DB-backed sound preferences, child profile CRUD, learning summaries, consent, downloadable export with request status tracking, support request intake, child deletion, and parent account deletion controls)
 - `/content` (content-admin course, lesson, activity, asset-selection, publish-check, and version-history workflow)
 - `/settings`
 
@@ -206,6 +206,11 @@ Current privacy endpoints:
 - `POST /api/privacy/data-export-requests`
 - `DELETE /api/privacy/children/{child_id}`
 - `DELETE /api/privacy/parent-account`
+
+Current support endpoints:
+
+- `GET /api/support/requests`
+- `POST /api/support/requests`
 
 ## Verification
 

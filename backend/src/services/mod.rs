@@ -6,3 +6,4 @@ pub mod health;
 pub mod pages;
 pub mod privacy;
 pub mod progress;
+pub mod support;

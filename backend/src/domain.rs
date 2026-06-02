@@ -289,3 +289,18 @@ pub struct DataExportResponse {
     pub request: DataExportRequestRecord,
     pub package: DataExportPackage,
 }
+
+#[derive(Debug, Clone, Serialize)]
+pub struct SupportRequestRecord {
+    pub id: String,
+    pub parent_account_id: String,
+    pub child_id: Option<String>,
+    pub request_type: String,
+    pub subject: String,
+    pub message: String,
+    pub status: String,
+    pub region: Option<String>,
+    pub created_at: String,
+    pub updated_at: String,
+    pub resolved_at: Option<String>,
+}

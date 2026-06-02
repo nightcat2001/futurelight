@@ -7,3 +7,4 @@ pub mod pages;
 pub mod privacy;
 pub mod progress;
 pub mod retention;
+pub mod support;

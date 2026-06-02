@@ -1,7 +1,7 @@
 # FutureLight Operations And Support Plan
 
 Created: 2026-06-01 16:01:50 +08:00
-Status: Process plan ready, tooling not implemented
+Status: Process plan plus local parent support request tooling
 
 ## Support Channels
 
@@ -14,12 +14,12 @@ Status: Process plan ready, tooling not implemented
 | Request | Owner | First Response Target | Current Product Path | Required Production Work |
 | --- | --- | --- | --- | --- |
 | Child data deletion | Privacy/support | 2 business days | Parent Center can delete a child profile/privacy data and the parent account through parent-gated APIs. | Add confirmation email, audit review process, backup propagation, and retention policy. |
-| Data export | Privacy/support | 2 business days | Parent Center generates a parent-gated downloadable JSON export package and records an audit event. | Add production delivery/status tracking, expiry, support review workflow, and public help copy. |
+| Data export | Privacy/support | 2 business days | Parent Center generates a parent-gated downloadable JSON export package, records export request status, and can submit support requests. | Add off-box production delivery, support review workflow, and public help copy. |
 | Consent revoke | Privacy/support | 2 business days | Parent Center can revoke consent records. | Add reviewed parent copy and region-specific follow-up handling. |
 | Refund | Billing/support | 2 business days | Not implemented. | Define store-billing paths for Apple/Google and any web subscription provider before paid launch. |
-| Content error report | Content ops | 3 business days | Not implemented. | Add report intake, content-admin triage status, rollback/publish workflow, and parent response templates. |
+| Content error report | Content ops | 3 business days | Parent Center can submit a `content_error` support request tied to account or child. | Add content-admin triage status, rollback/publish workflow, and parent response templates. |
 | Store review rejection | Release owner | Same business day | Not implemented. | Keep rejection log, map rejected guideline/policy to owner, update store metadata/assets/build, and rerun staging verification. |
-| Parent learning/support question | Support/content | 3 business days | Not implemented. | Add FAQ, support macros, escalation path, and localization review. |
+| Parent learning/support question | Support/content | 3 business days | Parent Center can submit and list support requests stored in PostgreSQL. | Add FAQ, support macros, escalation path, and localization review. |
 
 ## Triage Workflow
 
@@ -59,8 +59,9 @@ Status: Process plan ready, tooling not implemented
 
 ## Launch Blockers
 
-- No production support mailbox or tracker is configured.
-- Production export delivery/status tracking is not implemented.
-- Backup deletion propagation and retention jobs are not implemented.
+- No production support mailbox or external tracker is configured.
+- Local support request intake exists, but staff/admin triage, assignment, SLA reporting, and support email confirmation are not implemented.
+- DB-backed export request status exists, but off-box production delivery and support visibility are incomplete.
+- Backup deletion propagation and production retention scheduling are not implemented.
 - Refund policy and billing provider paths are not implemented.
 - Public FAQ, support macros, and reviewed legal/privacy templates are not complete.

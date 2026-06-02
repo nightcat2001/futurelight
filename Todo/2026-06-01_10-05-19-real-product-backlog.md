@@ -298,6 +298,8 @@ Status: Open
   - Still blocked: 2026-06-02 22:02:00 +08:00 Public hosting URL, legal review, production/staging reviewer accounts, native app package/permissions, final screenshots, final store console submission, production retention scheduling, backup deletion propagation, off-box production export delivery, and support visibility remain incomplete.
 - [ ] 2026-06-01 10:05:19 +08:00 Gate 6 Launch Ready：staging/production、監控、備份、客服、營運儀表板與回滾流程完成。
   - Remaining: 2026-06-02 20:56:23 +08:00 Deployment and support plans plus core CI exist, but staging/production hosting, production deployment/CD, monitoring, backup/restore drill, rollback runbook execution, and support tooling are not implemented yet.
+  - Progress: 2026-06-02 22:29:00 +08:00 Added real `support_requests` PostgreSQL table, `GET/POST /api/support/requests`, parent ownership validation, integration coverage, and Parent Center support request intake/listing.
+  - Still blocked: 2026-06-02 22:29:00 +08:00 Staging/production hosting, production deployment/CD, monitoring, backup/restore drill, rollback runbook execution, external support mailbox/tracker, staff/admin triage, SLA reporting, and support email confirmation remain incomplete.
 
 ## Superseded Todo Files
 

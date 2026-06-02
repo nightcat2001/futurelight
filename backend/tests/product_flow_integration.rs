@@ -10,6 +10,7 @@ use backend::{
         courses::{CourseRepository, CourseSelection},
         privacy::PrivacyRepository,
         progress::ProgressRepository,
+        support::SupportRepository,
     },
     services::{
         auth::{AuthService, LoginRequest, RegisterRequest, UpdateParentRequest},
@@ -21,6 +22,7 @@ use backend::{
         courses::CourseService,
         privacy::{CreateConsentRequest, DataExportRequest, PrivacyService},
         progress::{ProgressService, RecordAttemptRequest, StartSessionRequest},
+        support::{CreateSupportRequest, SupportService},
     },
 };
 use serde_json::json;
@@ -51,6 +53,7 @@ async fn parent_child_learning_and_privacy_flow_persists_and_rejects_invalid_acc
     let courses = CourseService::new(CourseRepository::new(database_url.clone()));
     let progress = ProgressService::new(ProgressRepository::new(database_url.clone()));
     let privacy = PrivacyService::new(PrivacyRepository::new(database_url.clone()));
+    let support = SupportService::new(SupportRepository::new(database_url.clone()));
 
     let registered = auth
         .register(RegisterRequest {
@@ -319,6 +322,46 @@ async fn parent_child_learning_and_privacy_flow_persists_and_rejects_invalid_acc
 
     let cross_parent_child_read = children.get(&other_parent.id, &child.id).await;
     expect_not_found(cross_parent_child_read);
+
+    let support_request = support
+        .create_request(
+            &registered.parent.id,
+            CreateSupportRequest {
+                child_id: Some(child.id.clone()),
+                request_type: "parent_question".to_string(),
+                subject: "Practice question".to_string(),
+                message: "How should we use review sessions after a completed lesson?".to_string(),
+                region: Some("US".to_string()),
+            },
+        )
+        .await
+        .expect("create support request");
+    assert_eq!(support_request.status, "open");
+    assert_eq!(support_request.child_id.as_deref(), Some(child.id.as_str()));
+
+    let support_requests = support
+        .list_requests(&registered.parent.id)
+        .await
+        .expect("list support requests");
+    assert!(
+        support_requests
+            .iter()
+            .any(|request| request.id == support_request.id)
+    );
+
+    let cross_parent_support = support
+        .create_request(
+            &other_parent.id,
+            CreateSupportRequest {
+                child_id: Some(child.id.clone()),
+                request_type: "content_error".to_string(),
+                subject: "Wrong child".to_string(),
+                message: "This should not be accepted for another parent's child.".to_string(),
+                region: Some("US".to_string()),
+            },
+        )
+        .await;
+    expect_not_found(cross_parent_support);
 
     let course_list = courses
         .list_courses(CourseSelection::default())

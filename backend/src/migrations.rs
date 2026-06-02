@@ -43,6 +43,10 @@ const MIGRATIONS: &[(&str, &str)] = &[
         "0010_data_export_request_tracking",
         include_str!("../migrations/0010_data_export_request_tracking.sql"),
     ),
+    (
+        "0011_support_requests",
+        include_str!("../migrations/0011_support_requests.sql"),
+    ),
 ];
 
 pub async fn run_migrations(

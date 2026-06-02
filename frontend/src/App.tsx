@@ -221,6 +221,20 @@ type DataExportRequestRecord = {
   metadata: unknown
 }
 
+type SupportRequestRecord = {
+  id: string
+  parent_account_id: string
+  child_id: string | null
+  request_type: string
+  subject: string
+  message: string
+  status: string
+  region: string | null
+  created_at: string
+  updated_at: string
+  resolved_at: string | null
+}
+
 type ChildProfile = {
   id: string
   parent_account_id: string
@@ -2899,6 +2913,7 @@ function ParentRoute({
           onAccountDeleted={auth.clearLocalAuth}
           onChildrenChanged={childProfiles.refreshChildren}
         />
+        <ParentSupportPanel authToken={auth.authToken} children={childProfiles.children} />
         <ChildProfileList childProfiles={childProfiles} />
       </>
     )
@@ -3509,6 +3524,170 @@ function ParentPrivacyPanel({
   )
 }
 
+function ParentSupportPanel({
+  authToken,
+  children,
+}: {
+  authToken: string | null
+  children: ChildProfile[]
+}) {
+  const [requests, setRequests] = useState<SupportRequestRecord[]>([])
+  const [requestType, setRequestType] = useState('parent_question')
+  const [childId, setChildId] = useState('none')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [supportBusy, setSupportBusy] = useState(false)
+  const [supportError, setSupportError] = useState<string | null>(null)
+  const [supportMessage, setSupportMessage] = useState<string | null>(null)
+
+  useEffect(() => {
+    const controller = new AbortController()
+
+    async function loadRequests() {
+      if (!authToken) {
+        setRequests([])
+        return
+      }
+
+      try {
+        setRequests(await fetchSupportRequests(authToken, controller.signal))
+      } catch (error) {
+        if (controller.signal.aborted) return
+        setSupportError(readableApiError(error))
+      }
+    }
+
+    loadRequests()
+    return () => controller.abort()
+  }, [authToken])
+
+  async function submitSupportRequest(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (!authToken) return
+    setSupportBusy(true)
+    setSupportError(null)
+    setSupportMessage(null)
+
+    try {
+      const created = await createSupportRequest(authToken, {
+        child_id: childId === 'none' ? null : childId,
+        message,
+        region: childId === 'none' ? null : children.find((child) => child.id === childId)?.market_region ?? null,
+        request_type: requestType,
+        subject,
+      })
+      setRequests(await fetchSupportRequests(authToken))
+      setSubject('')
+      setMessage('')
+      setSupportMessage(`Support request ${created.status}.`)
+    } catch (error) {
+      setSupportError(readableApiError(error))
+    } finally {
+      setSupportBusy(false)
+    }
+  }
+
+  return (
+    <section className="parent-section">
+      <div className="route-heading compact-heading">
+        <p className="eyebrow">Support</p>
+        <h2>Parent Support Requests</h2>
+      </div>
+
+      <form className="info-panel support-form" onSubmit={submitSupportRequest}>
+        <div className="field-grid">
+          <label>
+            Type
+            <select
+              disabled={supportBusy}
+              value={requestType}
+              onChange={(event) => setRequestType(event.target.value)}
+            >
+              <option value="parent_question">Parent question</option>
+              <option value="data_export">Data export</option>
+              <option value="child_data_deletion">Child data deletion</option>
+              <option value="consent">Consent</option>
+              <option value="content_error">Content error</option>
+              <option value="account_access">Account access</option>
+            </select>
+          </label>
+          <label>
+            Child
+            <select
+              disabled={supportBusy}
+              value={childId}
+              onChange={(event) => setChildId(event.target.value)}
+            >
+              <option value="none">Account level</option>
+              {children.map((child) => (
+                <option key={child.id} value={child.id}>
+                  {child.display_name}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Subject
+          <input
+            disabled={supportBusy}
+            maxLength={120}
+            minLength={3}
+            required
+            value={subject}
+            onChange={(event) => setSubject(event.target.value)}
+          />
+        </label>
+
+        <label>
+          Message
+          <textarea
+            disabled={supportBusy}
+            maxLength={2000}
+            minLength={10}
+            required
+            rows={4}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+          />
+        </label>
+
+        <button className="primary-action inline-action" disabled={supportBusy} type="submit">
+          Submit Request
+        </button>
+      </form>
+
+      {supportMessage && <p className="result-banner">{supportMessage}</p>}
+      {supportError && <p className="form-error">{supportError}</p>}
+
+      <section className="consent-panel">
+        <div className="route-heading compact-heading">
+          <p className="eyebrow">Requests</p>
+          <h2>Recent Support Requests</h2>
+        </div>
+        {requests.length === 0 && <p className="panel-note">No support requests yet.</p>}
+        {requests.length > 0 && (
+          <div className="consent-list">
+            {requests.map((request) => (
+              <article className="consent-row" key={request.id}>
+                <div>
+                  <strong>{request.subject}</strong>
+                  <span>
+                    {request.request_type.replaceAll('_', ' ')} - {request.status} -{' '}
+                    {formatDateTime(request.created_at)}
+                  </span>
+                </div>
+                <span>{request.child_id ? childName(children, request.child_id) : 'account'}</span>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </section>
+  )
+}
+
 function ChildProfileForm({ childProfiles }: { childProfiles: ChildController }) {
   return (
     <form className="child-form info-panel" onSubmit={childProfiles.submitChild}>
@@ -3987,6 +4166,30 @@ function fetchDataExportRequests(token: string, signal?: AbortSignal) {
   return requestJson<DataExportRequestRecord[]>('/api/privacy/data-export-requests', {
     headers: bearerHeaders(token),
     signal,
+  })
+}
+
+function fetchSupportRequests(token: string, signal?: AbortSignal) {
+  return requestJson<SupportRequestRecord[]>('/api/support/requests', {
+    headers: bearerHeaders(token),
+    signal,
+  })
+}
+
+function createSupportRequest(
+  token: string,
+  request: {
+    child_id: string | null
+    message: string
+    region: string | null
+    request_type: string
+    subject: string
+  },
+) {
+  return requestJson<SupportRequestRecord>('/api/support/requests', {
+    body: JSON.stringify(request),
+    headers: jsonHeaders(token),
+    method: 'POST',
   })
 }
 
