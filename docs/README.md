@@ -52,6 +52,10 @@
 - `法規與上架檢查.md`：整理 Apple Kids Category、Google Play Families、COPPA、Data Safety、SDK inventory 與上架 blocker。
 - `store-metadata-draft.md`：整理 App Store Connect / Google Play Console metadata、age rating、privacy label、Data Safety、Families/Kids review notes 草稿。
 - `store-listing-copy-de-uk-us.md`：整理德國、英國、美國 store listing 文案、定位、隱私承諾、截圖與 feature graphic 需求。
+- `privacy-policy-draft.md`: drafts the public privacy policy text for legal review and later production hosting.
+- `direct-parent-notice-draft.md`: drafts the COPPA/GDPR/UK-style direct parent notice before consent.
+- `privacy-choices-and-deletion-page-draft.md`: drafts the public privacy choices, export, deletion, and support request page.
+- `reviewer-account-runbook.md`: defines how to create real App Store / Google Play reviewer accounts without committing credentials.
 - `security-baseline.md`: documents the implemented local backend security baseline for CORS, Origin guard, rate limiting, password/token handling, SQL query safety, and request validation.
 - `deployment-plan.md`: documents the planned staging/production topology, runtime config, release flow, backup/restore, monitoring, rollback, and launch blockers.
 - `operations-support-plan.md`: documents planned support channels, privacy/support request triage, refunds, content reports, review rejection handling, escalations, and support metrics.

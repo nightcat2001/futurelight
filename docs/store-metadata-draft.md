@@ -36,7 +36,7 @@ This document converts the current FutureLight implementation into App Store Con
 | Child profile data | Nickname/display name, age band, market region, English variant. |
 | Learning data | Sessions, attempts, scores, progress, rewards. |
 | Deletion | Child data deletion, parent account deletion, and downloadable JSON export package are implemented in the local parent center. |
-| Privacy policy URL | Blocked until public policy and hosting URL exist. |
+| Privacy policy URL | Draft exists in `docs/privacy-policy-draft.md`; blocked until legal review and public hosting URL exist. |
 
 ## App Store Connect Draft
 
@@ -89,8 +89,8 @@ All current data is first-party, linked to the parent/child account, not used fo
 
 Blocked before final App Privacy submission:
 
-- Public privacy policy URL.
-- Privacy choices/delete URL or equivalent parent help page.
+- Public privacy policy URL. Draft exists in `docs/privacy-policy-draft.md`; final URL is still blocked by legal review and hosting.
+- Privacy choices/delete URL or equivalent parent help page. Draft exists in `docs/privacy-choices-and-deletion-page-draft.md`; final URL is still blocked by legal review and hosting.
 - Production hosting/database/logging vendor inventory.
 - Native build review for any SDKs, permissions, privacy manifests, or diagnostics.
 
@@ -98,7 +98,7 @@ Blocked before final App Privacy submission:
 
 FutureLight is a parent-managed children's English learning app. A parent creates an account, creates a child profile with age band, market region, and English variant, then grants parental privacy consent before supported child learning data is recorded for US/DE/UK profiles. The child experience contains no ads, no third-party analytics SDK, no chat, no user-generated sharing, no microphone/camera/location access, and no external social login. Adult and destructive actions are protected by a password-backed Parent Gate.
 
-Reviewer access still needs a production or staging account before submission:
+Reviewer access still needs a production or staging account before submission. Follow `docs/reviewer-account-runbook.md` and keep credentials outside git:
 
 - Parent email: `reviewer+apple@futurelight.example` (placeholder, not created)
 - Password: create in the release password vault, not in git
@@ -160,7 +160,7 @@ Security practices draft:
 
 FutureLight targets children with parent-managed account setup. The app has no ads, no in-app purchases, no third-party analytics SDK, no social login, no chat, no location, no camera, and no microphone in the launch scope. Parent account data and child learning progress are stored only on first-party infrastructure. US/DE/UK child learning writes require granted parental privacy consent. Parent Gate protects sensitive parent-center actions.
 
-Reviewer access still needs a production or staging account before submission:
+Reviewer access still needs a production or staging account before submission. Follow `docs/reviewer-account-runbook.md` and keep credentials outside git:
 
 - Parent email: `reviewer+google@futurelight.example` (placeholder, not created)
 - Password: create in the release password vault, not in git
@@ -169,7 +169,7 @@ Reviewer access still needs a production or staging account before submission:
 
 ## Release Blockers For Store Metadata
 
-- Public privacy policy URL and privacy choices/deletion page.
+- Public privacy policy URL and privacy choices/deletion page. Drafts exist in `docs/privacy-policy-draft.md` and `docs/privacy-choices-and-deletion-page-draft.md`; final legal approval and public hosting are still blocked.
 - Production hosting/database/logging vendor inventory and processor review.
 - Native app build inventory: package ID, permissions, SDK list, privacy manifests, Android manifest, network security config.
 - App icon, screenshots, preview video, and screenshot text reviewed against Apple metadata rules and Google Families suitability.

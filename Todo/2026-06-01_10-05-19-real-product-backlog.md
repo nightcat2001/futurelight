@@ -290,6 +290,8 @@ Status: Open
   - Blocked: 2026-06-02 14:36:56 +08:00 Seedance short-animation generation remains blocked by missing RunComfy auth/CLI, so the final video asset pipeline is not fully ready.
 - [ ] 2026-06-01 10:05:19 +08:00 Gate 5 Privacy / Store Ready：COPPA/GDPR/UK Children’s Code、Apple/Google 申報資料完成。
   - Remaining: 2026-06-02 14:53:49 +08:00 Draft privacy/store documents, local export package, and parent account deletion exist, but production privacy/support URLs, final legal review, store screenshots/native assets, public deletion/support page, retention jobs, backup deletion propagation, and production export delivery/status tracking are still required before launch readiness.
+  - Progress: 2026-06-02 21:14:00 +08:00 Added `docs/privacy-policy-draft.md`, `docs/direct-parent-notice-draft.md`, `docs/privacy-choices-and-deletion-page-draft.md`, and `docs/reviewer-account-runbook.md` so privacy/store review has concrete draft artifacts instead of placeholder blockers.
+  - Still blocked: 2026-06-02 21:14:00 +08:00 Public hosting URL, legal review, production/staging reviewer accounts, native app package/permissions, final screenshots, final store console submission, retention job implementation, backup deletion propagation, and production export delivery/status tracking remain incomplete.
 - [ ] 2026-06-01 10:05:19 +08:00 Gate 6 Launch Ready：staging/production、監控、備份、客服、營運儀表板與回滾流程完成。
   - Remaining: 2026-06-02 20:56:23 +08:00 Deployment and support plans plus core CI exist, but staging/production hosting, production deployment/CD, monitoring, backup/restore drill, rollback runbook execution, and support tooling are not implemented yet.
 
