@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "generatedAt": "2026-07-12T06:56:32.179Z",
+  "pages": 79,
+  "sections": [
+    "First Run / Account",
+    "Home / Daily",
+    "Stories",
+    "Growth / Interaction",
+    "Bedtime",
+    "Child Profile / Progress",
+    "Parent Center",
+    "System States",
+    "Support / Legal"
+  ],
+  "audiences": [
+    "system",
+    "parent",
+    "parent child",
+    "child",
+    "legal"
+  ],
+  "layouts": [
+    "splash",
+    "home",
+    "report",
+    "form",
+    "consent",
+    "chooser",
+    "list",
+    "player",
+    "childActivity",
+    "system",
+    "legal",
+    "settings"
+  ],
+  "rendererCounts": {
+    "splash": 1,
+    "home": 12,
+    "report": 7,
+    "form": 8,
+    "consent": 1,
+    "chooser": 7,
+    "list": 9,
+    "player": 3,
+    "childActivity": 7,
+    "system": 11,
+    "legal": 5,
+    "settings": 8
+  },
+  "maxLayoutSimilarity": 74.7,
+  "maxLayoutSimilarityPair": [
+    "FL-050 Update Age",
+    "FL-058 Age Rating Settings"
+  ],
+  "gates": {
+    "schema": true,
+    "content": true,
+    "coverage": true,
+    "duplicate": true,
+    "layout": true,
+    "accessibility": true,
+    "childSafety": true,
+    "component": true,
+    "businessLogic": true,
+    "interaction": true,
+    "animation": true,
+    "productPositioning": true,
+    "pmReview": true,
+    "uxReview": true
+  },
+  "failures": [],
+  "warnings": []
+}

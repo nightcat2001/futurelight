@@ -1,0 +1,8 @@
+{
+  "name": "FutureLight Page Generator",
+  "id": "futurelight-page-generator",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page"
+}
