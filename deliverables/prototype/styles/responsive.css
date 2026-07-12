@@ -1,0 +1,39 @@
+@media (max-width: 1120px) {
+  .prototype-shell {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .qa-panel {
+    grid-column: 1 / -1;
+    max-height: none;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 760px) {
+  .prototype-shell {
+    display: block;
+  }
+
+  .side-panel,
+  .qa-panel {
+    max-height: none;
+  }
+
+  .workspace {
+    padding: var(--space-3);
+  }
+
+  .workspace-header {
+    display: grid;
+  }
+
+  .device-frame,
+  .device-frame.h5,
+  .device-frame.tablet {
+    width: min(100%, 412px);
+    min-height: 760px;
+    border-width: 6px;
+    border-radius: 20px;
+  }
+}
