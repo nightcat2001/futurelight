@@ -1,0 +1,240 @@
+# FutureLight HTML Prototype Gate
+
+Status: PASS
+Prototype Review Ready: YES
+Production Ready: NO
+Task Complete: NO
+Production Ready Reason: HTML prototype gate can prove local review readiness, not backend/API/release production readiness.
+Task Complete Reason: Overall child product delivery still requires implementation, backend, persistence, release QA, and final human review.
+Page Count: 12
+Flow Count: 5
+Max Layout Similarity: 16.67% (FL-HTML-09 / FL-HTML-10)
+
+## Failures
+- None
+
+## Warnings
+- None
+
+## Evidence
+- PAGE_COVERAGE: 12 core pages present
+- FLOW_COVERAGE: 5 user flows present
+- DESIGN_SYSTEM_TYPOGRAPHY: Parent UI uses 16px minimum body text; child-facing labels pair short text with large visual cues.
+- DESIGN_SYSTEM_SPACING: 8px grid with 24px screen gutters and 48px minimum touch rows.
+- DESIGN_SYSTEM_COLOR: Warm paper base, green trust actions, blue learning surfaces, amber progress, low-stimulus night mode.
+- DESIGN_SYSTEM_ICONS: Icons are symbolic support only; primary meaning remains in text or illustrated controls.
+- DESIGN_SYSTEM_MOTION: Short purposeful transitions under 260ms; bedtime mode removes bounce and loops.
+- DESIGN_SYSTEM_BREAKPOINTS: 320,360,390,412,768,1024,1440
+- DESIGN_SYSTEM_TOUCHTARGET: All interactive controls are at least 44px high; primary child controls are at least 64px.
+- UNIQUE_RENDERERS: all 12 pages have unique renderer functions
+- LAYOUT_SIMILARITY: max 16.67% for FL-HTML-09 / FL-HTML-10
+- FILE_EXISTS: index.html size 2856
+- FILE_EXISTS: app.js size 12949
+- FILE_EXISTS: router.js size 638
+- FILE_EXISTS: data.js size 22709
+- FILE_EXISTS: styles/tokens.css size 717
+- FILE_EXISTS: styles/base.css size 1898
+- FILE_EXISTS: styles/components.css size 3187
+- FILE_EXISTS: styles/pages.css size 6108
+- FILE_EXISTS: styles/responsive.css size 593
+- FILE_EXISTS: styles/animations.css size 609
+- ROUTE_RENDER: mobile-320 FL-HTML-01
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-01 has 4 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-01 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-01 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-02
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-02 has 4 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-02 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-02 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-03
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-03 has 8 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-03 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-03 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-04
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-04 has 7 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-04 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-04 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-05
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-05 has 10 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-05 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-05 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-06
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-06 has 4 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-06 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-06 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-07
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-07 has 8 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-07 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-07 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-08
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-08 has 9 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-08 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-08 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-09
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-09 has 8 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-09 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-09 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-10
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-10 has 11 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-10 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-10 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-11
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-11 has 9 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-11 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-11 overflow 0
+- ROUTE_RENDER: mobile-320 FL-HTML-12
+- INTERACTION_CONTROLS: mobile-320 FL-HTML-12 has 7 visible controls
+- STATE_CONTROLS: mobile-320 FL-HTML-12 has 8 state controls
+- RESPONSIVE_OVERFLOW: mobile-320 FL-HTML-12 overflow 0
+- CONSOLE_ERRORS: mobile-320 zero console errors
+- BROKEN_ASSETS: mobile-320 zero broken assets
+- ROUTE_RENDER: android-390 FL-HTML-01
+- INTERACTION_CONTROLS: android-390 FL-HTML-01 has 4 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-01 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-01 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-02
+- INTERACTION_CONTROLS: android-390 FL-HTML-02 has 4 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-02 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-02 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-03
+- INTERACTION_CONTROLS: android-390 FL-HTML-03 has 8 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-03 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-03 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-04
+- INTERACTION_CONTROLS: android-390 FL-HTML-04 has 7 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-04 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-04 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-05
+- INTERACTION_CONTROLS: android-390 FL-HTML-05 has 10 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-05 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-05 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-06
+- INTERACTION_CONTROLS: android-390 FL-HTML-06 has 4 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-06 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-06 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-07
+- INTERACTION_CONTROLS: android-390 FL-HTML-07 has 8 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-07 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-07 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-08
+- INTERACTION_CONTROLS: android-390 FL-HTML-08 has 9 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-08 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-08 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-09
+- INTERACTION_CONTROLS: android-390 FL-HTML-09 has 8 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-09 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-09 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-10
+- INTERACTION_CONTROLS: android-390 FL-HTML-10 has 11 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-10 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-10 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-11
+- INTERACTION_CONTROLS: android-390 FL-HTML-11 has 9 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-11 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-11 overflow 0
+- ROUTE_RENDER: android-390 FL-HTML-12
+- INTERACTION_CONTROLS: android-390 FL-HTML-12 has 7 visible controls
+- STATE_CONTROLS: android-390 FL-HTML-12 has 8 state controls
+- RESPONSIVE_OVERFLOW: android-390 FL-HTML-12 overflow 0
+- CONSOLE_ERRORS: android-390 zero console errors
+- BROKEN_ASSETS: android-390 zero broken assets
+- ROUTE_RENDER: tablet-768 FL-HTML-01
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-01 has 4 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-01 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-01 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-02
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-02 has 4 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-02 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-02 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-03
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-03 has 8 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-03 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-03 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-04
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-04 has 7 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-04 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-04 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-05
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-05 has 10 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-05 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-05 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-06
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-06 has 4 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-06 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-06 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-07
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-07 has 8 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-07 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-07 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-08
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-08 has 9 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-08 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-08 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-09
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-09 has 8 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-09 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-09 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-10
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-10 has 11 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-10 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-10 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-11
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-11 has 9 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-11 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-11 overflow 0
+- ROUTE_RENDER: tablet-768 FL-HTML-12
+- INTERACTION_CONTROLS: tablet-768 FL-HTML-12 has 7 visible controls
+- STATE_CONTROLS: tablet-768 FL-HTML-12 has 8 state controls
+- RESPONSIVE_OVERFLOW: tablet-768 FL-HTML-12 overflow 0
+- CONSOLE_ERRORS: tablet-768 zero console errors
+- BROKEN_ASSETS: tablet-768 zero broken assets
+- ROUTE_RENDER: desktop-1440 FL-HTML-01
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-01 has 4 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-01 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-01 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-02
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-02 has 4 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-02 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-02 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-03
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-03 has 8 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-03 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-03 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-04
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-04 has 7 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-04 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-04 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-05
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-05 has 10 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-05 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-05 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-06
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-06 has 4 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-06 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-06 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-07
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-07 has 8 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-07 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-07 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-08
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-08 has 9 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-08 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-08 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-09
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-09 has 8 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-09 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-09 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-10
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-10 has 11 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-10 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-10 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-11
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-11 has 9 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-11 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-11 overflow 0
+- ROUTE_RENDER: desktop-1440 FL-HTML-12
+- INTERACTION_CONTROLS: desktop-1440 FL-HTML-12 has 7 visible controls
+- STATE_CONTROLS: desktop-1440 FL-HTML-12 has 8 state controls
+- RESPONSIVE_OVERFLOW: desktop-1440 FL-HTML-12 overflow 0
+- CONSOLE_ERRORS: desktop-1440 zero console errors
+- BROKEN_ASSETS: desktop-1440 zero broken assets

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureLight Child Product HTML Prototype</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239bd6a6'/%3E%3Ccircle cx='20' cy='12' r='7' fill='%23b8d9f4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/pages.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+  </head>
+  <body>
+    <div class="prototype-shell">
+      <aside class="side-panel" aria-label="Prototype page index">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <strong>FutureLight</strong>
+            <span>Core 12 HTML Prototype</span>
+          </div>
+        </div>
+        <div class="panel-section">
+          <h2>Page Index</h2>
+          <nav id="pageIndex" class="page-index"></nav>
+        </div>
+        <div class="panel-section">
+          <h2>User Flows</h2>
+          <div id="flowIndex" class="flow-index"></div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="workspace-header">
+          <div>
+            <p class="eyebrow">H5 and Android review surface</p>
+            <h1 id="screenTitle">FutureLight Prototype</h1>
+          </div>
+          <div class="device-switcher" role="group" aria-label="Device preview">
+            <button class="is-active" data-device="android">Android</button>
+            <button data-device="h5">H5</button>
+            <button data-device="tablet">Tablet</button>
+          </div>
+        </header>
+
+        <section class="review-stage" aria-label="Selected screen preview">
+          <div class="device-frame android" id="deviceFrame">
+            <div class="safe-area"></div>
+            <article id="screenRoot" class="screen-root" tabindex="0"></article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="qa-panel" aria-label="Page QA panel">
+        <div class="panel-section">
+          <h2>State Review</h2>
+          <div id="stateControls" class="state-controls"></div>
+        </div>
+        <div class="panel-section">
+          <h2>QA Evidence</h2>
+          <dl id="qaEvidence" class="qa-list"></dl>
+        </div>
+        <div class="panel-section">
+          <h2>Traceability</h2>
+          <ol id="traceability" class="trace-list"></ol>
+        </div>
+      </aside>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+.world-hero,
+.story-cover,
+.story-stage,
+.ending-scene,
+.night-scene {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--sky);
+}
+
+.world-hero {
+  display: grid;
+  place-items: end center;
+  height: 230px;
+  margin-bottom: var(--space-5);
+  background: linear-gradient(180deg, #cfe9fb, #fbefbf);
+}
+
+.world-hero img {
+  width: 180px;
+}
+
+.moon-lamp {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--honey);
+}
+
+.first-launch h2 {
+  font-size: 32px;
+  line-height: 1.08;
+}
+
+.trust-strip,
+.fit-grid,
+.alternative-list,
+.privacy-shortcuts,
+.duration-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.trust-strip span,
+.fit-grid span {
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.login-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.security-card,
+.consent-panel,
+.field-card,
+.task-card,
+.role-panel,
+.note-card,
+.signal-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.security-card input,
+.field-card input,
+.note-card textarea {
+  width: 100%;
+  min-height: 48px;
+  margin-top: var(--space-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+}
+
+.consent-panel {
+  grid-template-columns: 88px 1fr;
+  background: #eef8f0;
+}
+
+.profile-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.avatar-preview {
+  display: grid;
+  place-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: #eff7ff;
+}
+
+.avatar-preview img {
+  width: 120px;
+}
+
+.avatar-grid,
+.answer-grid,
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.avatar-grid button,
+.answer-grid button {
+  min-height: var(--child-touch);
+  background: var(--surface);
+  font-weight: 800;
+}
+
+.safe-list,
+.step-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safe-list li,
+.step-list li {
+  margin-bottom: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: #eef8f0;
+}
+
+.age-layout h2,
+.next-layout h2,
+.dashboard-layout h2,
+.bedtime-layout h2 {
+  font-size: 26px;
+}
+
+.age-cards {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.age-cards button {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  min-height: 88px;
+  padding: var(--space-4);
+  text-align: left;
+}
+
+.age-cards strong {
+  font-size: 24px;
+}
+
+.age-cards .selected,
+.duration-picker .selected {
+  border-color: var(--mint-dark);
+  background: #e7f7eb;
+}
+
+.parent-tip {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: #fff3cf;
+}
+
+.recommendation-layout {
+  padding-bottom: 96px;
+}
+
+.story-cover {
+  height: 210px;
+  display: grid;
+  place-items: center;
+  background: #eaf6ff;
+}
+
+.story-cover img {
+  width: 220px;
+  border-radius: var(--radius-md);
+}
+
+.alternative-list button,
+.privacy-shortcuts button,
+.duration-picker button {
+  flex: 1 1 120px;
+}
+
+.player-layout {
+  display: grid;
+  gap: var(--space-4);
+  min-height: 740px;
+  background: #fff7dd;
+}
+
+.story-stage {
+  height: 420px;
+  background: linear-gradient(180deg, #d6ecff 0%, #fff3ba 100%);
+}
+
+.sun,
+.moon {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--honey);
+}
+
+.hill {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 360px;
+  height: 210px;
+  border-radius: 50%;
+  background: var(--mint);
+}
+
+.character-dot {
+  position: absolute;
+  bottom: 88px;
+  left: 72px;
+  width: 96px;
+  height: 96px;
+  border-radius: 42% 58% 50% 50%;
+  background: var(--coral);
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.progress-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.progress-dots .is-active {
+  width: 34px;
+  background: var(--mint-dark);
+}
+
+.giant-play {
+  justify-self: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: var(--mint);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.parent-gate {
+  justify-self: center;
+  width: 190px;
+}
+
+.complete-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.ending-scene {
+  display: grid;
+  align-content: end;
+  min-height: 230px;
+  padding: var(--space-5);
+  background: linear-gradient(140deg, #e8f7ec, #fff0cf);
+}
+
+.answer-grid button {
+  border-color: var(--mint-dark);
+}
+
+.decision-board {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.decision-board article {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.decision-board .quiet {
+  background: #eef8f0;
+}
+
+.timer {
+  justify-self: start;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  background: var(--honey);
+  font-weight: 900;
+}
+
+.interaction-layout {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.parent-role {
+  background: #eef8f0;
+}
+
+.child-role {
+  background: #eff7ff;
+}
+
+.child-role button {
+  min-height: 64px;
+}
+
+.note-card textarea {
+  min-height: 96px;
+}
+
+.metric-grid article {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.metric-grid strong {
+  display: block;
+  font-size: 36px;
+}
+
+.bedtime-layout {
+  min-height: 740px;
+  background: var(--night);
+  color: #f8f4e9;
+}
+
+.bedtime-layout .state-banner,
+.bedtime-layout .secondary-action {
+  background: var(--night-soft);
+  color: #f8f4e9;
+  border-color: #4d5675;
+}
+
+.bedtime-layout .primary-action {
+  background: var(--lilac);
+}
+
+.night-scene {
+  min-height: 260px;
+  display: grid;
+  align-content: end;
+  padding: var(--space-5);
+  background: linear-gradient(180deg, #1d2440, #38425f);
+}
+
+.night-scene .moon {
+  background: #f8f4b5;
+}

@@ -1,0 +1,1121 @@
+{
+  "status": "PASS",
+  "prototypeReviewReady": "YES",
+  "productionReady": "NO",
+  "taskComplete": "NO",
+  "productionReadyReason": "HTML prototype gate can prove local review readiness, not backend/API/release production readiness.",
+  "taskCompleteReason": "Overall child product delivery still requires implementation, backend, persistence, release QA, and final human review.",
+  "pageCount": 12,
+  "flowCount": 5,
+  "maxLayoutSimilarity": 16.67,
+  "maxLayoutSimilarityPair": "FL-HTML-09 / FL-HTML-10",
+  "evidence": [
+    {
+      "check": "PAGE_COVERAGE",
+      "status": "PASS",
+      "detail": "12 core pages present"
+    },
+    {
+      "check": "FLOW_COVERAGE",
+      "status": "PASS",
+      "detail": "5 user flows present"
+    },
+    {
+      "check": "DESIGN_SYSTEM_TYPOGRAPHY",
+      "status": "PASS",
+      "detail": "Parent UI uses 16px minimum body text; child-facing labels pair short text with large visual cues."
+    },
+    {
+      "check": "DESIGN_SYSTEM_SPACING",
+      "status": "PASS",
+      "detail": "8px grid with 24px screen gutters and 48px minimum touch rows."
+    },
+    {
+      "check": "DESIGN_SYSTEM_COLOR",
+      "status": "PASS",
+      "detail": "Warm paper base, green trust actions, blue learning surfaces, amber progress, low-stimulus night mode."
+    },
+    {
+      "check": "DESIGN_SYSTEM_ICONS",
+      "status": "PASS",
+      "detail": "Icons are symbolic support only; primary meaning remains in text or illustrated controls."
+    },
+    {
+      "check": "DESIGN_SYSTEM_MOTION",
+      "status": "PASS",
+      "detail": "Short purposeful transitions under 260ms; bedtime mode removes bounce and loops."
+    },
+    {
+      "check": "DESIGN_SYSTEM_BREAKPOINTS",
+      "status": "PASS",
+      "detail": "320,360,390,412,768,1024,1440"
+    },
+    {
+      "check": "DESIGN_SYSTEM_TOUCHTARGET",
+      "status": "PASS",
+      "detail": "All interactive controls are at least 44px high; primary child controls are at least 64px."
+    },
+    {
+      "check": "UNIQUE_RENDERERS",
+      "status": "PASS",
+      "detail": "all 12 pages have unique renderer functions"
+    },
+    {
+      "check": "LAYOUT_SIMILARITY",
+      "status": "PASS",
+      "detail": "max 16.67% for FL-HTML-09 / FL-HTML-10"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "index.html size 2856"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "app.js size 12949"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "router.js size 638"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "data.js size 22709"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/tokens.css size 717"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/base.css size 1898"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/components.css size 3187"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/pages.css size 6108"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/responsive.css size 593"
+    },
+    {
+      "check": "FILE_EXISTS",
+      "status": "PASS",
+      "detail": "styles/animations.css size 609"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-01"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-01 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-01 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-01 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-02"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-02 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-02 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-02 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-03"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-03 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-03 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-03 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-04"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-04 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-04 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-04 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-05"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-05 has 10 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-05 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-05 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-06"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-06 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-06 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-06 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-07"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-07 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-07 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-07 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-08"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-08 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-08 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-08 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-09"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-09 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-09 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-09 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-10"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-10 has 11 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-10 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-10 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-11"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-11 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-11 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-11 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-12"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-12 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-12 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "mobile-320 FL-HTML-12 overflow 0"
+    },
+    {
+      "check": "CONSOLE_ERRORS",
+      "status": "PASS",
+      "detail": "mobile-320 zero console errors"
+    },
+    {
+      "check": "BROKEN_ASSETS",
+      "status": "PASS",
+      "detail": "mobile-320 zero broken assets"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-01"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-01 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-01 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-01 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-02"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-02 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-02 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-02 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-03"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-03 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-03 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-03 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-04"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-04 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-04 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-04 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-05"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-05 has 10 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-05 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-05 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-06"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-06 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-06 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-06 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-07"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-07 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-07 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-07 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-08"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-08 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-08 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-08 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-09"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-09 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-09 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-09 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-10"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-10 has 11 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-10 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-10 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-11"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-11 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-11 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-11 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-12"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-12 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-12 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "android-390 FL-HTML-12 overflow 0"
+    },
+    {
+      "check": "CONSOLE_ERRORS",
+      "status": "PASS",
+      "detail": "android-390 zero console errors"
+    },
+    {
+      "check": "BROKEN_ASSETS",
+      "status": "PASS",
+      "detail": "android-390 zero broken assets"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-01"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-01 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-01 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-01 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-02"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-02 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-02 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-02 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-03"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-03 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-03 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-03 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-04"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-04 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-04 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-04 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-05"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-05 has 10 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-05 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-05 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-06"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-06 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-06 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-06 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-07"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-07 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-07 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-07 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-08"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-08 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-08 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-08 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-09"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-09 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-09 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-09 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-10"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-10 has 11 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-10 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-10 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-11"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-11 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-11 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-11 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-12"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-12 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-12 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "tablet-768 FL-HTML-12 overflow 0"
+    },
+    {
+      "check": "CONSOLE_ERRORS",
+      "status": "PASS",
+      "detail": "tablet-768 zero console errors"
+    },
+    {
+      "check": "BROKEN_ASSETS",
+      "status": "PASS",
+      "detail": "tablet-768 zero broken assets"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-01"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-01 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-01 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-01 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-02"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-02 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-02 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-02 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-03"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-03 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-03 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-03 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-04"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-04 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-04 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-04 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-05"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-05 has 10 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-05 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-05 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-06"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-06 has 4 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-06 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-06 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-07"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-07 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-07 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-07 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-08"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-08 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-08 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-08 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-09"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-09 has 8 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-09 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-09 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-10"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-10 has 11 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-10 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-10 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-11"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-11 has 9 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-11 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-11 overflow 0"
+    },
+    {
+      "check": "ROUTE_RENDER",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-12"
+    },
+    {
+      "check": "INTERACTION_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-12 has 7 visible controls"
+    },
+    {
+      "check": "STATE_CONTROLS",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-12 has 8 state controls"
+    },
+    {
+      "check": "RESPONSIVE_OVERFLOW",
+      "status": "PASS",
+      "detail": "desktop-1440 FL-HTML-12 overflow 0"
+    },
+    {
+      "check": "CONSOLE_ERRORS",
+      "status": "PASS",
+      "detail": "desktop-1440 zero console errors"
+    },
+    {
+      "check": "BROKEN_ASSETS",
+      "status": "PASS",
+      "detail": "desktop-1440 zero broken assets"
+    }
+  ],
+  "warnings": [],
+  "failures": []
+}
