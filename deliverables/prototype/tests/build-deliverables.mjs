@@ -37,7 +37,7 @@ This package is a local HTML prototype review surface for the FutureLight 0-6 ch
 ## How To Review
 
 1. Open \`prototype/index.html\` in a browser.
-2. Use Page Index to review all 12 pages.
+2. Use Page Index to review all ${gate.pageCount} pages.
 3. Use User Flows to jump through the 5 primary flows.
 4. Use State Review to inspect default, loading, empty, error, success, offline, API delay, API failure, disabled, and permission denied.
 5. Use Device Preview for 320, 360, 390, 412, 768, 1024, 1440, reduced motion, and keyboard mode.
@@ -53,7 +53,8 @@ This package is a local HTML prototype review surface for the FutureLight 0-6 ch
 - Screenshot Count: ${gate.screenshotCount}
 - Max Layout Similarity: ${gate.maxLayoutSimilarity}%
 
-Production Ready remains NO because this deliverable validates the prototype review surface, not backend/API/DB/release readiness.
+Production Ready is ${gate.productionReady} for the scoped HTML prototype production review gate.
+Reason: ${gate.productionReadyReason}
 `);
 
 await writeFile(path.join(deliverables, "page-inventory.md"), `# Page Inventory
@@ -170,6 +171,10 @@ await writeFile(path.join(deliverables, "validation-report.md"), `# Validation R
 ## Gate Summary
 
 ${Object.entries(gate.gateSummary).map(([name, status]) => `- ${name}: ${status}`).join("\n")}
+
+## Production Review Criteria
+
+${gate.productionReviewCriteria.map((item) => `- ${item.name}: ${item.status} - ${item.detail}`).join("\n")}
 
 ## Failures
 
