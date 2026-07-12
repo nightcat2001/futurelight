@@ -1,0 +1,223 @@
+<!doctype html><html><head><meta charset="utf-8"/><title>FutureLight Core 12 Prototype</title><style>
+*{box-sizing:border-box} body{margin:0;background:#f4f4f1;font-family:Inter,Arial,sans-serif;color:#151820}.gallery{display:grid;grid-template-columns:repeat(3,390px);gap:48px;padding:48px}.phone,.svg-wrap{width:390px;height:844px;background:#fbfaf3;border:1px solid #d7dde3;border-radius:28px;overflow:hidden;position:relative;padding:24px}.phone{box-shadow:0 24px 60px rgba(20,24,31,.14)}.meta{font-size:11px;color:#5c6470;margin-bottom:12px}.qa{position:absolute;left:18px;right:18px;bottom:14px;background:rgba(255,255,255,.92);border:1px solid #d7dde3;border-radius:12px;padding:10px;font-size:10px;display:grid;gap:3px}.ui{height:760px}.topbar{height:72px;margin:-24px -24px 24px;padding:28px 24px 0;background:#fff;border-bottom:1px solid #d7dde3;display:flex;align-items:center;gap:12px}.topbar .avatar{width:32px;height:32px;border-radius:50%;background:#9dd6b3}.topbar strong{font-size:18px;flex:1}.topbar span{background:#fff3ca;border:1px solid #d7dde3;border-radius:999px;padding:7px 12px;font-size:11px}h1{font-size:30px;line-height:1.08;margin:20px 0 12px}h2{font-size:22px;margin:10px 0}p{font-size:15px;line-height:1.42;color:#5c6470}.brand{font-size:24px;font-weight:800;margin:12px 0 18px}.story-art{height:260px;border-radius:22px;background:#e7f5ff;border:1px solid #d7dde3;position:relative;padding:190px 24px 0;overflow:hidden}.dark .story-art,.dim-bedtime-environment .story-art{background:#2f3652;color:#fff}.sun{width:86px;height:86px;border-radius:50%;background:#f4c44f;position:absolute;left:30px;top:30px}.hill{width:140px;height:90px;background:#eaf8ed;border-radius:24px;position:absolute;left:92px;top:96px}.character{width:82px;height:82px;border-radius:50%;background:#9dd6b3;position:absolute;right:42px;top:66px}.trust,.notice{border:1px solid #d7dde3;background:#fff;border-radius:16px;padding:18px;margin:20px 0;font-size:14px;color:#151820}.cta-row{position:absolute;left:24px;right:24px;bottom:70px;display:flex;gap:10px}.primary,.secondary{height:54px;border-radius:14px;border:1px solid #d7dde3;font-weight:800;font-size:15px}.primary{background:#f4c44f;flex:1}.secondary{background:#fff;min-width:104px}.phone label{display:block;font-size:12px;color:#5c6470;margin:20px 0}.phone input{width:100%;height:58px;border:1px solid #d7dde3;border-radius:14px;padding:0 16px;font-size:15px;background:#fff;margin-top:8px}.profile-preview{height:150px;background:#fff;border:1px solid #d7dde3;border-radius:20px;display:flex;align-items:center;gap:24px;padding:24px}.big-avatar{width:94px;height:94px;border-radius:50%;background:#fff3ca}.avatar-row{display:flex;gap:18px;margin:18px 0}.avatar-row i{width:58px;height:58px;border-radius:50%;background:#b0a3e0}.age-card{height:92px;border-radius:18px;border:1px solid #d7dde3;background:#fff;margin:14px 0;padding:24px;display:flex;gap:26px;align-items:center}.age-card b{font-size:26px}.age-card.selected{border:2px solid #151820;background:#eaf8ed}.tags span{display:inline-block;border-radius:999px;background:#fff3ca;border:1px solid #d7dde3;padding:9px 12px;margin:4px;font-size:12px}.parent-exit{position:absolute;top:34px;left:24px;background:#fff;border-radius:999px;padding:10px 14px;font-size:11px}.progress{display:flex;gap:8px;justify-content:center;margin:28px}.progress i{width:24px;height:7px;border-radius:999px;background:#d7dde3}.progress i:nth-child(-n+3){background:#f4c44f}.play{display:block;width:96px;height:96px;border-radius:50%;border:1px solid #d7dde3;background:#f4c44f;margin:0 auto;font-weight:800}.celebrate{width:170px;height:170px;border-radius:50%;background:#fff;margin:70px auto 24px}.next-card{height:178px;border-radius:20px;background:#fff;border:1px solid #d7dde3;padding:24px;display:grid;grid-template-columns:88px 1fr;gap:16px;align-items:center}.next-card div{width:88px;height:88px;border-radius:20px;background:#e7f5ff}.task-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}.task-stats b{background:#eaf8ed;border:1px solid #d7dde3;border-radius:18px;padding:28px;text-align:center;font-size:24px}.script{background:#fff;border:1px solid #d7dde3;border-radius:20px;padding:24px;margin:28px 0}.role{margin:-24px -24px 24px;padding:34px 24px;background:#fff;border-bottom:1px solid #d7dde3;font-size:22px;font-weight:800}.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0}.choice-grid button{height:156px;border-radius:20px;border:1px solid #d7dde3;background:#e7f5ff;font-weight:800}.choice-grid .selected{background:#fff3ca;border:2px solid #151820}.profile-summary{background:#fff;border:1px solid #d7dde3;border-radius:20px;padding:24px}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}.control-grid button{height:100px;border-radius:18px;border:1px solid #d7dde3;background:#eaf8ed;font-weight:800}.phone nav{position:absolute;left:0;right:0;bottom:0;height:58px;background:#fff;border-top:1px solid #d7dde3;text-align:center;padding-top:22px;font-size:11px;color:#5c6470}.dim-bedtime-environment,.dark{background:#191e31;color:#fff}.dim-bedtime-environment p,.dark p{color:#c9d0df}.bedtime-controls{background:#2f3652;border:1px solid #525b78;border-radius:18px;padding:22px;margin:24px 0;color:#fff}
+ .flows{padding:42px;display:grid;gap:42px}.flow{display:grid;grid-template-columns:260px repeat(4,390px);gap:28px;align-items:start}.flow-title{font-size:24px;font-weight:800;position:sticky;left:0}.flow .phone{transform:scale(.88);transform-origin:top left;margin-right:-46px}</style></head><body><main class="flows"><section class="flow"><div class="flow-title">Flow A: Onboarding<p>FL-HF-01 -> FL-HF-02 -> FL-HF-03 -> FL-HF-04</p></div>
+    <article class="phone first-launch-immersive " data-page-id="FL-HF-01">
+      <div class="meta">FL-HF-01 · first-run product orientation</div>
+      <section class="ui first-launch-immersive">
+        <div class="brand">FutureLight</div><div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>parent-child story world</b></div><h1>Stories fit your child</h1><p>Parent-managed stories, growth prompts, and bedtime mode for ages 0-6.</p><div class="trust">No child account · No ads · Parent controls data</div><div class="cta-row"><button class="primary">Set up my child</button><button class="secondary">I already have an account</button></div>
+      </section>
+      <aside class="qa">
+        <b>First Launch</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone secure-parent-form " data-page-id="FL-HF-02">
+      <div class="meta">FL-HF-02 · parent authentication</div>
+      <section class="ui secure-parent-form">
+        <h1>Parent login</h1><p>Adult account controls consent, privacy, and child profiles.</p><label>Email<input value="parent@example.com" /></label><label>Password<input value="••••••••" /></label><div class="notice">Child profiles stay hidden until adult login succeeds.</div><div class="cta-row"><button class="primary">Log in</button><button class="secondary">Forgot password</button></div>
+      </section>
+      <aside class="qa">
+        <b>Parent Login</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone profile-builder " data-page-id="FL-HF-03">
+      <div class="meta">FL-HF-03 · parent setup form</div>
+      <section class="ui profile-builder">
+        <div class="topbar"><div class="avatar"></div><strong>Create child</strong><span>Step 1</span></div><div class="profile-preview"><div class="big-avatar"></div><div><h2>Mia</h2><p>Preview child profile</p></div></div><label>Nickname shown in app<input value="Mimi" /></label><div class="avatar-row"><i></i><i></i><i></i><i></i></div><div class="notice">Children do not create accounts. Parent owns privacy and profile controls.</div><div class="cta-row"><button class="primary">Continue to age</button></div>
+      </section>
+      <aside class="qa">
+        <b>Create Child</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone age-band-panels " data-page-id="FL-HF-04">
+      <div class="meta">FL-HF-04 · age-band decision</div>
+      <section class="ui age-band-panels">
+        <div class="topbar"><div class="avatar"></div><strong>Age band</strong><span>Step 2</span></div><h1>Age changes UI complexity</h1><div class="age-card"><b>0-2</b><span>Pictures + sound · no reading</span></div><div class="age-card selected"><b>3-4</b><span>Simple choices · selected for Mia</span></div><div class="age-card"><b>5-6</b><span>Short recall · guided words</span></div><div class="cta-row"><button class="primary">Use this age band</button></div>
+      </section>
+      <aside class="qa">
+        <b>Age Selection</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article></section><section class="flow"><div class="flow-title">Flow B: Recommendation To Playback<p>FL-HF-04 -> FL-HF-05 -> FL-HF-06 -> FL-HF-07</p></div>
+    <article class="phone age-band-panels " data-page-id="FL-HF-04">
+      <div class="meta">FL-HF-04 · age-band decision</div>
+      <section class="ui age-band-panels">
+        <div class="topbar"><div class="avatar"></div><strong>Age band</strong><span>Step 2</span></div><h1>Age changes UI complexity</h1><div class="age-card"><b>0-2</b><span>Pictures + sound · no reading</span></div><div class="age-card selected"><b>3-4</b><span>Simple choices · selected for Mia</span></div><div class="age-card"><b>5-6</b><span>Short recall · guided words</span></div><div class="cta-row"><button class="primary">Use this age band</button></div>
+      </section>
+      <aside class="qa">
+        <b>Age Selection</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone trustworthy-recommendation " data-page-id="FL-HF-05">
+      <div class="meta">FL-HF-05 · recommendation explanation</div>
+      <section class="ui trustworthy-recommendation">
+        <div class="topbar"><div class="avatar"></div><strong>Recommended</strong><span>Mia</span></div><div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>Little Fox Finds Colors</b></div><h1>Why this story?</h1><p>Age 3-4 · animal interest · repeated color words · 4 minutes.</p><div class="tags"><span>Color words</span><span>Low load</span><span>Parent prompt</span></div><div class="cta-row"><button class="primary">Play story</button><button class="secondary">Change</button></div>
+      </section>
+      <aside class="qa">
+        <b>AI Story Recommendation</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone immersive-child-player " data-page-id="FL-HF-06">
+      <div class="meta">FL-HF-06 · child playback</div>
+      <section class="ui immersive-child-player">
+        <div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>full-screen fox scene</b></div><div class="parent-exit">Exit parent</div><div class="progress"><i></i><i></i><i></i><i></i><i></i></div><button class="play">Pause</button><p>Picture and voice first. No reading needed.</p>
+      </section>
+      <aside class="qa">
+        <b>Child Story Player</b>
+        <span>child · 0-6 child with parent nearby</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article>
+    <article class="phone calm-child-completion " data-page-id="FL-HF-07">
+      <div class="meta">FL-HF-07 · child completion</div>
+      <section class="ui calm-child-completion">
+        <div class="celebrate"></div><h1>All done</h1><p>Ask together: what color did fox find?</p><div class="notice">No autoplay next. Parent chooses what happens now.</div><div class="cta-row"><button class="primary">Ask together</button><button class="secondary">Done</button></div>
+      </section>
+      <aside class="qa">
+        <b>Story Complete</b>
+        <span>child · 0-6 child with parent nearby</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article></section><section class="flow"><div class="flow-title">Flow C: Post Story Action<p>FL-HF-07 -> FL-HF-08 -> FL-HF-09 -> FL-HF-10</p></div>
+    <article class="phone calm-child-completion " data-page-id="FL-HF-07">
+      <div class="meta">FL-HF-07 · child completion</div>
+      <section class="ui calm-child-completion">
+        <div class="celebrate"></div><h1>All done</h1><p>Ask together: what color did fox find?</p><div class="notice">No autoplay next. Parent chooses what happens now.</div><div class="cta-row"><button class="primary">Ask together</button><button class="secondary">Done</button></div>
+      </section>
+      <aside class="qa">
+        <b>Story Complete</b>
+        <span>child · 0-6 child with parent nearby</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article>
+    <article class="phone parent-next-decision " data-page-id="FL-HF-08">
+      <div class="meta">FL-HF-08 · parent decision after child session</div>
+      <section class="ui parent-next-decision">
+        <div class="topbar"><div class="avatar"></div><strong>Next step</strong><span>Parent</span></div><h1>Continue, stop, or save</h1><div class="next-card"><div></div><b>Bear Shares a Blanket</b><span>Same skill, calmer setting</span></div><div class="notice">Autoplay is off. Saving is the recommended parent action.</div><div class="cta-row"><button class="primary">Save for later</button><button class="secondary">Play next</button></div>
+      </section>
+      <aside class="qa">
+        <b>Next Recommendation</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone parent-led-task " data-page-id="FL-HF-09">
+      <div class="meta">FL-HF-09 · parent-led task</div>
+      <section class="ui parent-led-task">
+        <div class="topbar"><div class="avatar"></div><strong>Daily task</strong><span>Mia</span></div><div class="task-stats"><b>2 min</b><b>No prep</b></div><div class="script"><small>Parent script</small><h2>Ask: Which face is sleepy?</h2><p>Accept pointing, sound, or speech.</p></div><div class="notice">No scoring pressure.</div><div class="cta-row"><button class="primary">Start with child</button><button class="secondary">Skip today</button></div>
+      </section>
+      <aside class="qa">
+        <b>Daily Task</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone split-role-interaction " data-page-id="FL-HF-10">
+      <div class="meta">FL-HF-10 · shared interaction</div>
+      <section class="ui split-role-interaction">
+        <div class="role parent">Parent reads: Which bear is sleepy?</div><h2>Child taps</h2><div class="choice-grid"><button>Happy</button><button class="selected">Sleepy</button><button>Sad</button></div><div class="notice">Parent confirms after child points or taps.</div><div class="cta-row"><button class="primary">Mark done</button><button class="secondary">Try again</button></div>
+      </section>
+      <aside class="qa">
+        <b>Parent Child Interaction</b>
+        <span>parent child · 0-6 child with parent-assisted flow</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article></section><section class="flow"><div class="flow-title">Flow D: Parent Control<p>FL-HF-11 -> FL-HF-03 -> FL-HF-04 -> FL-HF-05</p></div>
+    <article class="phone parent-dashboard " data-page-id="FL-HF-11">
+      <div class="meta">FL-HF-11 · parent dashboard</div>
+      <section class="ui parent-dashboard">
+        <div class="topbar"><div class="avatar"></div><strong>Parent Center</strong><span>Mia</span></div><div class="profile-summary"><h2>Mia · age 3-4</h2><p>12 stories · 5 tasks · consent active</p></div><div class="control-grid"><button>Progress</button><button>Privacy</button><button>Limits</button><button>Support</button></div><div class="cta-row"><button class="primary">Review progress</button><button class="secondary">Privacy settings</button></div><nav>Home · Story · Task · Parent</nav>
+      </section>
+      <aside class="qa">
+        <b>Parent Center</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone profile-builder " data-page-id="FL-HF-03">
+      <div class="meta">FL-HF-03 · parent setup form</div>
+      <section class="ui profile-builder">
+        <div class="topbar"><div class="avatar"></div><strong>Create child</strong><span>Step 1</span></div><div class="profile-preview"><div class="big-avatar"></div><div><h2>Mia</h2><p>Preview child profile</p></div></div><label>Nickname shown in app<input value="Mimi" /></label><div class="avatar-row"><i></i><i></i><i></i><i></i></div><div class="notice">Children do not create accounts. Parent owns privacy and profile controls.</div><div class="cta-row"><button class="primary">Continue to age</button></div>
+      </section>
+      <aside class="qa">
+        <b>Create Child</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone age-band-panels " data-page-id="FL-HF-04">
+      <div class="meta">FL-HF-04 · age-band decision</div>
+      <section class="ui age-band-panels">
+        <div class="topbar"><div class="avatar"></div><strong>Age band</strong><span>Step 2</span></div><h1>Age changes UI complexity</h1><div class="age-card"><b>0-2</b><span>Pictures + sound · no reading</span></div><div class="age-card selected"><b>3-4</b><span>Simple choices · selected for Mia</span></div><div class="age-card"><b>5-6</b><span>Short recall · guided words</span></div><div class="cta-row"><button class="primary">Use this age band</button></div>
+      </section>
+      <aside class="qa">
+        <b>Age Selection</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article>
+    <article class="phone trustworthy-recommendation " data-page-id="FL-HF-05">
+      <div class="meta">FL-HF-05 · recommendation explanation</div>
+      <section class="ui trustworthy-recommendation">
+        <div class="topbar"><div class="avatar"></div><strong>Recommended</strong><span>Mia</span></div><div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>Little Fox Finds Colors</b></div><h1>Why this story?</h1><p>Age 3-4 · animal interest · repeated color words · 4 minutes.</p><div class="tags"><span>Color words</span><span>Low load</span><span>Parent prompt</span></div><div class="cta-row"><button class="primary">Play story</button><button class="secondary">Change</button></div>
+      </section>
+      <aside class="qa">
+        <b>AI Story Recommendation</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article></section><section class="flow"><div class="flow-title">Flow E: Bedtime<p>FL-HF-12 -> FL-HF-06 -> FL-HF-07 -> FL-HF-08</p></div>
+    <article class="phone dim-bedtime-environment dark" data-page-id="FL-HF-12">
+      <div class="meta">FL-HF-12 · bedtime environment</div>
+      <section class="ui dim-bedtime-environment">
+        <h1>Bedtime mode</h1><div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>slow moon scene</b></div><div class="bedtime-controls">Timer 10 min · Rain low · One story only</div><div class="notice">No autoplay after bedtime.</div><div class="cta-row"><button class="primary">Start bedtime story</button><button class="secondary">Exit bedtime</button></div>
+      </section>
+      <aside class="qa">
+        <b>Bedtime Mode</b>
+        <span>parent child · 0-6 child with parent bedtime control</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article>
+    <article class="phone immersive-child-player " data-page-id="FL-HF-06">
+      <div class="meta">FL-HF-06 · child playback</div>
+      <section class="ui immersive-child-player">
+        <div class="story-art"><div class="sun"></div><div class="hill"></div><div class="character"></div><b>full-screen fox scene</b></div><div class="parent-exit">Exit parent</div><div class="progress"><i></i><i></i><i></i><i></i><i></i></div><button class="play">Pause</button><p>Picture and voice first. No reading needed.</p>
+      </section>
+      <aside class="qa">
+        <b>Child Story Player</b>
+        <span>child · 0-6 child with parent nearby</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article>
+    <article class="phone calm-child-completion " data-page-id="FL-HF-07">
+      <div class="meta">FL-HF-07 · child completion</div>
+      <section class="ui calm-child-completion">
+        <div class="celebrate"></div><h1>All done</h1><p>Ask together: what color did fox find?</p><div class="notice">No autoplay next. Parent chooses what happens now.</div><div class="cta-row"><button class="primary">Ask together</button><button class="secondary">Done</button></div>
+      </section>
+      <aside class="qa">
+        <b>Story Complete</b>
+        <span>child · 0-6 child with parent nearby</span>
+        <span>visual/audio/action first</span>
+      </aside>
+    </article>
+    <article class="phone parent-next-decision " data-page-id="FL-HF-08">
+      <div class="meta">FL-HF-08 · parent decision after child session</div>
+      <section class="ui parent-next-decision">
+        <div class="topbar"><div class="avatar"></div><strong>Next step</strong><span>Parent</span></div><h1>Continue, stop, or save</h1><div class="next-card"><div></div><b>Bear Shares a Blanket</b><span>Same skill, calmer setting</span></div><div class="notice">Autoplay is off. Saving is the recommended parent action.</div><div class="cta-row"><button class="primary">Save for later</button><button class="secondary">Play next</button></div>
+      </section>
+      <aside class="qa">
+        <b>Next Recommendation</b>
+        <span>parent · parent or caregiver</span>
+        <span>parent-controlled flow</span>
+      </aside>
+    </article></section></main></body></html>

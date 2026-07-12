@@ -86,3 +86,24 @@ taskComplete: false
 ```
 
 This means the 12 core screen specs and renderer pass the local pre-Figma gate. It does not mean production readiness, and it does not mean Figma visual QA is complete.
+
+## Static Artifact Delivery
+
+The core 12 UI now has file-based artifacts that can be opened and reviewed without controlling Figma:
+
+- HTML gallery: `tools/figma-futurelight-pages/artifacts/core12-ui/index.html`
+- HTML prototype flows: `tools/figma-futurelight-pages/artifacts/core12-ui/prototype.html`
+- Prototype overview PNG: `tools/figma-futurelight-pages/artifacts/core12-ui/prototype-overview.png`
+- 12 screen PNGs: `tools/figma-futurelight-pages/artifacts/core12-ui/png/`
+- 12 screen SVGs: `tools/figma-futurelight-pages/artifacts/core12-ui/svg/`
+- Manifest: `tools/figma-futurelight-pages/artifacts/core12-ui/manifest.json`
+- Visual QA report: `tools/figma-futurelight-pages/artifacts/core12-ui/visual-qa-report.md`
+
+Latest static QA status:
+
+```text
+STATIC VISUAL QA: PASS_WITH_EXTERNAL_FIGMA_BLOCKER
+FIGMA_CANVAS_REVIEW: BLOCKED_EXTERNAL
+PRODUCTION_READY: NO
+TASK_COMPLETE: NO
+```

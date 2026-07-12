@@ -1,0 +1,255 @@
+{
+  "status": "ready_for_static_visual_review",
+  "prototypeFlows": [
+    {
+      "name": "Flow A: Onboarding",
+      "pageIds": [
+        "FL-HF-01",
+        "FL-HF-02",
+        "FL-HF-03",
+        "FL-HF-04"
+      ]
+    },
+    {
+      "name": "Flow B: Recommendation To Playback",
+      "pageIds": [
+        "FL-HF-04",
+        "FL-HF-05",
+        "FL-HF-06",
+        "FL-HF-07"
+      ]
+    },
+    {
+      "name": "Flow C: Post Story Action",
+      "pageIds": [
+        "FL-HF-07",
+        "FL-HF-08",
+        "FL-HF-09",
+        "FL-HF-10"
+      ]
+    },
+    {
+      "name": "Flow D: Parent Control",
+      "pageIds": [
+        "FL-HF-11",
+        "FL-HF-03",
+        "FL-HF-04",
+        "FL-HF-05"
+      ]
+    },
+    {
+      "name": "Flow E: Bedtime",
+      "pageIds": [
+        "FL-HF-12",
+        "FL-HF-06",
+        "FL-HF-07",
+        "FL-HF-08"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "pageId": "FL-HF-01",
+      "title": "First Launch",
+      "layoutFamily": "first-run product orientation",
+      "primaryCTA": "Set up my child",
+      "componentTree": [
+        "Frame",
+        "BrandHeader",
+        "StoryWorldHero",
+        "TrustStrip",
+        "PrimaryCTA",
+        "PrivacyNote"
+      ],
+      "artifactSvg": "svg\\FL-HF-01.svg",
+      "artifactPng": "png\\FL-HF-01.png"
+    },
+    {
+      "pageId": "FL-HF-02",
+      "title": "Parent Login",
+      "layoutFamily": "parent authentication",
+      "primaryCTA": "Log in",
+      "componentTree": [
+        "Frame",
+        "AuthHeader",
+        "FormStack",
+        "InlineValidation",
+        "PrimaryCTA",
+        "RecoveryLink"
+      ],
+      "artifactSvg": "svg\\FL-HF-02.svg",
+      "artifactPng": "png\\FL-HF-02.png"
+    },
+    {
+      "pageId": "FL-HF-03",
+      "title": "Create Child",
+      "layoutFamily": "parent setup form",
+      "primaryCTA": "Continue to age",
+      "componentTree": [
+        "Frame",
+        "SetupHeader",
+        "ProfilePreviewCard",
+        "FieldGroup",
+        "AvatarPicker",
+        "OwnershipNote",
+        "PrimaryCTA"
+      ],
+      "artifactSvg": "svg\\FL-HF-03.svg",
+      "artifactPng": "png\\FL-HF-03.png"
+    },
+    {
+      "pageId": "FL-HF-04",
+      "title": "Age Selection",
+      "layoutFamily": "age-band decision",
+      "primaryCTA": "Use this age band",
+      "componentTree": [
+        "Frame",
+        "ProgressHeader",
+        "AgeBandGrid",
+        "SelectedState",
+        "ImpactSummary",
+        "PrimaryCTA"
+      ],
+      "artifactSvg": "svg\\FL-HF-04.svg",
+      "artifactPng": "png\\FL-HF-04.png"
+    },
+    {
+      "pageId": "FL-HF-05",
+      "title": "AI Story Recommendation",
+      "layoutFamily": "recommendation explanation",
+      "primaryCTA": "Play story",
+      "componentTree": [
+        "Frame",
+        "ParentTopBar",
+        "StoryCover",
+        "ReasonPanel",
+        "LearningTags",
+        "DurationBadge",
+        "PrimaryCTA",
+        "SecondaryAction"
+      ],
+      "artifactSvg": "svg\\FL-HF-05.svg",
+      "artifactPng": "png\\FL-HF-05.png"
+    },
+    {
+      "pageId": "FL-HF-06",
+      "title": "Child Story Player",
+      "layoutFamily": "child playback",
+      "primaryCTA": "Play or pause",
+      "componentTree": [
+        "Frame",
+        "StoryScene",
+        "ProgressDots",
+        "PrimaryPlayControl",
+        "ParentExit",
+        "VoiceCue",
+        "BufferOverlay"
+      ],
+      "artifactSvg": "svg\\FL-HF-06.svg",
+      "artifactPng": "png\\FL-HF-06.png"
+    },
+    {
+      "pageId": "FL-HF-07",
+      "title": "Story Complete",
+      "layoutFamily": "child completion",
+      "primaryCTA": "Ask together",
+      "componentTree": [
+        "Frame",
+        "CompletionIllustration",
+        "SinglePrompt",
+        "ParentHandoff",
+        "DoneCTA"
+      ],
+      "artifactSvg": "svg\\FL-HF-07.svg",
+      "artifactPng": "png\\FL-HF-07.png"
+    },
+    {
+      "pageId": "FL-HF-08",
+      "title": "Next Recommendation",
+      "layoutFamily": "parent decision after child session",
+      "primaryCTA": "Save for later",
+      "componentTree": [
+        "Frame",
+        "ParentTopBar",
+        "NextStoryCard",
+        "ReasonSummary",
+        "PrimaryCTA",
+        "SecondaryCTA",
+        "StopOption",
+        "GuardrailNote"
+      ],
+      "artifactSvg": "svg\\FL-HF-08.svg",
+      "artifactPng": "png\\FL-HF-08.png"
+    },
+    {
+      "pageId": "FL-HF-09",
+      "title": "Daily Task",
+      "layoutFamily": "parent-led task",
+      "primaryCTA": "Start with child",
+      "componentTree": [
+        "Frame",
+        "ParentTopBar",
+        "TaskSummary",
+        "ScriptPanel",
+        "ResponseGuide",
+        "SkillTag",
+        "PrimaryCTA",
+        "SkipAction"
+      ],
+      "artifactSvg": "svg\\FL-HF-09.svg",
+      "artifactPng": "png\\FL-HF-09.png"
+    },
+    {
+      "pageId": "FL-HF-10",
+      "title": "Parent Child Interaction",
+      "layoutFamily": "shared interaction",
+      "primaryCTA": "Mark done",
+      "componentTree": [
+        "Frame",
+        "RoleBanner",
+        "ParentScriptPanel",
+        "ChildChoiceGrid",
+        "VoiceCue",
+        "ParentConfirmBar"
+      ],
+      "artifactSvg": "svg\\FL-HF-10.svg",
+      "artifactPng": "png\\FL-HF-10.png"
+    },
+    {
+      "pageId": "FL-HF-11",
+      "title": "Parent Center",
+      "layoutFamily": "parent dashboard",
+      "primaryCTA": "Review progress",
+      "componentTree": [
+        "Frame",
+        "ParentTopBar",
+        "ChildSwitcher",
+        "ProgressSummary",
+        "ControlGrid",
+        "PrivacyAction",
+        "SupportEntry",
+        "BottomNav"
+      ],
+      "artifactSvg": "svg\\FL-HF-11.svg",
+      "artifactPng": "png\\FL-HF-11.png"
+    },
+    {
+      "pageId": "FL-HF-12",
+      "title": "Bedtime Mode",
+      "layoutFamily": "bedtime environment",
+      "primaryCTA": "Start bedtime story",
+      "componentTree": [
+        "Frame",
+        "DimHeader",
+        "CalmStoryCover",
+        "TimerControl",
+        "SoundControl",
+        "Guardrail",
+        "PrimaryCTA",
+        "ParentExit"
+      ],
+      "artifactSvg": "svg\\FL-HF-12.svg",
+      "artifactPng": "png\\FL-HF-12.png"
+    }
+  ]
+}

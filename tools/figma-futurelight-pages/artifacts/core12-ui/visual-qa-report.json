@@ -1,0 +1,316 @@
+{
+  "status": "FAIL",
+  "generatedAt": "2026-07-12T10:32:56.332Z",
+  "figmaCanvasReview": "BLOCKED_EXTERNAL",
+  "productionReady": false,
+  "taskComplete": false,
+  "pages": 12,
+  "prototypeFlows": 5,
+  "checks": [
+    {
+      "name": "DATA_SCHEMA_VALIDATION",
+      "status": "PASS",
+      "detail": "validator schema gate must pass"
+    },
+    {
+      "name": "PAGE_SPEC_VALIDATION",
+      "status": "PASS",
+      "detail": "expected 12 pages, found 12"
+    },
+    {
+      "name": "STRUCTURAL_DIFFERENTIATION",
+      "status": "PASS",
+      "detail": "max 34.83% <= 45%"
+    },
+    {
+      "name": "UNIQUE_RENDERERS",
+      "status": "PASS",
+      "detail": "each core screen must use a unique renderer family"
+    },
+    {
+      "name": "CONTENT_SAFETY",
+      "status": "PASS",
+      "detail": "content and child safety gates must pass"
+    },
+    {
+      "name": "STATIC_VISUAL_REVIEW",
+      "status": "PASS",
+      "detail": "gallery and prototype HTML must exist"
+    },
+    {
+      "name": "PROTOTYPE_FLOW_REVIEW",
+      "status": "PASS",
+      "detail": "expected 5 flows, found 5"
+    },
+    {
+      "name": "FIGMA_CANVAS_REVIEW",
+      "status": "FAIL",
+      "detail": "BLOCKED_EXTERNAL: Figma canvas must be reviewed after manual/plugin import"
+    },
+    {
+      "name": "UX_REVIEW",
+      "status": "PASS",
+      "detail": "UX review gate must pass"
+    },
+    {
+      "name": "UI_REVIEW",
+      "status": "PASS",
+      "detail": "layout and component gates must pass"
+    },
+    {
+      "name": "PRODUCTION_READY",
+      "status": "FAIL",
+      "detail": "NO: Figma canvas review is blocked external"
+    },
+    {
+      "name": "TASK_COMPLETE",
+      "status": "FAIL",
+      "detail": "NO: Figma canvas review is blocked external"
+    },
+    {
+      "name": "FL-HF-01_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-01.svg size 5982"
+    },
+    {
+      "name": "FL-HF-01_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-01.png size 29739"
+    },
+    {
+      "name": "FL-HF-01_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-01_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Set up my child"
+    },
+    {
+      "name": "FL-HF-02_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-02.svg size 5897"
+    },
+    {
+      "name": "FL-HF-02_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-02.png size 23539"
+    },
+    {
+      "name": "FL-HF-02_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-02_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Log in"
+    },
+    {
+      "name": "FL-HF-03_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-03.svg size 5999"
+    },
+    {
+      "name": "FL-HF-03_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-03.png size 23967"
+    },
+    {
+      "name": "FL-HF-03_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-03_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Continue to age"
+    },
+    {
+      "name": "FL-HF-04_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-04.svg size 5953"
+    },
+    {
+      "name": "FL-HF-04_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-04.png size 30068"
+    },
+    {
+      "name": "FL-HF-04_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-04_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Use this age band"
+    },
+    {
+      "name": "FL-HF-05_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-05.svg size 6024"
+    },
+    {
+      "name": "FL-HF-05_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-05.png size 29205"
+    },
+    {
+      "name": "FL-HF-05_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-05_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Play story"
+    },
+    {
+      "name": "FL-HF-06_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-06.svg size 5815"
+    },
+    {
+      "name": "FL-HF-06_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-06.png size 20629"
+    },
+    {
+      "name": "FL-HF-06_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-06_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Play or pause"
+    },
+    {
+      "name": "FL-HF-07_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-07.svg size 5770"
+    },
+    {
+      "name": "FL-HF-07_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-07.png size 20751"
+    },
+    {
+      "name": "FL-HF-07_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-07_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Ask together"
+    },
+    {
+      "name": "FL-HF-08_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-08.svg size 5929"
+    },
+    {
+      "name": "FL-HF-08_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-08.png size 27542"
+    },
+    {
+      "name": "FL-HF-08_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-08_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Save for later"
+    },
+    {
+      "name": "FL-HF-09_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-09.svg size 5940"
+    },
+    {
+      "name": "FL-HF-09_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-09.png size 26962"
+    },
+    {
+      "name": "FL-HF-09_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-09_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Start with child"
+    },
+    {
+      "name": "FL-HF-10_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-10.svg size 5872"
+    },
+    {
+      "name": "FL-HF-10_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-10.png size 25630"
+    },
+    {
+      "name": "FL-HF-10_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-10_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Mark done"
+    },
+    {
+      "name": "FL-HF-11_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-11.svg size 5990"
+    },
+    {
+      "name": "FL-HF-11_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-11.png size 24235"
+    },
+    {
+      "name": "FL-HF-11_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-11_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Review progress"
+    },
+    {
+      "name": "FL-HF-12_SVG_EXISTS",
+      "status": "PASS",
+      "detail": "svg\\FL-HF-12.svg size 5896"
+    },
+    {
+      "name": "FL-HF-12_PNG_EXISTS",
+      "status": "PASS",
+      "detail": "png\\FL-HF-12.png size 27027"
+    },
+    {
+      "name": "FL-HF-12_COMPONENT_TREE",
+      "status": "PASS",
+      "detail": "component tree has at least 5 nodes"
+    },
+    {
+      "name": "FL-HF-12_CTA",
+      "status": "PASS",
+      "detail": "primary CTA: Start bedtime story"
+    }
+  ],
+  "failures": [
+    "FIGMA_CANVAS_REVIEW: BLOCKED_EXTERNAL: Figma canvas must be reviewed after manual/plugin import",
+    "PRODUCTION_READY: NO: Figma canvas review is blocked external",
+    "TASK_COMPLETE: NO: Figma canvas review is blocked external"
+  ]
+}
