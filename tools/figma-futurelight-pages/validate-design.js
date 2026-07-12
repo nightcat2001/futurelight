@@ -6,6 +6,8 @@ const reportPath = path.join(__dirname, "validation-report.json");
 const code = fs.readFileSync(codePath, "utf8");
 const failures = [];
 const warnings = [];
+const MAX_ALLOWED_LAYOUT_SIMILARITY = 0.45;
+const REQUIRED_CORE_HIGH_FIDELITY_PAGES = 12;
 
 function fail(gate, message, pageId) {
   failures.push({ gate, message, pageId: pageId || null });
@@ -135,7 +137,16 @@ const requiredFields = [
   "childSafety",
   "productFit",
   "acceptanceCriteria",
-  "testCases"
+  "testCases",
+  "layoutFamily",
+  "visualDesignLevel",
+  "actualUIScreen",
+  "navigationModel",
+  "appChrome",
+  "componentTree",
+  "visualHierarchy",
+  "roleSeparation",
+  "designReviewEvidence"
 ];
 
 const requiredStateKeys = ["default", "loading", "empty", "error", "success", "disabled", "offline"];
@@ -154,6 +165,20 @@ const requiredAudiences = ["child", "parent", "parent child", "legal", "system"]
 const requiredLayouts = ["splash", "form", "consent", "chooser", "home", "list", "player", "childActivity", "report", "settings", "system", "legal"];
 
 if (pages.length !== 79) fail("Page Coverage Validation", `Expected 79 pages, found ${pages.length}`);
+
+if (fs.existsSync(path.join(__dirname, "futurelight-validated-79-screens.svg"))) {
+  fail(
+    "Output Artifact Validation",
+    "Existing SVG poster output is not accepted as product UI or Figma delivery. Remove it and generate real app screens only."
+  );
+}
+
+if (fs.existsSync(path.join(__dirname, "export-svg-preview.js"))) {
+  fail(
+    "Output Artifact Validation",
+    "SVG poster exporter exists. Poster/catalog exports are forbidden as final UI output."
+  );
+}
 
 for (const page of pages) {
   for (const field of requiredFields) {
@@ -212,14 +237,22 @@ for (let i = 0; i < pages.length; i++) {
       maxLayoutSimilarity = similarity;
       maxLayoutPair = [pages[i], pages[j]];
     }
-    if (similarity > 0.8) {
+    if (similarity > MAX_ALLOWED_LAYOUT_SIMILARITY) {
       fail(
         "Layout Validation",
-        `Layout similarity ${(similarity * 100).toFixed(1)}% exceeds 80%: ${pages[i].title} / ${pages[j].title}`,
+        `Layout similarity ${(similarity * 100).toFixed(1)}% exceeds ${(MAX_ALLOWED_LAYOUT_SIMILARITY * 100).toFixed(0)}%: ${pages[i].title} / ${pages[j].title}`,
         `${pages[i].pageId},${pages[j].pageId}`
       );
     }
   }
+}
+
+const highFidelityPages = pages.filter((page) => page.visualDesignLevel === "high-fidelity-ui");
+if (highFidelityPages.length < REQUIRED_CORE_HIGH_FIDELITY_PAGES) {
+  fail(
+    "UI Review",
+    `At least ${REQUIRED_CORE_HIGH_FIDELITY_PAGES} core pages must be high-fidelity UI before broad 79-page output. Found ${highFidelityPages.length}.`
+  );
 }
 
 const rendererCounts = {};
@@ -271,6 +304,9 @@ for (const page of pages) {
 
 const report = {
   status: failures.length ? "FAIL" : "PASS",
+  productionReady: false,
+  taskComplete: false,
+  revokedPriorPass: true,
   generatedAt: new Date().toISOString(),
   pages: pages.length,
   sections,
@@ -278,6 +314,7 @@ const report = {
   layouts,
   rendererCounts,
   maxLayoutSimilarity: Number((maxLayoutSimilarity * 100).toFixed(2)),
+  maxAllowedLayoutSimilarity: Number((MAX_ALLOWED_LAYOUT_SIMILARITY * 100).toFixed(2)),
   maxLayoutSimilarityPair: maxLayoutPair.map((page) => `${page.pageId} ${page.title}`),
   gates: {
     schema: !failures.some((f) => f.gate === "Schema Validation"),

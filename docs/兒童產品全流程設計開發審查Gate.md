@@ -278,6 +278,15 @@ Validation 必須檢查：
 - Responsive Review PASS
 - Content Review PASS
 
+追加硬規則：
+
+- Layout similarity > 45% 必須 FAIL。
+- SVG poster / catalog / long page list 不能算 Figma UI。
+- 不能先做 79 頁廣撒式輸出；必須先完成 12 個核心 high-fidelity product screens，通過專業 UI/UX/PM/Child Safety review 後才可擴展。
+- 每一頁必須是實際產品畫面，不是 Page Spec 卡片、Wireframe catalog、Screen list、Poster、或文字規格海報。
+- 任何使用相同 renderer、相同 Hero + Cards、相同 CTA 結構，只換文字的頁面，都視為 template duplication。
+- Validator 若只證明 JSON 完整、SVG 存在、Frame 數量正確、或程式無 syntax error，必須 FAIL。
+
 每個 Figma Frame 必須能追溯到：
 
 - Page ID
@@ -297,6 +306,36 @@ Validation 必須檢查：
 - Generic Frame
 - 與兒童教育產品無關的 Frame
 - 只為了增加頁數而產生 Frame
+- SVG poster / screen catalog
+- 79 頁一次性模板輸出
+
+## 8.1 當前 79 頁輸出撤回規則
+
+如果輸出符合以下任一條件，必須立刻撤回 PASS：
+
+- 看起來是 79 個相似卡片模板。
+- 不是產品 UI，而是一張頁面清單海報。
+- Layout similarity 高於 45%。
+- 大量頁面使用相同 renderer family。
+- 沒有真實 app navigation。
+- 沒有真實 child-facing / parent-facing UI 差異。
+- 沒有每頁獨立 visual hierarchy。
+- 沒有 loading / empty / error / success / offline 的畫面級設計。
+- 沒有先完成 12 個核心 high-fidelity screens。
+
+撤回後狀態必須是：
+
+```text
+DESIGN VALIDATION: FAIL
+UI REVIEW: FAIL
+UX REVIEW: FAIL
+PRODUCT REVIEW: FAIL
+CHILD PRODUCT REVIEW: FAIL
+CONTENT REVIEW: FAIL
+VISUAL DIFFERENTIATION: FAIL
+PRODUCTION READY: NO
+TASK COMPLETE: NO
+```
 
 ## 9. Traceability
 

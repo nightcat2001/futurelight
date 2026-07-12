@@ -1,6 +1,9 @@
 {
-  "status": "PASS",
-  "generatedAt": "2026-07-12T06:58:04.653Z",
+  "status": "FAIL",
+  "productionReady": false,
+  "taskComplete": false,
+  "revokedPriorPass": true,
+  "generatedAt": "2026-07-12T10:17:05.903Z",
   "pages": 79,
   "sections": [
     "First Run / Account",
@@ -49,16 +52,17 @@
     "settings": 8
   },
   "maxLayoutSimilarity": 74.7,
+  "maxAllowedLayoutSimilarity": 45,
   "maxLayoutSimilarityPair": [
     "FL-050 Update Age",
     "FL-058 Age Rating Settings"
   ],
   "gates": {
-    "schema": true,
+    "schema": false,
     "content": true,
     "coverage": true,
     "duplicate": true,
-    "layout": true,
+    "layout": false,
     "accessibility": true,
     "childSafety": true,
     "component": true,
@@ -69,6 +73,5657 @@
     "pmReview": true,
     "uxReview": true
   },
-  "failures": [],
+  "failures": [
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: layoutFamily",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: visualDesignLevel",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: actualUIScreen",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: navigationModel",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: appChrome",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: componentTree",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: visualHierarchy",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: roleSeparation",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Splash missing or empty field: designReviewEvidence",
+      "pageId": "FL-001"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: layoutFamily",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: visualDesignLevel",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: actualUIScreen",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: navigationModel",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: appChrome",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: componentTree",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: visualHierarchy",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: roleSeparation",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Welcome missing or empty field: designReviewEvidence",
+      "pageId": "FL-002"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: layoutFamily",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: visualDesignLevel",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: actualUIScreen",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: navigationModel",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: appChrome",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: componentTree",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: visualHierarchy",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: roleSeparation",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Value Intro missing or empty field: designReviewEvidence",
+      "pageId": "FL-003"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: layoutFamily",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: visualDesignLevel",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: actualUIScreen",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: navigationModel",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: appChrome",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: componentTree",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: visualHierarchy",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: roleSeparation",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Login missing or empty field: designReviewEvidence",
+      "pageId": "FL-004"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: layoutFamily",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: visualDesignLevel",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: actualUIScreen",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: navigationModel",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: appChrome",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: componentTree",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: visualHierarchy",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: roleSeparation",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Register missing or empty field: designReviewEvidence",
+      "pageId": "FL-005"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: layoutFamily",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: visualDesignLevel",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: actualUIScreen",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: navigationModel",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: appChrome",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: componentTree",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: visualHierarchy",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: roleSeparation",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Forgot Password missing or empty field: designReviewEvidence",
+      "pageId": "FL-006"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: layoutFamily",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: visualDesignLevel",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: actualUIScreen",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: navigationModel",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: appChrome",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: componentTree",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: visualHierarchy",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: roleSeparation",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Verification Code missing or empty field: designReviewEvidence",
+      "pageId": "FL-007"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: layoutFamily",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: visualDesignLevel",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: actualUIScreen",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: navigationModel",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: appChrome",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: componentTree",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: visualHierarchy",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: roleSeparation",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Consent missing or empty field: designReviewEvidence",
+      "pageId": "FL-008"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: layoutFamily",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: visualDesignLevel",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: actualUIScreen",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: navigationModel",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: appChrome",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: componentTree",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: visualHierarchy",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: roleSeparation",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Create Child missing or empty field: designReviewEvidence",
+      "pageId": "FL-009"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: layoutFamily",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: visualDesignLevel",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: actualUIScreen",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: navigationModel",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: appChrome",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: componentTree",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: visualHierarchy",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: roleSeparation",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Age missing or empty field: designReviewEvidence",
+      "pageId": "FL-010"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: layoutFamily",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: visualDesignLevel",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: actualUIScreen",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: navigationModel",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: appChrome",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: componentTree",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: visualHierarchy",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: roleSeparation",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Interests missing or empty field: designReviewEvidence",
+      "pageId": "FL-011"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: layoutFamily",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: visualDesignLevel",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: actualUIScreen",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: navigationModel",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: appChrome",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: componentTree",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: visualHierarchy",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: roleSeparation",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Initial AI Recommendation missing or empty field: designReviewEvidence",
+      "pageId": "FL-012"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: layoutFamily",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: visualDesignLevel",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: actualUIScreen",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: navigationModel",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: appChrome",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: componentTree",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: visualHierarchy",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: roleSeparation",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Home missing or empty field: designReviewEvidence",
+      "pageId": "FL-013"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: layoutFamily",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: visualDesignLevel",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: actualUIScreen",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: navigationModel",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: appChrome",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: componentTree",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: visualHierarchy",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: roleSeparation",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Story missing or empty field: designReviewEvidence",
+      "pageId": "FL-014"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: layoutFamily",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: visualDesignLevel",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: actualUIScreen",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: navigationModel",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: appChrome",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: componentTree",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: visualHierarchy",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: roleSeparation",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Today Growth Task missing or empty field: designReviewEvidence",
+      "pageId": "FL-015"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: layoutFamily",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: visualDesignLevel",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: actualUIScreen",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: navigationModel",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: appChrome",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: componentTree",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: visualHierarchy",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: roleSeparation",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Entry missing or empty field: designReviewEvidence",
+      "pageId": "FL-016"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: layoutFamily",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: visualDesignLevel",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: actualUIScreen",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: navigationModel",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: appChrome",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: componentTree",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: visualHierarchy",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: roleSeparation",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Entry missing or empty field: designReviewEvidence",
+      "pageId": "FL-017"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: layoutFamily",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: visualDesignLevel",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: actualUIScreen",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: navigationModel",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: appChrome",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: componentTree",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: visualHierarchy",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: roleSeparation",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recently Played missing or empty field: designReviewEvidence",
+      "pageId": "FL-018"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: layoutFamily",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: visualDesignLevel",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: actualUIScreen",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: navigationModel",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: appChrome",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: componentTree",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: visualHierarchy",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: roleSeparation",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorites missing or empty field: designReviewEvidence",
+      "pageId": "FL-019"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: layoutFamily",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: visualDesignLevel",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: actualUIScreen",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: navigationModel",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: appChrome",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: componentTree",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: visualHierarchy",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: roleSeparation",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story List missing or empty field: designReviewEvidence",
+      "pageId": "FL-020"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: layoutFamily",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: visualDesignLevel",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: actualUIScreen",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: navigationModel",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: appChrome",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: componentTree",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: visualHierarchy",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: roleSeparation",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Category missing or empty field: designReviewEvidence",
+      "pageId": "FL-021"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: layoutFamily",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: visualDesignLevel",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: actualUIScreen",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: navigationModel",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: appChrome",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: componentTree",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: visualHierarchy",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: roleSeparation",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Detail missing or empty field: designReviewEvidence",
+      "pageId": "FL-022"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: layoutFamily",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: visualDesignLevel",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: actualUIScreen",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: navigationModel",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: appChrome",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: componentTree",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: visualHierarchy",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: roleSeparation",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "AI Story Recommendation missing or empty field: designReviewEvidence",
+      "pageId": "FL-023"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: layoutFamily",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: visualDesignLevel",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: actualUIScreen",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: navigationModel",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: appChrome",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: componentTree",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: visualHierarchy",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: roleSeparation",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Matched Stories missing or empty field: designReviewEvidence",
+      "pageId": "FL-024"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: layoutFamily",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: visualDesignLevel",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: actualUIScreen",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: navigationModel",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: appChrome",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: componentTree",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: visualHierarchy",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: roleSeparation",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Search missing or empty field: designReviewEvidence",
+      "pageId": "FL-025"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: layoutFamily",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: visualDesignLevel",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: actualUIScreen",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: navigationModel",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: appChrome",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: componentTree",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: visualHierarchy",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: roleSeparation",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Little Fox Finds Colors missing or empty field: designReviewEvidence",
+      "pageId": "FL-026"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: layoutFamily",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: visualDesignLevel",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: actualUIScreen",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: navigationModel",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: appChrome",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: componentTree",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: visualHierarchy",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: roleSeparation",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Paused missing or empty field: designReviewEvidence",
+      "pageId": "FL-027"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: layoutFamily",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: visualDesignLevel",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: actualUIScreen",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: navigationModel",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: appChrome",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: componentTree",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: visualHierarchy",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: roleSeparation",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story Complete missing or empty field: designReviewEvidence",
+      "pageId": "FL-028"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: layoutFamily",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: visualDesignLevel",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: actualUIScreen",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: navigationModel",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: appChrome",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: componentTree",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: visualHierarchy",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: roleSeparation",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Next Story missing or empty field: designReviewEvidence",
+      "pageId": "FL-029"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: layoutFamily",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: visualDesignLevel",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: actualUIScreen",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: navigationModel",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: appChrome",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: componentTree",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: visualHierarchy",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: roleSeparation",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Favorite Saved missing or empty field: designReviewEvidence",
+      "pageId": "FL-030"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: layoutFamily",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: visualDesignLevel",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: actualUIScreen",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: navigationModel",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: appChrome",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: componentTree",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: visualHierarchy",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: roleSeparation",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "No Stories Empty missing or empty field: designReviewEvidence",
+      "pageId": "FL-031"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: layoutFamily",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: visualDesignLevel",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: actualUIScreen",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: navigationModel",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: appChrome",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: componentTree",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: visualHierarchy",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: roleSeparation",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Daily Tasks missing or empty field: designReviewEvidence",
+      "pageId": "FL-032"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: layoutFamily",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: visualDesignLevel",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: actualUIScreen",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: navigationModel",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: appChrome",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: componentTree",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: visualHierarchy",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: roleSeparation",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Detail missing or empty field: designReviewEvidence",
+      "pageId": "FL-033"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: layoutFamily",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: visualDesignLevel",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: actualUIScreen",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: navigationModel",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: appChrome",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: componentTree",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: visualHierarchy",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: roleSeparation",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task Complete missing or empty field: designReviewEvidence",
+      "pageId": "FL-034"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: layoutFamily",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: visualDesignLevel",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: actualUIScreen",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: navigationModel",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: appChrome",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: componentTree",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: visualHierarchy",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: roleSeparation",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Child Interaction missing or empty field: designReviewEvidence",
+      "pageId": "FL-035"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: layoutFamily",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: visualDesignLevel",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: actualUIScreen",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: navigationModel",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: appChrome",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: componentTree",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: visualHierarchy",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: roleSeparation",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Prompt Guide missing or empty field: designReviewEvidence",
+      "pageId": "FL-036"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: layoutFamily",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: visualDesignLevel",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: actualUIScreen",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: navigationModel",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: appChrome",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: componentTree",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: visualHierarchy",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: roleSeparation",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Post Story Q&A missing or empty field: designReviewEvidence",
+      "pageId": "FL-037"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: layoutFamily",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: visualDesignLevel",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: actualUIScreen",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: navigationModel",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: appChrome",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: componentTree",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: visualHierarchy",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: roleSeparation",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Emotion Activity missing or empty field: designReviewEvidence",
+      "pageId": "FL-038"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: layoutFamily",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: visualDesignLevel",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: actualUIScreen",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: navigationModel",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: appChrome",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: componentTree",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: visualHierarchy",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: roleSeparation",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Habit Activity missing or empty field: designReviewEvidence",
+      "pageId": "FL-039"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: layoutFamily",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: visualDesignLevel",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: actualUIScreen",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: navigationModel",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: appChrome",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: componentTree",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: visualHierarchy",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: roleSeparation",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Language Practice missing or empty field: designReviewEvidence",
+      "pageId": "FL-040"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: layoutFamily",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: visualDesignLevel",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: actualUIScreen",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: navigationModel",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: appChrome",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: componentTree",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: visualHierarchy",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: roleSeparation",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Focus Task missing or empty field: designReviewEvidence",
+      "pageId": "FL-041"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: layoutFamily",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: visualDesignLevel",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: actualUIScreen",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: navigationModel",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: appChrome",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: componentTree",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: visualHierarchy",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: roleSeparation",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Home missing or empty field: designReviewEvidence",
+      "pageId": "FL-042"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: layoutFamily",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: visualDesignLevel",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: actualUIScreen",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: navigationModel",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: appChrome",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: componentTree",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: visualHierarchy",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: roleSeparation",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Recommendation missing or empty field: designReviewEvidence",
+      "pageId": "FL-043"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: layoutFamily",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: visualDesignLevel",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: actualUIScreen",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: navigationModel",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: appChrome",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: componentTree",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: visualHierarchy",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: roleSeparation",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "White Noise missing or empty field: designReviewEvidence",
+      "pageId": "FL-044"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: layoutFamily",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: visualDesignLevel",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: actualUIScreen",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: navigationModel",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: appChrome",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: componentTree",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: visualHierarchy",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: roleSeparation",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Sleepy Star missing or empty field: designReviewEvidence",
+      "pageId": "FL-045"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: layoutFamily",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: visualDesignLevel",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: actualUIScreen",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: navigationModel",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: appChrome",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: componentTree",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: visualHierarchy",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: roleSeparation",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Bedtime Complete missing or empty field: designReviewEvidence",
+      "pageId": "FL-046"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: layoutFamily",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: visualDesignLevel",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: actualUIScreen",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: navigationModel",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: appChrome",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: componentTree",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: visualHierarchy",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: roleSeparation",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Tomorrow Recommendation missing or empty field: designReviewEvidence",
+      "pageId": "FL-047"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: layoutFamily",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: visualDesignLevel",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: actualUIScreen",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: navigationModel",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: appChrome",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: componentTree",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: visualHierarchy",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: roleSeparation",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Profile missing or empty field: designReviewEvidence",
+      "pageId": "FL-048"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: layoutFamily",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: visualDesignLevel",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: actualUIScreen",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: navigationModel",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: appChrome",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: componentTree",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: visualHierarchy",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: roleSeparation",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Edit Child missing or empty field: designReviewEvidence",
+      "pageId": "FL-049"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: layoutFamily",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: visualDesignLevel",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: actualUIScreen",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: navigationModel",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: appChrome",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: componentTree",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: visualHierarchy",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: roleSeparation",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Age missing or empty field: designReviewEvidence",
+      "pageId": "FL-050"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: layoutFamily",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: visualDesignLevel",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: actualUIScreen",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: navigationModel",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: appChrome",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: componentTree",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: visualHierarchy",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: roleSeparation",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Growth Report missing or empty field: designReviewEvidence",
+      "pageId": "FL-051"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: layoutFamily",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: visualDesignLevel",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: actualUIScreen",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: navigationModel",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: appChrome",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: componentTree",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: visualHierarchy",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: roleSeparation",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Story History missing or empty field: designReviewEvidence",
+      "pageId": "FL-052"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: layoutFamily",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: visualDesignLevel",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: actualUIScreen",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: navigationModel",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: appChrome",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: componentTree",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: visualHierarchy",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: roleSeparation",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Task History missing or empty field: designReviewEvidence",
+      "pageId": "FL-053"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: layoutFamily",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: visualDesignLevel",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: actualUIScreen",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: navigationModel",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: appChrome",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: componentTree",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: visualHierarchy",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: roleSeparation",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Interest Preferences missing or empty field: designReviewEvidence",
+      "pageId": "FL-054"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: layoutFamily",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: visualDesignLevel",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: actualUIScreen",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: navigationModel",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: appChrome",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: componentTree",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: visualHierarchy",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: roleSeparation",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Parent Center missing or empty field: designReviewEvidence",
+      "pageId": "FL-055"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: layoutFamily",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: visualDesignLevel",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: actualUIScreen",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: navigationModel",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: appChrome",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: componentTree",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: visualHierarchy",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: roleSeparation",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Content Management missing or empty field: designReviewEvidence",
+      "pageId": "FL-056"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: layoutFamily",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: visualDesignLevel",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: actualUIScreen",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: navigationModel",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: appChrome",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: componentTree",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: visualHierarchy",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: roleSeparation",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Play Time Limit missing or empty field: designReviewEvidence",
+      "pageId": "FL-057"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: layoutFamily",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: visualDesignLevel",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: actualUIScreen",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: navigationModel",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: appChrome",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: componentTree",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: visualHierarchy",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: roleSeparation",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Age Rating Settings missing or empty field: designReviewEvidence",
+      "pageId": "FL-058"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: layoutFamily",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: visualDesignLevel",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: actualUIScreen",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: navigationModel",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: appChrome",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: componentTree",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: visualHierarchy",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: roleSeparation",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Recommendation Settings missing or empty field: designReviewEvidence",
+      "pageId": "FL-059"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: layoutFamily",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: visualDesignLevel",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: actualUIScreen",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: navigationModel",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: appChrome",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: componentTree",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: visualHierarchy",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: roleSeparation",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Switch Child missing or empty field: designReviewEvidence",
+      "pageId": "FL-060"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: layoutFamily",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: visualDesignLevel",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: actualUIScreen",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: navigationModel",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: appChrome",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: componentTree",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: visualHierarchy",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: roleSeparation",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Notification Settings missing or empty field: designReviewEvidence",
+      "pageId": "FL-061"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: layoutFamily",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: visualDesignLevel",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: actualUIScreen",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: navigationModel",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: appChrome",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: componentTree",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: visualHierarchy",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: roleSeparation",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Settings missing or empty field: designReviewEvidence",
+      "pageId": "FL-062"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: layoutFamily",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: visualDesignLevel",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: actualUIScreen",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: navigationModel",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: appChrome",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: componentTree",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: visualHierarchy",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: roleSeparation",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Account Settings missing or empty field: designReviewEvidence",
+      "pageId": "FL-063"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: layoutFamily",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: visualDesignLevel",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: actualUIScreen",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: navigationModel",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: appChrome",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: componentTree",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: visualHierarchy",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: roleSeparation",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Loading missing or empty field: designReviewEvidence",
+      "pageId": "FL-064"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: layoutFamily",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: visualDesignLevel",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: actualUIScreen",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: navigationModel",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: appChrome",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: componentTree",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: visualHierarchy",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: roleSeparation",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Skeleton Loading missing or empty field: designReviewEvidence",
+      "pageId": "FL-065"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: layoutFamily",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: visualDesignLevel",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: actualUIScreen",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: navigationModel",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: appChrome",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: componentTree",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: visualHierarchy",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: roleSeparation",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Network Error missing or empty field: designReviewEvidence",
+      "pageId": "FL-066"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: layoutFamily",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: visualDesignLevel",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: actualUIScreen",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: navigationModel",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: appChrome",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: componentTree",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: visualHierarchy",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: roleSeparation",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Permission Denied missing or empty field: designReviewEvidence",
+      "pageId": "FL-067"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: layoutFamily",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: visualDesignLevel",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: actualUIScreen",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: navigationModel",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: appChrome",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: componentTree",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: visualHierarchy",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: roleSeparation",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Not Found missing or empty field: designReviewEvidence",
+      "pageId": "FL-068"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: layoutFamily",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: visualDesignLevel",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: actualUIScreen",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: navigationModel",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: appChrome",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: componentTree",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: visualHierarchy",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: roleSeparation",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Server Error missing or empty field: designReviewEvidence",
+      "pageId": "FL-069"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: layoutFamily",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: visualDesignLevel",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: actualUIScreen",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: navigationModel",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: appChrome",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: componentTree",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: visualHierarchy",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: roleSeparation",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Offline Mode missing or empty field: designReviewEvidence",
+      "pageId": "FL-070"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: layoutFamily",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: visualDesignLevel",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: actualUIScreen",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: navigationModel",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: appChrome",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: componentTree",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: visualHierarchy",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: roleSeparation",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Update Prompt missing or empty field: designReviewEvidence",
+      "pageId": "FL-071"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: layoutFamily",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: visualDesignLevel",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: actualUIScreen",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: navigationModel",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: appChrome",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: componentTree",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: visualHierarchy",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: roleSeparation",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Help Center missing or empty field: designReviewEvidence",
+      "pageId": "FL-072"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: layoutFamily",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: visualDesignLevel",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: actualUIScreen",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: navigationModel",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: appChrome",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: componentTree",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: visualHierarchy",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: roleSeparation",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "FAQ missing or empty field: designReviewEvidence",
+      "pageId": "FL-073"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: layoutFamily",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: visualDesignLevel",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: actualUIScreen",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: navigationModel",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: appChrome",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: componentTree",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: visualHierarchy",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: roleSeparation",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Contact Support missing or empty field: designReviewEvidence",
+      "pageId": "FL-074"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: layoutFamily",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: visualDesignLevel",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: actualUIScreen",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: navigationModel",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: appChrome",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: componentTree",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: visualHierarchy",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: roleSeparation",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Terms missing or empty field: designReviewEvidence",
+      "pageId": "FL-075"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: layoutFamily",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: visualDesignLevel",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: actualUIScreen",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: navigationModel",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: appChrome",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: componentTree",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: visualHierarchy",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: roleSeparation",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Privacy Policy missing or empty field: designReviewEvidence",
+      "pageId": "FL-076"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: layoutFamily",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: visualDesignLevel",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: actualUIScreen",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: navigationModel",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: appChrome",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: componentTree",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: visualHierarchy",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: roleSeparation",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Child Data Protection missing or empty field: designReviewEvidence",
+      "pageId": "FL-077"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: layoutFamily",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: visualDesignLevel",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: actualUIScreen",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: navigationModel",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: appChrome",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: componentTree",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: visualHierarchy",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: roleSeparation",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Delete Account missing or empty field: designReviewEvidence",
+      "pageId": "FL-078"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: layoutFamily",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: visualDesignLevel",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: actualUIScreen",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: navigationModel",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: appChrome",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: componentTree",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: visualHierarchy",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: roleSeparation",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Schema Validation",
+      "message": "Export Data missing or empty field: designReviewEvidence",
+      "pageId": "FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.0% exceeds 45%: Splash / Welcome",
+      "pageId": "FL-001,FL-002"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.4% exceeds 45%: Splash / Privacy Consent",
+      "pageId": "FL-001,FL-008"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.8% exceeds 45%: Splash / Today Story",
+      "pageId": "FL-001,FL-014"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.4% exceeds 45%: Splash / Bedtime Entry",
+      "pageId": "FL-001,FL-016"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.9% exceeds 45%: Splash / Parent Child Entry",
+      "pageId": "FL-001,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Splash / Story Detail",
+      "pageId": "FL-001,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.2% exceeds 45%: Splash / Next Story",
+      "pageId": "FL-001,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.1% exceeds 45%: Splash / Favorite Saved",
+      "pageId": "FL-001,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.7% exceeds 45%: Splash / No Stories Empty",
+      "pageId": "FL-001,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Splash / Parent Child Interaction",
+      "pageId": "FL-001,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Splash / Child Profile",
+      "pageId": "FL-001,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Splash / Growth Report",
+      "pageId": "FL-001,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.9% exceeds 45%: Splash / Parent Center",
+      "pageId": "FL-001,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.1% exceeds 45%: Splash / Loading",
+      "pageId": "FL-001,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Splash / Skeleton Loading",
+      "pageId": "FL-001,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.7% exceeds 45%: Splash / Network Error",
+      "pageId": "FL-001,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.8% exceeds 45%: Splash / Permission Denied",
+      "pageId": "FL-001,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.1% exceeds 45%: Splash / Not Found",
+      "pageId": "FL-001,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Splash / Server Error",
+      "pageId": "FL-001,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.0% exceeds 45%: Splash / Offline Mode",
+      "pageId": "FL-001,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.0% exceeds 45%: Splash / Update Prompt",
+      "pageId": "FL-001,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.6% exceeds 45%: Splash / FAQ",
+      "pageId": "FL-001,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Splash / Terms",
+      "pageId": "FL-001,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.3% exceeds 45%: Splash / Privacy Policy",
+      "pageId": "FL-001,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Splash / Child Data Protection",
+      "pageId": "FL-001,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Splash / Export Data",
+      "pageId": "FL-001,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.0% exceeds 45%: Welcome / Today Story",
+      "pageId": "FL-002,FL-014"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Welcome / Bedtime Entry",
+      "pageId": "FL-002,FL-016"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: Welcome / Parent Child Entry",
+      "pageId": "FL-002,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Welcome / Story Detail",
+      "pageId": "FL-002,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.4% exceeds 45%: Welcome / Privacy Policy",
+      "pageId": "FL-002,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.9% exceeds 45%: Value Intro / Privacy Consent",
+      "pageId": "FL-003,FL-008"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.5% exceeds 45%: Value Intro / Today Growth Task",
+      "pageId": "FL-003,FL-015"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.6% exceeds 45%: Value Intro / AI Story Recommendation",
+      "pageId": "FL-003,FL-023"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Value Intro / Favorite Saved",
+      "pageId": "FL-003,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.5% exceeds 45%: Value Intro / Task Detail",
+      "pageId": "FL-003,FL-033"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.2% exceeds 45%: Value Intro / Child Profile",
+      "pageId": "FL-003,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Value Intro / Growth Report",
+      "pageId": "FL-003,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Value Intro / Offline Mode",
+      "pageId": "FL-003,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Value Intro / Update Prompt",
+      "pageId": "FL-003,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.1% exceeds 45%: Value Intro / Export Data",
+      "pageId": "FL-003,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 66.7% exceeds 45%: Login / Register",
+      "pageId": "FL-004,FL-005"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 73.9% exceeds 45%: Login / Forgot Password",
+      "pageId": "FL-004,FL-006"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 69.6% exceeds 45%: Login / Verification Code",
+      "pageId": "FL-004,FL-007"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.5% exceeds 45%: Login / Create Child",
+      "pageId": "FL-004,FL-009"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.2% exceeds 45%: Login / Story Search",
+      "pageId": "FL-004,FL-025"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.5% exceeds 45%: Login / Edit Child",
+      "pageId": "FL-004,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Login / Account Settings",
+      "pageId": "FL-004,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 66.7% exceeds 45%: Login / Contact Support",
+      "pageId": "FL-004,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.7% exceeds 45%: Register / Forgot Password",
+      "pageId": "FL-005,FL-006"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Register / Verification Code",
+      "pageId": "FL-005,FL-007"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.7% exceeds 45%: Register / Create Child",
+      "pageId": "FL-005,FL-009"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.7% exceeds 45%: Register / Story Search",
+      "pageId": "FL-005,FL-025"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.2% exceeds 45%: Register / Edit Child",
+      "pageId": "FL-005,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.8% exceeds 45%: Register / Contact Support",
+      "pageId": "FL-005,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.5% exceeds 45%: Forgot Password / Verification Code",
+      "pageId": "FL-006,FL-007"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.0% exceeds 45%: Forgot Password / Create Child",
+      "pageId": "FL-006,FL-009"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.9% exceeds 45%: Forgot Password / Story Search",
+      "pageId": "FL-006,FL-025"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.7% exceeds 45%: Forgot Password / Edit Child",
+      "pageId": "FL-006,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.6% exceeds 45%: Forgot Password / Contact Support",
+      "pageId": "FL-006,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.2% exceeds 45%: Verification Code / Create Child",
+      "pageId": "FL-007,FL-009"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.0% exceeds 45%: Verification Code / Story Search",
+      "pageId": "FL-007,FL-025"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Verification Code / Edit Child",
+      "pageId": "FL-007,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.8% exceeds 45%: Verification Code / Contact Support",
+      "pageId": "FL-007,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Privacy Consent / Favorite Saved",
+      "pageId": "FL-008,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Privacy Consent / No Stories Empty",
+      "pageId": "FL-008,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.4% exceeds 45%: Privacy Consent / Task Detail",
+      "pageId": "FL-008,FL-033"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.2% exceeds 45%: Privacy Consent / Child Profile",
+      "pageId": "FL-008,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.2% exceeds 45%: Privacy Consent / Growth Report",
+      "pageId": "FL-008,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Privacy Consent / Skeleton Loading",
+      "pageId": "FL-008,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Privacy Consent / Network Error",
+      "pageId": "FL-008,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Privacy Consent / Permission Denied",
+      "pageId": "FL-008,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Privacy Consent / Server Error",
+      "pageId": "FL-008,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Privacy Consent / Offline Mode",
+      "pageId": "FL-008,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Privacy Consent / Update Prompt",
+      "pageId": "FL-008,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.5% exceeds 45%: Privacy Consent / FAQ",
+      "pageId": "FL-008,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.1% exceeds 45%: Privacy Consent / Privacy Policy",
+      "pageId": "FL-008,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.3% exceeds 45%: Privacy Consent / Child Data Protection",
+      "pageId": "FL-008,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.3% exceeds 45%: Privacy Consent / Export Data",
+      "pageId": "FL-008,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.4% exceeds 45%: Create Child / Story Search",
+      "pageId": "FL-009,FL-025"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.9% exceeds 45%: Create Child / Edit Child",
+      "pageId": "FL-009,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.2% exceeds 45%: Create Child / Contact Support",
+      "pageId": "FL-009,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.6% exceeds 45%: Child Age / Child Interests",
+      "pageId": "FL-010,FL-011"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Child Age / Story Category",
+      "pageId": "FL-010,FL-021"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 74.4% exceeds 45%: Child Age / Update Age",
+      "pageId": "FL-010,FL-050"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.0% exceeds 45%: Child Age / Interest Preferences",
+      "pageId": "FL-010,FL-054"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 70.0% exceeds 45%: Child Age / Age Rating Settings",
+      "pageId": "FL-010,FL-058"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.2% exceeds 45%: Child Age / Switch Child",
+      "pageId": "FL-010,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.9% exceeds 45%: Child Interests / Story Category",
+      "pageId": "FL-011,FL-021"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.9% exceeds 45%: Child Interests / Update Age",
+      "pageId": "FL-011,FL-050"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 66.7% exceeds 45%: Child Interests / Interest Preferences",
+      "pageId": "FL-011,FL-054"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.8% exceeds 45%: Child Interests / Age Rating Settings",
+      "pageId": "FL-011,FL-058"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.2% exceeds 45%: Child Interests / Switch Child",
+      "pageId": "FL-011,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.5% exceeds 45%: Initial AI Recommendation / Today Story",
+      "pageId": "FL-012,FL-014"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.8% exceeds 45%: Initial AI Recommendation / Parent Child Entry",
+      "pageId": "FL-012,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.4% exceeds 45%: Initial AI Recommendation / Story Detail",
+      "pageId": "FL-012,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.5% exceeds 45%: Initial AI Recommendation / AI Story Recommendation",
+      "pageId": "FL-012,FL-023"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Initial AI Recommendation / Next Story",
+      "pageId": "FL-012,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Initial AI Recommendation / Favorite Saved",
+      "pageId": "FL-012,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.5% exceeds 45%: Initial AI Recommendation / Parent Child Interaction",
+      "pageId": "FL-012,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.8% exceeds 45%: Home / Today Story",
+      "pageId": "FL-013,FL-014"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.5% exceeds 45%: Home / Bedtime Entry",
+      "pageId": "FL-013,FL-016"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.4% exceeds 45%: Home / Parent Child Entry",
+      "pageId": "FL-013,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Home / Story Detail",
+      "pageId": "FL-013,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Home / Next Story",
+      "pageId": "FL-013,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.1% exceeds 45%: Home / Favorite Saved",
+      "pageId": "FL-013,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.9% exceeds 45%: Home / Parent Child Interaction",
+      "pageId": "FL-013,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Home / Parent Center",
+      "pageId": "FL-013,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Home / Permission Denied",
+      "pageId": "FL-013,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Home / Offline Mode",
+      "pageId": "FL-013,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Home / Update Prompt",
+      "pageId": "FL-013,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Today Story / Bedtime Entry",
+      "pageId": "FL-014,FL-016"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.3% exceeds 45%: Today Story / Parent Child Entry",
+      "pageId": "FL-014,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Today Story / Story Detail",
+      "pageId": "FL-014,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.9% exceeds 45%: Today Story / Next Story",
+      "pageId": "FL-014,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Today Story / Favorite Saved",
+      "pageId": "FL-014,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Today Story / No Stories Empty",
+      "pageId": "FL-014,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.4% exceeds 45%: Today Story / Parent Child Interaction",
+      "pageId": "FL-014,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.6% exceeds 45%: Today Story / Parent Center",
+      "pageId": "FL-014,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: Today Story / Loading",
+      "pageId": "FL-014,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Today Story / Skeleton Loading",
+      "pageId": "FL-014,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.0% exceeds 45%: Today Story / Not Found",
+      "pageId": "FL-014,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Today Story / Server Error",
+      "pageId": "FL-014,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Today Story / Offline Mode",
+      "pageId": "FL-014,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Today Story / Update Prompt",
+      "pageId": "FL-014,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Today Growth Task / Parent Child Entry",
+      "pageId": "FL-015,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.6% exceeds 45%: Today Growth Task / AI Story Recommendation",
+      "pageId": "FL-015,FL-023"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.2% exceeds 45%: Today Growth Task / Task Detail",
+      "pageId": "FL-015,FL-033"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.0% exceeds 45%: Today Growth Task / Child Profile",
+      "pageId": "FL-015,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Today Growth Task / Growth Report",
+      "pageId": "FL-015,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Today Growth Task / Offline Mode",
+      "pageId": "FL-015,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.5% exceeds 45%: Today Growth Task / Export Data",
+      "pageId": "FL-015,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.8% exceeds 45%: Bedtime Entry / Parent Child Entry",
+      "pageId": "FL-016,FL-017"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.6% exceeds 45%: Bedtime Entry / Story Detail",
+      "pageId": "FL-016,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.5% exceeds 45%: Bedtime Entry / Next Story",
+      "pageId": "FL-016,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Bedtime Entry / Favorite Saved",
+      "pageId": "FL-016,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.9% exceeds 45%: Bedtime Entry / Parent Child Interaction",
+      "pageId": "FL-016,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.2% exceeds 45%: Bedtime Entry / Bedtime Home",
+      "pageId": "FL-016,FL-042"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.1% exceeds 45%: Bedtime Entry / Tomorrow Recommendation",
+      "pageId": "FL-016,FL-047"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Bedtime Entry / Parent Center",
+      "pageId": "FL-016,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Bedtime Entry / Loading",
+      "pageId": "FL-016,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Bedtime Entry / Skeleton Loading",
+      "pageId": "FL-016,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Bedtime Entry / Network Error",
+      "pageId": "FL-016,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: Bedtime Entry / Not Found",
+      "pageId": "FL-016,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Bedtime Entry / Server Error",
+      "pageId": "FL-016,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Bedtime Entry / Offline Mode",
+      "pageId": "FL-016,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Bedtime Entry / Update Prompt",
+      "pageId": "FL-016,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.9% exceeds 45%: Parent Child Entry / Story Detail",
+      "pageId": "FL-017,FL-022"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.7% exceeds 45%: Parent Child Entry / Next Story",
+      "pageId": "FL-017,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.6% exceeds 45%: Parent Child Entry / Favorite Saved",
+      "pageId": "FL-017,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Parent Child Entry / No Stories Empty",
+      "pageId": "FL-017,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.5% exceeds 45%: Parent Child Entry / Parent Child Interaction",
+      "pageId": "FL-017,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.8% exceeds 45%: Parent Child Entry / Parent Center",
+      "pageId": "FL-017,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Parent Child Entry / Loading",
+      "pageId": "FL-017,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Parent Child Entry / Skeleton Loading",
+      "pageId": "FL-017,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Parent Child Entry / Network Error",
+      "pageId": "FL-017,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Parent Child Entry / Permission Denied",
+      "pageId": "FL-017,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Parent Child Entry / Not Found",
+      "pageId": "FL-017,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Parent Child Entry / Server Error",
+      "pageId": "FL-017,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Parent Child Entry / Offline Mode",
+      "pageId": "FL-017,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.3% exceeds 45%: Parent Child Entry / Update Prompt",
+      "pageId": "FL-017,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Recently Played / Favorites",
+      "pageId": "FL-018,FL-019"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.8% exceeds 45%: Recently Played / Story List",
+      "pageId": "FL-018,FL-020"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.4% exceeds 45%: Recently Played / Age Matched Stories",
+      "pageId": "FL-018,FL-024"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 67.5% exceeds 45%: Recently Played / Story History",
+      "pageId": "FL-018,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.8% exceeds 45%: Recently Played / Task History",
+      "pageId": "FL-018,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.3% exceeds 45%: Recently Played / Help Center",
+      "pageId": "FL-018,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: Favorites / Story List",
+      "pageId": "FL-019,FL-020"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.1% exceeds 45%: Favorites / Age Matched Stories",
+      "pageId": "FL-019,FL-024"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.9% exceeds 45%: Favorites / Daily Tasks",
+      "pageId": "FL-019,FL-032"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.6% exceeds 45%: Favorites / Story History",
+      "pageId": "FL-019,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Favorites / Task History",
+      "pageId": "FL-019,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.1% exceeds 45%: Favorites / Help Center",
+      "pageId": "FL-019,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.3% exceeds 45%: Story List / Age Matched Stories",
+      "pageId": "FL-020,FL-024"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: Story List / Daily Tasks",
+      "pageId": "FL-020,FL-032"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.7% exceeds 45%: Story List / Story History",
+      "pageId": "FL-020,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.7% exceeds 45%: Story List / Task History",
+      "pageId": "FL-020,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.2% exceeds 45%: Story List / Help Center",
+      "pageId": "FL-020,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.5% exceeds 45%: Story Category / Update Age",
+      "pageId": "FL-021,FL-050"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.4% exceeds 45%: Story Category / Interest Preferences",
+      "pageId": "FL-021,FL-054"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.5% exceeds 45%: Story Category / Age Rating Settings",
+      "pageId": "FL-021,FL-058"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.3% exceeds 45%: Story Category / Switch Child",
+      "pageId": "FL-021,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.5% exceeds 45%: Story Detail / Next Story",
+      "pageId": "FL-022,FL-029"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.9% exceeds 45%: Story Detail / Favorite Saved",
+      "pageId": "FL-022,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Story Detail / No Stories Empty",
+      "pageId": "FL-022,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.0% exceeds 45%: Story Detail / Parent Child Interaction",
+      "pageId": "FL-022,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Story Detail / Parent Center",
+      "pageId": "FL-022,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Story Detail / Loading",
+      "pageId": "FL-022,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Story Detail / Skeleton Loading",
+      "pageId": "FL-022,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Story Detail / Network Error",
+      "pageId": "FL-022,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Story Detail / Permission Denied",
+      "pageId": "FL-022,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Story Detail / Not Found",
+      "pageId": "FL-022,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Story Detail / Server Error",
+      "pageId": "FL-022,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Story Detail / Offline Mode",
+      "pageId": "FL-022,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Story Detail / Update Prompt",
+      "pageId": "FL-022,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.6% exceeds 45%: AI Story Recommendation / Task Detail",
+      "pageId": "FL-023,FL-033"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.2% exceeds 45%: AI Story Recommendation / Child Profile",
+      "pageId": "FL-023,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.6% exceeds 45%: AI Story Recommendation / Growth Report",
+      "pageId": "FL-023,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: AI Story Recommendation / Update Prompt",
+      "pageId": "FL-023,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.0% exceeds 45%: AI Story Recommendation / Export Data",
+      "pageId": "FL-023,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.7% exceeds 45%: Age Matched Stories / Bedtime Recommendation",
+      "pageId": "FL-024,FL-043"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.9% exceeds 45%: Age Matched Stories / Story History",
+      "pageId": "FL-024,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.3% exceeds 45%: Age Matched Stories / Task History",
+      "pageId": "FL-024,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.7% exceeds 45%: Age Matched Stories / Help Center",
+      "pageId": "FL-024,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.0% exceeds 45%: Story Search / Edit Child",
+      "pageId": "FL-025,FL-049"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.8% exceeds 45%: Story Search / Contact Support",
+      "pageId": "FL-025,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.7% exceeds 45%: Little Fox Finds Colors / Paused",
+      "pageId": "FL-026,FL-027"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.6% exceeds 45%: Little Fox Finds Colors / Sleepy Star",
+      "pageId": "FL-026,FL-045"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 69.4% exceeds 45%: Paused / Sleepy Star",
+      "pageId": "FL-027,FL-045"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.8% exceeds 45%: Story Complete / Task Complete",
+      "pageId": "FL-028,FL-034"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.5% exceeds 45%: Story Complete / Post Story Q&A",
+      "pageId": "FL-028,FL-037"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Story Complete / Emotion Activity",
+      "pageId": "FL-028,FL-038"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.0% exceeds 45%: Story Complete / Habit Activity",
+      "pageId": "FL-028,FL-039"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.5% exceeds 45%: Story Complete / Language Practice",
+      "pageId": "FL-028,FL-040"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 67.6% exceeds 45%: Story Complete / Focus Task",
+      "pageId": "FL-028,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.6% exceeds 45%: Next Story / Favorite Saved",
+      "pageId": "FL-029,FL-030"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Next Story / No Stories Empty",
+      "pageId": "FL-029,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.1% exceeds 45%: Next Story / Parent Child Interaction",
+      "pageId": "FL-029,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.7% exceeds 45%: Next Story / Parent Center",
+      "pageId": "FL-029,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Next Story / Loading",
+      "pageId": "FL-029,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Next Story / Skeleton Loading",
+      "pageId": "FL-029,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.0% exceeds 45%: Next Story / Network Error",
+      "pageId": "FL-029,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Next Story / Not Found",
+      "pageId": "FL-029,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.1% exceeds 45%: Next Story / Offline Mode",
+      "pageId": "FL-029,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Next Story / Update Prompt",
+      "pageId": "FL-029,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.7% exceeds 45%: Favorite Saved / No Stories Empty",
+      "pageId": "FL-030,FL-031"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.8% exceeds 45%: Favorite Saved / Parent Child Interaction",
+      "pageId": "FL-030,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Favorite Saved / Parent Center",
+      "pageId": "FL-030,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.2% exceeds 45%: Favorite Saved / Loading",
+      "pageId": "FL-030,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: Favorite Saved / Skeleton Loading",
+      "pageId": "FL-030,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.6% exceeds 45%: Favorite Saved / Network Error",
+      "pageId": "FL-030,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.0% exceeds 45%: Favorite Saved / Permission Denied",
+      "pageId": "FL-030,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.7% exceeds 45%: Favorite Saved / Not Found",
+      "pageId": "FL-030,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: Favorite Saved / Server Error",
+      "pageId": "FL-030,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.9% exceeds 45%: Favorite Saved / Offline Mode",
+      "pageId": "FL-030,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.1% exceeds 45%: Favorite Saved / Update Prompt",
+      "pageId": "FL-030,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Favorite Saved / FAQ",
+      "pageId": "FL-030,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.8% exceeds 45%: Favorite Saved / Terms",
+      "pageId": "FL-030,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Favorite Saved / Privacy Policy",
+      "pageId": "FL-030,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: No Stories Empty / Parent Child Interaction",
+      "pageId": "FL-031,FL-035"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.0% exceeds 45%: No Stories Empty / Child Profile",
+      "pageId": "FL-031,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: No Stories Empty / Parent Center",
+      "pageId": "FL-031,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.1% exceeds 45%: No Stories Empty / Loading",
+      "pageId": "FL-031,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.1% exceeds 45%: No Stories Empty / Skeleton Loading",
+      "pageId": "FL-031,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.4% exceeds 45%: No Stories Empty / Network Error",
+      "pageId": "FL-031,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.1% exceeds 45%: No Stories Empty / Permission Denied",
+      "pageId": "FL-031,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.8% exceeds 45%: No Stories Empty / Not Found",
+      "pageId": "FL-031,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.1% exceeds 45%: No Stories Empty / Server Error",
+      "pageId": "FL-031,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: No Stories Empty / Offline Mode",
+      "pageId": "FL-031,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.9% exceeds 45%: No Stories Empty / Update Prompt",
+      "pageId": "FL-031,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: No Stories Empty / Terms",
+      "pageId": "FL-031,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: No Stories Empty / Privacy Policy",
+      "pageId": "FL-031,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: No Stories Empty / Child Data Protection",
+      "pageId": "FL-031,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: No Stories Empty / Export Data",
+      "pageId": "FL-031,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Daily Tasks / Story History",
+      "pageId": "FL-032,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.5% exceeds 45%: Daily Tasks / Task History",
+      "pageId": "FL-032,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.7% exceeds 45%: Daily Tasks / Help Center",
+      "pageId": "FL-032,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.5% exceeds 45%: Task Detail / Child Profile",
+      "pageId": "FL-033,FL-048"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.0% exceeds 45%: Task Detail / Growth Report",
+      "pageId": "FL-033,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Task Detail / Export Data",
+      "pageId": "FL-033,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.1% exceeds 45%: Task Complete / Post Story Q&A",
+      "pageId": "FL-034,FL-037"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 64.6% exceeds 45%: Task Complete / Emotion Activity",
+      "pageId": "FL-034,FL-038"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: Task Complete / Habit Activity",
+      "pageId": "FL-034,FL-039"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.0% exceeds 45%: Task Complete / Language Practice",
+      "pageId": "FL-034,FL-040"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.0% exceeds 45%: Task Complete / Focus Task",
+      "pageId": "FL-034,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.3% exceeds 45%: Parent Child Interaction / Parent Prompt Guide",
+      "pageId": "FL-035,FL-036"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.7% exceeds 45%: Parent Child Interaction / Parent Center",
+      "pageId": "FL-035,FL-055"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Parent Child Interaction / Loading",
+      "pageId": "FL-035,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Parent Child Interaction / Skeleton Loading",
+      "pageId": "FL-035,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.1% exceeds 45%: Parent Child Interaction / Network Error",
+      "pageId": "FL-035,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Parent Child Interaction / Permission Denied",
+      "pageId": "FL-035,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Parent Child Interaction / Not Found",
+      "pageId": "FL-035,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Parent Child Interaction / Server Error",
+      "pageId": "FL-035,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Parent Child Interaction / Offline Mode",
+      "pageId": "FL-035,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.6% exceeds 45%: Parent Child Interaction / Update Prompt",
+      "pageId": "FL-035,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.0% exceeds 45%: Parent Prompt Guide / Update Prompt",
+      "pageId": "FL-036,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Parent Prompt Guide / Terms",
+      "pageId": "FL-036,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.6% exceeds 45%: Post Story Q&A / Emotion Activity",
+      "pageId": "FL-037,FL-038"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.5% exceeds 45%: Post Story Q&A / Habit Activity",
+      "pageId": "FL-037,FL-039"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.0% exceeds 45%: Post Story Q&A / Language Practice",
+      "pageId": "FL-037,FL-040"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 64.6% exceeds 45%: Post Story Q&A / Focus Task",
+      "pageId": "FL-037,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.0% exceeds 45%: Emotion Activity / Habit Activity",
+      "pageId": "FL-038,FL-039"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.6% exceeds 45%: Emotion Activity / Language Practice",
+      "pageId": "FL-038,FL-040"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 65.3% exceeds 45%: Emotion Activity / Focus Task",
+      "pageId": "FL-038,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.5% exceeds 45%: Habit Activity / Language Practice",
+      "pageId": "FL-039,FL-040"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.0% exceeds 45%: Habit Activity / Focus Task",
+      "pageId": "FL-039,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 67.1% exceeds 45%: Language Practice / Focus Task",
+      "pageId": "FL-040,FL-041"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.3% exceeds 45%: Bedtime Home / Bedtime Complete",
+      "pageId": "FL-042,FL-046"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.3% exceeds 45%: Bedtime Home / Tomorrow Recommendation",
+      "pageId": "FL-042,FL-047"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.5% exceeds 45%: Bedtime Recommendation / Story History",
+      "pageId": "FL-043,FL-052"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.9% exceeds 45%: Bedtime Complete / Tomorrow Recommendation",
+      "pageId": "FL-046,FL-047"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.3% exceeds 45%: Bedtime Complete / Not Found",
+      "pageId": "FL-046,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.3% exceeds 45%: Child Profile / Growth Report",
+      "pageId": "FL-048,FL-051"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.1% exceeds 45%: Child Profile / Skeleton Loading",
+      "pageId": "FL-048,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.9% exceeds 45%: Child Profile / Permission Denied",
+      "pageId": "FL-048,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.9% exceeds 45%: Child Profile / Server Error",
+      "pageId": "FL-048,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Child Profile / Offline Mode",
+      "pageId": "FL-048,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Child Profile / Update Prompt",
+      "pageId": "FL-048,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Child Profile / Privacy Policy",
+      "pageId": "FL-048,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Child Profile / Child Data Protection",
+      "pageId": "FL-048,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.8% exceeds 45%: Child Profile / Export Data",
+      "pageId": "FL-048,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.7% exceeds 45%: Edit Child / Contact Support",
+      "pageId": "FL-049,FL-074"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.4% exceeds 45%: Update Age / Interest Preferences",
+      "pageId": "FL-050,FL-054"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 74.7% exceeds 45%: Update Age / Age Rating Settings",
+      "pageId": "FL-050,FL-058"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.3% exceeds 45%: Update Age / Switch Child",
+      "pageId": "FL-050,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Growth Report / Server Error",
+      "pageId": "FL-051,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.1% exceeds 45%: Growth Report / Offline Mode",
+      "pageId": "FL-051,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Growth Report / Update Prompt",
+      "pageId": "FL-051,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.8% exceeds 45%: Growth Report / Export Data",
+      "pageId": "FL-051,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.3% exceeds 45%: Story History / Task History",
+      "pageId": "FL-052,FL-053"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.6% exceeds 45%: Story History / Help Center",
+      "pageId": "FL-052,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.9% exceeds 45%: Task History / Help Center",
+      "pageId": "FL-053,FL-072"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.8% exceeds 45%: Interest Preferences / Age Rating Settings",
+      "pageId": "FL-054,FL-058"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.1% exceeds 45%: Interest Preferences / Switch Child",
+      "pageId": "FL-054,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.8% exceeds 45%: Parent Center / Loading",
+      "pageId": "FL-055,FL-064"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Parent Center / Skeleton Loading",
+      "pageId": "FL-055,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Parent Center / Network Error",
+      "pageId": "FL-055,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Parent Center / Permission Denied",
+      "pageId": "FL-055,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Parent Center / Not Found",
+      "pageId": "FL-055,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Parent Center / Server Error",
+      "pageId": "FL-055,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Parent Center / Offline Mode",
+      "pageId": "FL-055,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Parent Center / Update Prompt",
+      "pageId": "FL-055,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.2% exceeds 45%: Parent Center / FAQ",
+      "pageId": "FL-055,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.5% exceeds 45%: Parent Center / Terms",
+      "pageId": "FL-055,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.2% exceeds 45%: Parent Center / Privacy Policy",
+      "pageId": "FL-055,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.7% exceeds 45%: Parent Center / Export Data",
+      "pageId": "FL-055,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.8% exceeds 45%: Content Management / Play Time Limit",
+      "pageId": "FL-056,FL-057"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.5% exceeds 45%: Content Management / Recommendation Settings",
+      "pageId": "FL-056,FL-059"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.0% exceeds 45%: Content Management / Notification Settings",
+      "pageId": "FL-056,FL-061"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.4% exceeds 45%: Content Management / Privacy Settings",
+      "pageId": "FL-056,FL-062"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.9% exceeds 45%: Content Management / Account Settings",
+      "pageId": "FL-056,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.2% exceeds 45%: Content Management / Delete Account",
+      "pageId": "FL-056,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.2% exceeds 45%: Play Time Limit / Recommendation Settings",
+      "pageId": "FL-057,FL-059"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.0% exceeds 45%: Play Time Limit / Notification Settings",
+      "pageId": "FL-057,FL-061"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.8% exceeds 45%: Play Time Limit / Privacy Settings",
+      "pageId": "FL-057,FL-062"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.1% exceeds 45%: Play Time Limit / Account Settings",
+      "pageId": "FL-057,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.4% exceeds 45%: Play Time Limit / Delete Account",
+      "pageId": "FL-057,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 67.9% exceeds 45%: Age Rating Settings / Switch Child",
+      "pageId": "FL-058,FL-060"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 52.4% exceeds 45%: Recommendation Settings / Notification Settings",
+      "pageId": "FL-059,FL-061"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Recommendation Settings / Privacy Settings",
+      "pageId": "FL-059,FL-062"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.5% exceeds 45%: Recommendation Settings / Account Settings",
+      "pageId": "FL-059,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.5% exceeds 45%: Recommendation Settings / Delete Account",
+      "pageId": "FL-059,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.1% exceeds 45%: Notification Settings / Privacy Settings",
+      "pageId": "FL-061,FL-062"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.6% exceeds 45%: Notification Settings / Account Settings",
+      "pageId": "FL-061,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.8% exceeds 45%: Notification Settings / Delete Account",
+      "pageId": "FL-061,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 67.6% exceeds 45%: Privacy Settings / Account Settings",
+      "pageId": "FL-062,FL-063"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 64.3% exceeds 45%: Privacy Settings / Delete Account",
+      "pageId": "FL-062,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 68.7% exceeds 45%: Account Settings / Delete Account",
+      "pageId": "FL-063,FL-078"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 73.3% exceeds 45%: Loading / Skeleton Loading",
+      "pageId": "FL-064,FL-065"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.2% exceeds 45%: Loading / Network Error",
+      "pageId": "FL-064,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.7% exceeds 45%: Loading / Permission Denied",
+      "pageId": "FL-064,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.1% exceeds 45%: Loading / Not Found",
+      "pageId": "FL-064,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Loading / Server Error",
+      "pageId": "FL-064,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.9% exceeds 45%: Loading / Offline Mode",
+      "pageId": "FL-064,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.5% exceeds 45%: Loading / Update Prompt",
+      "pageId": "FL-064,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Loading / Terms",
+      "pageId": "FL-064,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Loading / Privacy Policy",
+      "pageId": "FL-064,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Loading / Child Data Protection",
+      "pageId": "FL-064,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 55.7% exceeds 45%: Skeleton Loading / Network Error",
+      "pageId": "FL-065,FL-066"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.4% exceeds 45%: Skeleton Loading / Permission Denied",
+      "pageId": "FL-065,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.5% exceeds 45%: Skeleton Loading / Not Found",
+      "pageId": "FL-065,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.9% exceeds 45%: Skeleton Loading / Server Error",
+      "pageId": "FL-065,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.9% exceeds 45%: Skeleton Loading / Offline Mode",
+      "pageId": "FL-065,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.9% exceeds 45%: Skeleton Loading / Update Prompt",
+      "pageId": "FL-065,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.8% exceeds 45%: Skeleton Loading / FAQ",
+      "pageId": "FL-065,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Skeleton Loading / Terms",
+      "pageId": "FL-065,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Skeleton Loading / Privacy Policy",
+      "pageId": "FL-065,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Skeleton Loading / Child Data Protection",
+      "pageId": "FL-065,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Skeleton Loading / Export Data",
+      "pageId": "FL-065,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.2% exceeds 45%: Network Error / Permission Denied",
+      "pageId": "FL-066,FL-067"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.7% exceeds 45%: Network Error / Not Found",
+      "pageId": "FL-066,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.3% exceeds 45%: Network Error / Server Error",
+      "pageId": "FL-066,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.6% exceeds 45%: Network Error / Offline Mode",
+      "pageId": "FL-066,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.4% exceeds 45%: Network Error / Update Prompt",
+      "pageId": "FL-066,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.1% exceeds 45%: Network Error / FAQ",
+      "pageId": "FL-066,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Network Error / Terms",
+      "pageId": "FL-066,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Network Error / Privacy Policy",
+      "pageId": "FL-066,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.1% exceeds 45%: Network Error / Child Data Protection",
+      "pageId": "FL-066,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.4% exceeds 45%: Permission Denied / Not Found",
+      "pageId": "FL-067,FL-068"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 57.4% exceeds 45%: Permission Denied / Server Error",
+      "pageId": "FL-067,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.2% exceeds 45%: Permission Denied / Offline Mode",
+      "pageId": "FL-067,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 58.8% exceeds 45%: Permission Denied / Update Prompt",
+      "pageId": "FL-067,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.5% exceeds 45%: Permission Denied / FAQ",
+      "pageId": "FL-067,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Permission Denied / Terms",
+      "pageId": "FL-067,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Permission Denied / Privacy Policy",
+      "pageId": "FL-067,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Permission Denied / Child Data Protection",
+      "pageId": "FL-067,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.4% exceeds 45%: Permission Denied / Export Data",
+      "pageId": "FL-067,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 59.1% exceeds 45%: Not Found / Server Error",
+      "pageId": "FL-068,FL-069"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.0% exceeds 45%: Not Found / Offline Mode",
+      "pageId": "FL-068,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 63.1% exceeds 45%: Not Found / Update Prompt",
+      "pageId": "FL-068,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Not Found / Terms",
+      "pageId": "FL-068,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Not Found / Privacy Policy",
+      "pageId": "FL-068,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.6% exceeds 45%: Not Found / Child Data Protection",
+      "pageId": "FL-068,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 62.9% exceeds 45%: Server Error / Offline Mode",
+      "pageId": "FL-069,FL-070"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.9% exceeds 45%: Server Error / Update Prompt",
+      "pageId": "FL-069,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.0% exceeds 45%: Server Error / Terms",
+      "pageId": "FL-069,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 49.4% exceeds 45%: Server Error / Privacy Policy",
+      "pageId": "FL-069,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.7% exceeds 45%: Server Error / Child Data Protection",
+      "pageId": "FL-069,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 47.5% exceeds 45%: Server Error / Export Data",
+      "pageId": "FL-069,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 61.9% exceeds 45%: Offline Mode / Update Prompt",
+      "pageId": "FL-070,FL-071"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Offline Mode / FAQ",
+      "pageId": "FL-070,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 50.7% exceeds 45%: Offline Mode / Terms",
+      "pageId": "FL-070,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Offline Mode / Privacy Policy",
+      "pageId": "FL-070,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.1% exceeds 45%: Offline Mode / Child Data Protection",
+      "pageId": "FL-070,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.3% exceeds 45%: Offline Mode / Export Data",
+      "pageId": "FL-070,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 45.2% exceeds 45%: Update Prompt / FAQ",
+      "pageId": "FL-071,FL-073"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.3% exceeds 45%: Update Prompt / Terms",
+      "pageId": "FL-071,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.7% exceeds 45%: Update Prompt / Privacy Policy",
+      "pageId": "FL-071,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Update Prompt / Child Data Protection",
+      "pageId": "FL-071,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 48.8% exceeds 45%: Update Prompt / Export Data",
+      "pageId": "FL-071,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 51.1% exceeds 45%: FAQ / Terms",
+      "pageId": "FL-073,FL-075"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.0% exceeds 45%: FAQ / Privacy Policy",
+      "pageId": "FL-073,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 53.9% exceeds 45%: FAQ / Child Data Protection",
+      "pageId": "FL-073,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 60.8% exceeds 45%: Terms / Privacy Policy",
+      "pageId": "FL-075,FL-076"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 54.8% exceeds 45%: Terms / Child Data Protection",
+      "pageId": "FL-075,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 46.1% exceeds 45%: Terms / Export Data",
+      "pageId": "FL-075,FL-079"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.0% exceeds 45%: Privacy Policy / Child Data Protection",
+      "pageId": "FL-076,FL-077"
+    },
+    {
+      "gate": "Layout Validation",
+      "message": "Layout similarity 56.0% exceeds 45%: Privacy Policy / Export Data",
+      "pageId": "FL-076,FL-079"
+    },
+    {
+      "gate": "UI Review",
+      "message": "At least 12 core pages must be high-fidelity UI before broad 79-page output. Found 0.",
+      "pageId": null
+    }
+  ],
   "warnings": []
 }
