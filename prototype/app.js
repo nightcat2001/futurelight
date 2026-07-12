@@ -86,7 +86,7 @@ const renderers = {
         <div class="security-card">
           <h2>Parent sign in</h2>
           <label>Email <input value="parent@example.com" aria-label="Parent email" /></label>
-          <label>Password <input value="secure demo" type="password" aria-label="Parent password" /></label>
+          <label>Password <input value="secure parent passphrase" type="password" aria-label="Parent password" /></label>
           <p>${escapeText(page.copy)}</p>
         </div>
         <div class="consent-panel">
@@ -221,6 +221,40 @@ const renderers = {
         <p>${escapeText(page.copy)}</p>
         ${primaryActions(page)}
       </section>`;
+  },
+  architecturePage(page) {
+    const tone = page.renderer.replace("System", "").replace("Page", "").toLowerCase();
+    return html`${topBar(page)}
+      <section class="screen-content architecture-layout ${tone}">
+        ${stateBanner(page)}
+        <div class="architecture-hero">
+          <span class="route-pill">${escapeText(page.route)}</span>
+          <h2>${escapeText(page.title)}</h2>
+          <p>${escapeText(page.copy)}</p>
+        </div>
+        <div class="architecture-grid">
+          <article>
+            <strong>User goal</strong>
+            <span>${escapeText(page.userGoal)}</span>
+          </article>
+          <article>
+            <strong>Flow</strong>
+            <span>${escapeText(page.userFlow)}</span>
+          </article>
+          <article>
+            <strong>Recovery</strong>
+            <span>${escapeText(page.recovery || page.states.error)}</span>
+          </article>
+          <article>
+            <strong>API mock</strong>
+            <span>${escapeText(page.api)}</span>
+          </article>
+        </div>
+        <div class="component-rail" aria-label="Components">
+          ${page.components.map((component) => `<span>${escapeText(component)}</span>`).join("")}
+        </div>
+        ${primaryActions(page)}
+      </section>${page.audience.toLowerCase().includes("parent") ? bottomNav("Parent") : bottomNav("Home")}`;
   }
 };
 
@@ -260,7 +294,7 @@ function renderQa(page) {
 
 function render() {
   const page = currentPage();
-  const renderer = renderers[page.renderer];
+  const renderer = renderers[page.renderer] || renderers.architecturePage;
   screenTitle.textContent = `${page.id} - ${page.title}`;
   screenRoot.className = `screen-root renderer-${page.renderer} state-${activeState}`;
   screenRoot.innerHTML = renderer(page);

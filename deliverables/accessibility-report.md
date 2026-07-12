@@ -19,3 +19,26 @@ Per-page accessibility notes:
 - FL-HTML-10: Parent instructions and child choices are separated semantically.
 - FL-HTML-11: Charts include text summaries and table fallback.
 - FL-HTML-12: High contrast in dark mode; audio can continue with screen dimmed.
+- FL-HTML-13: Brand text has readable contrast; loading status is announced.
+- FL-HTML-14: Cards use headings and are reachable by keyboard.
+- FL-HTML-15: Labels, errors, and password rules are explicit.
+- FL-HTML-16: Toggles have labels and state text.
+- FL-HTML-17: Tiles have labels and selected text.
+- FL-HTML-18: Large labels and aria names for controls.
+- FL-HTML-19: Filter chips expose selected state.
+- FL-HTML-20: Rows have text labels and age rationale.
+- FL-HTML-21: Search field has label and clear button.
+- FL-HTML-22: Summary has text equivalent for cover.
+- FL-HTML-23: Contrast is AA in dark mode and labels remain visible.
+- FL-HTML-24: Remove buttons have clear labels.
+- FL-HTML-25: Timeline has text order and dates.
+- FL-HTML-26: Adult-only labels are explicit.
+- FL-HTML-27: Keypad buttons have accessible labels.
+- FL-HTML-28: Inputs have labels and numeric text.
+- FL-HTML-29: Charts have text summaries.
+- FL-HTML-30: Actions are labelled and destructive action is separated.
+- FL-HTML-31: Rows are keyboard reachable and labelled.
+- FL-HTML-32: Toggles expose on/off text.
+- FL-HTML-33: Status is text, not color-only.
+- FL-HTML-34: Progress has text percentage.
+- FL-HTML-35: Error heading is explicit and aria-live.

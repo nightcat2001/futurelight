@@ -9,7 +9,7 @@ const repoRoot = path.resolve(root, "..");
 const reportDir = path.join(root, "reports");
 const screenshotDir = path.join(reportDir, "screenshots");
 const dataModule = await import(pathToFileURL(path.join(root, "data.js")).href);
-const { pages, flows, designSystem } = dataModule;
+const { pages, flows, designSystem, sitemap, navigationMatrix } = dataModule;
 const { chromium } = playwrightCore;
 const failures = [];
 const warnings = [];
@@ -50,11 +50,28 @@ const requiredPageFields = [
   "childSafety", "responsive", "api", "states", "acceptance", "testIds"
 ];
 const stateFields = ["default", "loading", "empty", "error", "success", "offline", "apiDelay", "apiFailure", "disabled", "permissionDenied"];
-const bannedTerms = ["lorem", "ipsum", "placeholder", "todo", "casino", "gambling", "betting", "weapon", "blood", "horror", "adult content"];
-const vagueTerms = ["click here", "learn more", "content here", "image here", "card title"];
+const bannedTerms = ["lorem", "ipsum", "placeholder", "todo", "casino", "gambling", "betting", "weapon", "blood", "horror", "adult content", "demo", "sample"];
+const vagueTerms = ["click here", "learn more", "content here", "image here", "card title", "primary content"];
+const requiredTitles = [
+  "Splash", "Onboarding", "Parent Login", "Parent Register", "Consent", "Create Child", "Age Band", "Interest Selection",
+  "Child Home", "AI Story Recommendation", "Story Explore", "Category", "Search", "Story Detail", "Child Story Player",
+  "Bedtime Player", "Favorites", "History", "Parent Entry", "PIN Verification", "Parent Dashboard", "Screen Time",
+  "Growth Report", "Privacy", "Settings", "Notification", "Offline", "Reconnect", "Error Recovery"
+];
 
-if (pages.length === 12) pass("PAGE_COVERAGE", "12 core pages present");
-else fail("PAGE_COVERAGE", `expected 12 pages, found ${pages.length}`);
+if (pages.length >= 35) pass("PAGE_COVERAGE", `${pages.length} product pages present`);
+else fail("PAGE_COVERAGE", `expected at least 35 pages, found ${pages.length}`);
+
+for (const title of requiredTitles) {
+  if (pages.some((page) => page.title === title)) pass("REQUIRED_PAGE", title);
+  else fail("REQUIRED_PAGE", `${title} missing`);
+}
+
+if (Array.isArray(sitemap) && sitemap.length >= 5) pass("SITEMAP", `${sitemap.length} sitemap groups`);
+else fail("SITEMAP", "sitemap missing or incomplete");
+
+if (Array.isArray(navigationMatrix) && navigationMatrix.length === pages.length) pass("NAVIGATION_MATRIX", `${navigationMatrix.length} navigation rows`);
+else fail("NAVIGATION_MATRIX", "navigation matrix does not match page count");
 
 if (flows.length >= 5) pass("FLOW_COVERAGE", `${flows.length} user flows present`);
 else fail("FLOW_COVERAGE", `expected at least 5 flows, found ${flows.length}`);
