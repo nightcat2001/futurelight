@@ -8,6 +8,7 @@ const failures = [];
 const warnings = [];
 const MAX_ALLOWED_LAYOUT_SIMILARITY = 0.45;
 const REQUIRED_CORE_HIGH_FIDELITY_PAGES = 12;
+const EXPECTED_PAGE_COUNT = 12;
 
 function fail(gate, message, pageId) {
   failures.push({ gate, message, pageId: pageId || null });
@@ -150,21 +151,41 @@ const requiredFields = [
 ];
 
 const requiredStateKeys = ["default", "loading", "empty", "error", "success", "disabled", "offline"];
-const requiredSections = [
-  "First Run / Account",
-  "Home / Daily",
-  "Stories",
-  "Growth / Interaction",
-  "Bedtime",
-  "Child Profile / Progress",
-  "Parent Center",
-  "System States",
-  "Support / Legal"
+const requiredSections = ["Core 12"];
+const requiredAudiences = ["child", "parent", "parent child"];
+const requiredLayouts = [
+  "first-launch-immersive",
+  "secure-parent-form",
+  "profile-builder",
+  "age-band-panels",
+  "trustworthy-recommendation",
+  "immersive-child-player",
+  "calm-child-completion",
+  "parent-next-decision",
+  "parent-led-task",
+  "split-role-interaction",
+  "parent-dashboard",
+  "dim-bedtime-environment"
 ];
-const requiredAudiences = ["child", "parent", "parent child", "legal", "system"];
-const requiredLayouts = ["splash", "form", "consent", "chooser", "home", "list", "player", "childActivity", "report", "settings", "system", "legal"];
+const requiredCorePageIds = [
+  "FL-HF-01",
+  "FL-HF-02",
+  "FL-HF-03",
+  "FL-HF-04",
+  "FL-HF-05",
+  "FL-HF-06",
+  "FL-HF-07",
+  "FL-HF-08",
+  "FL-HF-09",
+  "FL-HF-10",
+  "FL-HF-11",
+  "FL-HF-12"
+];
 
-if (pages.length !== 79) fail("Page Coverage Validation", `Expected 79 pages, found ${pages.length}`);
+if (pages.length !== EXPECTED_PAGE_COUNT) fail("Page Coverage Validation", `Expected ${EXPECTED_PAGE_COUNT} core high-fidelity pages, found ${pages.length}`);
+for (const pageId of requiredCorePageIds) {
+  if (!pages.some((page) => page.pageId === pageId)) fail("Page Coverage Validation", `Missing core page: ${pageId}`);
+}
 
 if (fs.existsSync(path.join(__dirname, "futurelight-validated-79-screens.svg"))) {
   fail(
@@ -258,7 +279,7 @@ if (highFidelityPages.length < REQUIRED_CORE_HIGH_FIDELITY_PAGES) {
 const rendererCounts = {};
 for (const page of pages) rendererCounts[page.layout] = (rendererCounts[page.layout] || 0) + 1;
 for (const [layout, count] of Object.entries(rendererCounts)) {
-  if (count > 12) fail("Layout Validation", `Renderer overused (${count}): ${layout}`);
+  if (count > 1) fail("Layout Validation", `Core 12 renderer reused (${count}): ${layout}`);
 }
 
 const accessibilitySignals = ["large", "contrast", "non-color", "reduced-motion", "focus", "audio"];
@@ -299,6 +320,12 @@ for (const page of pages) {
   }
   if (!/confusion|clear|visual|cognitive|safe|recover|one clear|next/i.test(asText([page.userGoal, page.userPain, page.taskFlow, page.interaction]))) {
     fail("UX Review", `${page.title} does not prove understandable first-use UX`, page.pageId);
+  }
+  if (page.visualDesignLevel !== "high-fidelity-ui") {
+    fail("UI Review", `${page.title} is not marked high-fidelity-ui`, page.pageId);
+  }
+  if (/poster|catalog|wireframe|page spec card/i.test(asText([page.actualUIScreen, page.layoutFamily, page.visualHierarchy]))) {
+    fail("UI Review", `${page.title} appears to be a catalog/poster/wireframe artifact`, page.pageId);
   }
 }
 

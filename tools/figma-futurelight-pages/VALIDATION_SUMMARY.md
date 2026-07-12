@@ -4,9 +4,9 @@
 
 TASK STATUS: IN PROGRESS
 
-The previous `DESIGN VALIDATION: PASS` result is revoked.
+The previous 79-page `DESIGN VALIDATION: PASS` result is revoked.
 
-The prior 79-page output is not accepted because it produced a catalog/poster-style set of similar card templates, not production-ready product UI. The exported SVG poster has been removed from the project and must not be used as Figma delivery evidence.
+The project has been reset to a core-12-first workflow. The prior 79-page output is rejected because it produced a catalog/poster-style set of similar card templates, not production-ready product UI. The exported SVG poster has been removed from the project and must not be used as Figma delivery evidence.
 
 ## Revoked Claims
 
@@ -19,7 +19,7 @@ These claims are invalid and must not be repeated:
 - `SVG can be imported as valid Figma UI`
 - `Production Ready`
 
-Correct current status:
+Correct revoked-output status:
 
 ```text
 DESIGN VALIDATION: FAIL
@@ -70,4 +70,19 @@ The previous validator checked structured metadata and weak similarity signals, 
 
 ## Current Evidence
 
-The validator has been changed so the current 79-page output fails. A passing report is not allowed until the rebuild path is complete.
+The validator has been changed so the old 79-page output fails.
+
+Current core-12 rebuild validation:
+
+```text
+DESIGN VALIDATION: PASS
+Pages: 12
+Max layout similarity: 34.83%
+Renderer reuse: 0 repeated renderer families
+failures: 0
+warnings: 0
+productionReady: false
+taskComplete: false
+```
+
+This means the 12 core screen specs and renderer pass the local pre-Figma gate. It does not mean production readiness, and it does not mean Figma visual QA is complete.
