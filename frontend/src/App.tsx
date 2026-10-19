@@ -14,6 +14,10 @@ import { StoryExperience } from './StoryExperience'
 type ApiStatus = 'checking' | 'ok' | 'error'
 type AuthMode = 'login' | 'register'
 type AuthStatus = 'checking' | 'signed_out' | 'signed_in'
+type InstallPromptEvent = Event & {
+  prompt: () => Promise<void>
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+}
 type RouteState = 'live' | 'blocked' | 'next'
 type RouteId =
   | 'home'
@@ -537,7 +541,10 @@ function App() {
   const [authToken, setAuthToken] = useState<string | null>(null)
   const [authStatus, setAuthStatus] = useState<AuthStatus>('checking')
   const [parent, setParent] = useState<ParentAccount | null>(null)
-  const [authMode, setAuthMode] = useState<AuthMode>('login')
+  const [authMode, setAuthMode] = useState<AuthMode>(() =>
+    localStorage.getItem('futurelight.hasAccount') ? 'login' : 'register',
+  )
+  const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null)
   const [authBusy, setAuthBusy] = useState(false)
   const [authError, setAuthError] = useState<string | null>(null)
   const [authForm, setAuthForm] = useState<AuthForm>({
@@ -572,6 +579,15 @@ function App() {
 
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  useEffect(() => {
+    function handleInstallPrompt(event: Event) {
+      event.preventDefault()
+      setInstallPrompt(event as InstallPromptEvent)
+    }
+    window.addEventListener('beforeinstallprompt', handleInstallPrompt)
+    return () => window.removeEventListener('beforeinstallprompt', handleInstallPrompt)
   }, [])
 
   useEffect(() => {
@@ -687,11 +703,19 @@ function App() {
 
   function persistAuth(response: AuthResponse) {
     localStorage.setItem(authTokenStorageKey, response.session.token)
+    localStorage.setItem('futurelight.hasAccount', 'true')
     setAuthToken(response.session.token)
     setParent(response.parent)
     setAuthStatus('signed_in')
     setAuthError(null)
     setAuthForm((current) => ({ ...current, password: '' }))
+  }
+
+  async function installApp() {
+    if (!installPrompt) return
+    await installPrompt.prompt()
+    await installPrompt.userChoice
+    setInstallPrompt(null)
   }
 
   function clearAuthState() {
@@ -1026,6 +1050,11 @@ function App() {
               {route.label}
             </button>
           ))}
+          {installPrompt && (
+            <button className="install-button" type="button" onClick={() => void installApp()}>
+              安裝
+            </button>
+          )}
         </nav>
       </header>
 
@@ -1102,7 +1131,15 @@ function RouteView({
   route: RouteDefinition
 }) {
   if (route.id === 'home') {
-    return <HomeRoute apiStatus={apiStatus} courses={courses} home={home} navigate={navigate} />
+    return (
+      <HomeRoute
+        apiStatus={apiStatus}
+        courses={courses}
+        home={home}
+        navigate={navigate}
+        onboardingNeeded={auth.authStatus !== 'signed_in' || childProfiles.children.length === 0}
+      />
+    )
   }
 
   if (route.id === 'courses') {
@@ -1207,11 +1244,13 @@ function HomeRoute({
   courses,
   home,
   navigate,
+  onboardingNeeded,
 }: {
   apiStatus: ApiStatus
   courses: CourseSummary[]
   home: HomeSummary | null
   navigate: (route: RouteDefinition) => void
+  onboardingNeeded: boolean
 }) {
   const primaryCourse = courses[0]
 
@@ -1229,8 +1268,8 @@ function HomeRoute({
                 : '正在準備今天適合孩子的內容。'}
           </p>
           <div className="hero-actions">
-            <button className="primary-action" type="button" onClick={() => navigate(routes[7])}>
-              開始今天的故事
+            <button className="primary-action" type="button" onClick={() => navigate(onboardingNeeded ? routes[4] : routes[7])}>
+              {onboardingNeeded ? '開始建立家庭資料' : '開始今天的故事'}
             </button>
             <button className="secondary-action" type="button" onClick={() => navigate(routes[4])}>
               家長中心

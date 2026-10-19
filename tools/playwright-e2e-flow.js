@@ -35,7 +35,7 @@ async (page) => {
   await requireVisible(page.getByRole('heading', { name: 'Parent Center' }), 'Parent Center')
   await requireVisible(page.getByText('API connected'), 'API connected')
 
-  await page.getByRole('button', { name: 'Create Account' }).click()
+  await page.locator('[role="tablist"]').getByRole('button', { name: 'Create Account' }).click()
   const authForm = page.locator('form.auth-panel')
   await authForm.getByLabel('Email').fill(email)
   await authForm.getByLabel('Display Name').fill('Playwright Parent')

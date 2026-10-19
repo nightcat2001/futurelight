@@ -20,7 +20,7 @@ async (page) => {
   page.setDefaultTimeout(15_000)
 
   await page.goto(`${baseUrl}/parent`)
-  await page.getByRole('button', { name: 'Create Account' }).click()
+  await page.locator('[role="tablist"]').getByRole('button', { name: 'Create Account' }).click()
   const authForm = page.locator('form.auth-panel')
   await authForm.getByLabel('Email').fill(email)
   await authForm.getByLabel('Display Name').fill('故事測試家長')

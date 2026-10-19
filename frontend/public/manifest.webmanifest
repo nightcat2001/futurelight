@@ -1,0 +1,18 @@
+{
+  "name": "FutureLight 親子故事",
+  "short_name": "FutureLight",
+  "description": "為 0 至 6 歲孩子設計的親子故事、每日互動與睡前陪伴。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f8fb",
+  "theme_color": "#286b57",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "/assets/images/characters/guide-happy.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
