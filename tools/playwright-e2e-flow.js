@@ -5,7 +5,7 @@ async (page) => {
     page = await isolatedContext.newPage()
   }
 
-  const baseUrl = 'http://127.0.0.1:37173'
+  const baseUrl = process.env.FUTURELIGHT_BASE_URL || 'http://127.0.0.1:37173'
   const email = 'playwright-e2e@futurelight.test'
   const password = 'correct horse battery staple'
 
@@ -60,7 +60,7 @@ async (page) => {
   await childForm.getByLabel('English Variant').selectOption('american')
   await childForm.getByLabel('Record parent privacy consent').check()
   await childForm.getByRole('button', { name: 'Create Child' }).click()
-  await requireVisible(page.getByText('Avery US'), 'created child profile')
+  await requireVisible(page.locator('.child-card h2', { hasText: 'Avery US' }), 'created child profile')
   await requireVisible(page.getByText('granted'), 'granted consent record')
 
   await page.getByRole('button', { name: 'Sign Out' }).click()
@@ -70,7 +70,7 @@ async (page) => {
   await authForm.getByLabel('Password').fill(password)
   await authForm.locator('button[type="submit"]').click()
   await requireVisible(page.getByText('Signed In'), 'login after sign out')
-  await requireVisible(page.getByText('Avery US'), 'child profile after login')
+  await requireVisible(page.locator('.child-card h2', { hasText: 'Avery US' }), 'child profile after login')
   const tokenAfterLogin = await page.evaluate(() => localStorage.getItem('futurelight.parentToken'))
   if (!tokenAfterLogin) {
     throw new Error('Missing futurelight.parentToken after login.')
@@ -107,7 +107,7 @@ async (page) => {
 
   await page.goto(`${baseUrl}/parent`)
   await requireVisible(page.getByRole('heading', { name: 'Progress By Child' }), 'parent summary')
-  await requireVisible(page.getByText('Avery US'), 'parent summary child')
+  await requireVisible(page.locator('.summary-card h2', { hasText: 'Avery US' }), 'parent summary child')
   await requireVisible(page.getByText('Recorded Consent'), 'privacy consent panel')
 
   await page.goto(`${baseUrl}/courses`)

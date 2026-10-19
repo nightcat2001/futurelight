@@ -2,8 +2,8 @@
 
 - Status: PASS
 - Prototype Review Ready: YES
-- Production Ready: YES
-- Task Complete: YES
+- Production Ready: NO
+- Task Complete: NO
 - Page Count: 35
 - Flow Count: 5
 - Screenshot Count: 175
@@ -24,7 +24,8 @@
 - CONSOLE: PASS
 - ASSETS: PASS
 - E2E: PASS
-- PRODUCTION REVIEW: PASS
+- PROTOTYPE REVIEW: PASS
+- PRODUCT PRODUCTION REVIEW: NOT ASSESSED
 
 ## Production Review Criteria
 

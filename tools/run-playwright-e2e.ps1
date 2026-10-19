@@ -1,6 +1,7 @@
 param(
     [string]$FlowFile = (Join-Path $PSScriptRoot 'playwright-e2e-flow.js'),
-    [string]$TestEmail = 'playwright-e2e@futurelight.test'
+    [string]$TestEmail = 'playwright-e2e@futurelight.test',
+    [string]$BaseUrl = 'http://127.0.0.1:37173'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -142,7 +143,7 @@ try {
     Remove-Item -LiteralPath $playwrightLog, $playwrightErrorLog -Force -ErrorAction SilentlyContinue
     $playwrightProcess = Start-Process `
         -FilePath 'node' `
-        -ArgumentList @($playwrightRunner, '--filename', $FlowFile) `
+        -ArgumentList @($playwrightRunner, '--filename', $FlowFile, '--base-url', $BaseUrl) `
         -WorkingDirectory $root `
         -WindowStyle Hidden `
         -PassThru `

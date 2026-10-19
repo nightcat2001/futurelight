@@ -8,6 +8,7 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 37173,
     strictPort: true,
+    allowedHosts: ['.trycloudflare.com'],
     proxy: {
       '/api': 'http://127.0.0.1:37200',
       '/health': 'http://127.0.0.1:37200',

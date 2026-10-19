@@ -351,20 +351,17 @@ const productionReviewCriteria = [
   { name: "Child Safety", status: gateSummary["CHILD SAFETY"], detail: "No banned adult, violent, gambling, or horror terms detected" },
   { name: "Warnings", status: warnings.length === 0 ? "PASS" : "FAIL", detail: `${warnings.length} warnings` }
 ];
-const productionReviewPass = failures.length === 0 && productionReviewCriteria.every((item) => item.status === "PASS");
-gateSummary["PRODUCTION REVIEW"] = productionReviewPass ? "PASS" : "FAIL";
+const prototypeReviewPass = failures.length === 0 && productionReviewCriteria.every((item) => item.status === "PASS");
+gateSummary["PROTOTYPE REVIEW"] = prototypeReviewPass ? "PASS" : "FAIL";
+gateSummary["PRODUCT PRODUCTION REVIEW"] = "NOT ASSESSED";
 const status = failures.length === 0 ? "PASS" : "FAIL";
 const report = {
   status,
-  prototypeReviewReady: failures.length === 0 ? "YES" : "NO",
-  productionReady: productionReviewPass ? "YES" : "NO",
-  taskComplete: productionReviewPass ? "YES" : "NO",
-  productionReadyReason: productionReviewPass
-    ? "Prototype production review criteria passed: architecture, inventory, sitemap, flow, navigation, CTA, runtime, assets, interaction, responsive, E2E, visual QA, accessibility, child safety, and warning checks are all PASS."
-    : "Prototype production review criteria failed; inspect productionReviewCriteria, failures, and warnings.",
-  taskCompleteReason: productionReviewPass
-    ? "HTML prototype task complete within scoped prototype review: all gates passed and no failures or warnings remain."
-    : "HTML prototype task incomplete because one or more production review criteria failed.",
+  prototypeReviewReady: prototypeReviewPass ? "YES" : "NO",
+  productionReady: "NO",
+  taskComplete: "NO",
+  productionReadyReason: "This gate validates only the HTML prototype. Product readiness requires evidence from the React frontend, Rust API, PostgreSQL, Android, deployment, security, performance, legal/store, and release gates.",
+  taskCompleteReason: "The FutureLight product task cannot be completed by an HTML prototype gate.",
   pageCount: pages.length,
   flowCount: flows.length,
   screenshotCount,

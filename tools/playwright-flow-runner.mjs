@@ -6,9 +6,15 @@ const { chromium } = require('playwright-core')
 
 const filenameIndex = process.argv.indexOf('--filename')
 const filename = filenameIndex >= 0 ? process.argv[filenameIndex + 1] : null
+const baseUrlIndex = process.argv.indexOf('--base-url')
+const baseUrl = baseUrlIndex >= 0 ? process.argv[baseUrlIndex + 1] : null
 
 if (!filename) {
   throw new Error('Usage: node tools/playwright-flow-runner.mjs --filename <flow-file>')
+}
+
+if (baseUrl) {
+  process.env.FUTURELIGHT_BASE_URL = baseUrl
 }
 
 const source = await readFile(filename, 'utf8')

@@ -53,8 +53,8 @@ This package is a local HTML prototype review surface for the FutureLight 0-6 ch
 - Screenshot Count: ${gate.screenshotCount}
 - Max Layout Similarity: ${gate.maxLayoutSimilarity}%
 
-Production Ready is ${gate.productionReady} for the scoped HTML prototype production review gate.
-Reason: ${gate.productionReadyReason}
+This package is a prototype review artifact. It does not establish product production readiness.
+Product readiness: ${gate.productionReady}. Reason: ${gate.productionReadyReason}
 `);
 
 await writeFile(path.join(deliverables, "page-inventory.md"), `# Page Inventory
