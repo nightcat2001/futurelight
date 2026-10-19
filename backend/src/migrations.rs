@@ -47,6 +47,10 @@ const MIGRATIONS: &[(&str, &str)] = &[
         "0011_support_requests",
         include_str!("../migrations/0011_support_requests.sql"),
     ),
+    (
+        "0012_story_journey",
+        include_str!("../migrations/0012_story_journey.sql"),
+    ),
 ];
 
 pub async fn run_migrations(

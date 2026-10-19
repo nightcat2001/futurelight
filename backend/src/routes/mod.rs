@@ -10,6 +10,7 @@ pub mod health;
 pub mod pages;
 pub mod privacy;
 pub mod progress;
+pub mod stories;
 pub mod support;
 
 pub fn router(state: AppState) -> Router {
@@ -120,6 +121,31 @@ pub fn router(state: AppState) -> Router {
         .route(
             "/api/support/requests",
             get(support::list_requests).post(support::create_request),
+        )
+        .route(
+            "/api/stories/recommendations",
+            get(stories::recommendations),
+        )
+        .route("/api/stories/{story_id}", get(stories::story_detail))
+        .route(
+            "/api/story-sessions",
+            axum::routing::post(stories::start_story_session),
+        )
+        .route(
+            "/api/story-sessions/{session_id}/progress",
+            axum::routing::patch(stories::update_story_progress),
+        )
+        .route(
+            "/api/story-sessions/{session_id}/complete",
+            axum::routing::patch(stories::complete_story_session),
+        )
+        .route(
+            "/api/children/{child_id}/daily-family-task",
+            get(stories::daily_family_task),
+        )
+        .route(
+            "/api/family-tasks/{task_id}/complete",
+            axum::routing::post(stories::complete_family_task),
         )
         .with_state(state)
 }

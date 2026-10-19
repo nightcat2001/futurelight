@@ -9,6 +9,7 @@ import {
   useState,
 } from 'react'
 import './App.css'
+import { StoryExperience } from './StoryExperience'
 
 type ApiStatus = 'checking' | 'ok' | 'error'
 type AuthMode = 'login' | 'register'
@@ -22,6 +23,8 @@ type RouteId =
   | 'parent'
   | 'content'
   | 'settings'
+  | 'stories'
+  | 'bedtime'
   | 'not-found'
 
 type HomeSummary = {
@@ -428,9 +431,11 @@ const routes: RouteDefinition[] = [
   { id: 'parent', path: '/parent', label: 'Parent', title: 'Parent Center', state: 'live' },
   { id: 'content', path: '/content', label: 'Content', title: 'Content Studio', state: 'live' },
   { id: 'settings', path: '/settings', label: 'Settings', title: 'Settings', state: 'next' },
+  { id: 'stories', path: '/stories', label: 'Stories', title: 'Story Time', state: 'live' },
+  { id: 'bedtime', path: '/bedtime', label: 'Bedtime', title: 'Bedtime Mode', state: 'live' },
 ]
 
-const topNavigationIds: RouteId[] = ['home', 'courses', 'learn', 'parent', 'content']
+const topNavigationIds: RouteId[] = ['home', 'stories', 'bedtime', 'parent']
 
 const notFoundRoute: RouteDefinition = {
   id: 'not-found',
@@ -547,7 +552,7 @@ function App() {
   const [childError, setChildError] = useState<string | null>(null)
   const [editingChildId, setEditingChildId] = useState<string | null>(null)
   const [childForm, setChildForm] = useState<ChildForm>({
-    ageBand: '6-8',
+    ageBand: '3-4',
     displayName: '',
     englishVariant: 'american',
     marketRegion: 'US',
@@ -852,7 +857,7 @@ function App() {
 
   function resetChildForm() {
     setChildForm({
-      ageBand: '6-8',
+      ageBand: '3-4',
       displayName: '',
       englishVariant: 'american',
       marketRegion: 'US',
@@ -1031,7 +1036,7 @@ function App() {
         <span className="status-path">{activeRoute.path}</span>
       </section>
 
-      <div className="workspace-shell">
+      <div className={`workspace-shell ${activeRoute.id === 'stories' || activeRoute.id === 'bedtime' ? 'immersive-route' : ''}`}>
         <aside className="route-rail" aria-label="All product routes">
           {routes.map((route) => (
             <button
@@ -1120,6 +1125,18 @@ function RouteView({
     return <ContentAdminRoute auth={auth} />
   }
 
+  if (route.id === 'stories' || route.id === 'bedtime') {
+    return (
+      <StoryExperience
+        key={route.id}
+        authToken={auth.authToken}
+        children={childProfiles.children}
+        mode={route.id === 'bedtime' ? 'bedtime' : 'standard'}
+        onOpenParent={() => navigate(routes[4])}
+      />
+    )
+  }
+
   if (route.id === 'not-found') {
     return (
       <BlockedRoute
@@ -1203,20 +1220,20 @@ function HomeRoute({
       <section className="hero-band">
         <div className="hero-copy">
           <p className="eyebrow">Today</p>
-          <h1>Start a focused English session.</h1>
+          <h1>今天，一起走進故事裡。</h1>
           <p>
             {home
-              ? `${home.current_child} is ready for ${home.next_action}.`
+              ? `${home.current_child} 的故事、親子任務和睡前陪伴都準備好了。`
               : apiStatus === 'error'
                 ? 'The local API is unavailable, so live learning data is paused.'
-                : 'Preparing the latest learning state.'}
+                : '正在準備今天適合孩子的內容。'}
           </p>
           <div className="hero-actions">
-            <button className="primary-action" type="button" onClick={() => navigate(routes[1])}>
-              Open Courses
+            <button className="primary-action" type="button" onClick={() => navigate(routes[7])}>
+              開始今天的故事
             </button>
             <button className="secondary-action" type="button" onClick={() => navigate(routes[4])}>
-              Parent Center
+              家長中心
             </button>
           </div>
         </div>
@@ -3713,7 +3730,10 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
             value={childProfiles.childForm.ageBand}
             onChange={(event) => childProfiles.updateChildForm('ageBand', event.target.value)}
           >
-            <option value="3-5">3-5</option>
+            <option value="0-2">0-2</option>
+            <option value="3-4">3-4</option>
+            <option value="5-6">5-6</option>
+            <option value="3-5">3-5 (legacy)</option>
             <option value="6-8">6-8</option>
             <option value="9-11">9-11</option>
           </select>

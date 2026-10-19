@@ -142,7 +142,7 @@ fn validate_display_name(display_name: &str) -> Result<&str, ApiError> {
 
 fn validate_age_band(age_band: &str) -> Result<&str, ApiError> {
     match age_band {
-        "3-5" | "6-8" | "9-11" => Ok(age_band),
+        "0-2" | "3-4" | "5-6" | "3-5" | "6-8" | "9-11" => Ok(age_band),
         _ => Err(ApiError::BadRequest("invalid_age_band")),
     }
 }

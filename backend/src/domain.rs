@@ -304,3 +304,60 @@ pub struct SupportRequestRecord {
     pub updated_at: String,
     pub resolved_at: Option<String>,
 }
+
+#[derive(Debug, Clone, Serialize)]
+pub struct StorySummary {
+    pub id: String,
+    pub slug: String,
+    pub title: String,
+    pub summary: String,
+    pub theme: String,
+    pub mode: String,
+    pub min_age: i32,
+    pub max_age: i32,
+    pub duration_minutes: i32,
+    pub cover_path: String,
+    pub parent_prompt: String,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct StoryDetail {
+    pub id: String,
+    pub slug: String,
+    pub title: String,
+    pub summary: String,
+    pub theme: String,
+    pub mode: String,
+    pub min_age: i32,
+    pub max_age: i32,
+    pub duration_minutes: i32,
+    pub cover_path: String,
+    pub pages: Value,
+    pub parent_prompt: String,
+    pub calming_prompt: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct StorySession {
+    pub id: String,
+    pub child_id: String,
+    pub story_id: String,
+    pub mode: String,
+    pub current_page: i32,
+    pub started_at: String,
+    pub last_progress_at: String,
+    pub completed_at: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct DailyFamilyTask {
+    pub id: String,
+    pub task_key: String,
+    pub title: String,
+    pub instruction: String,
+    pub parent_tip: String,
+    pub min_age: i32,
+    pub max_age: i32,
+    pub duration_minutes: i32,
+    pub completed_today: bool,
+}
