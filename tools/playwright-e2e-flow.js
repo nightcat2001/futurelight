@@ -32,15 +32,16 @@ async (page) => {
   await page.goto(baseUrl)
   await page.evaluate(() => localStorage.clear())
   await page.goto(`${baseUrl}/parent`)
+  await page.locator('.language-switcher select').selectOption('en')
   await requireVisible(page.getByRole('heading', { name: 'Parent Center' }), 'Parent Center')
-  await requireVisible(page.getByText('API connected'), 'API connected')
+  await requireVisible(page.getByText('Service connected'), 'Service connected')
 
   await page.locator('[role="tablist"]').getByRole('button', { name: 'Create Account' }).click()
   const authForm = page.locator('form.auth-panel')
   await authForm.getByLabel('Email').fill(email)
   await authForm.getByLabel('Display Name').fill('Playwright Parent')
   await authForm.getByLabel('Password').fill(password)
-  await authForm.getByLabel('Locale').fill('en-US')
+  await authForm.getByLabel('Language').fill('en-US')
   const registerResponsePromise = page.waitForResponse(
     (response) => response.url().includes('/api/auth/register') && response.request().method() === 'POST',
   )
@@ -55,7 +56,7 @@ async (page) => {
 
   const childForm = page.locator('form.child-form')
   await childForm.getByLabel('Display Name').fill('Avery US')
-  await childForm.getByLabel('Age Band').selectOption('6-8')
+  await childForm.getByLabel('Age').selectOption('6-8')
   await childForm.getByLabel('Region').selectOption('US')
   await childForm.getByLabel('English Variant').selectOption('american')
   await childForm.getByLabel('Record parent privacy consent').check()

@@ -16,6 +16,16 @@
 | Daily family task | Story dashboard and completion screen | `GET /api/children/{id}/daily-family-task`, `POST /api/family-tasks/{id}/complete` | `daily_family_tasks`, `family_task_completions` | Complete and reload assertions in backend/browser tests |
 | Bedtime mode | `/bedtime`, bedtime variant of `StoryExperience` | Story APIs with `mode=bedtime` | `stories.mode`, `story_sessions.mode` | Bedtime recommendation, start, copy, screenshot, mobile overflow check |
 | Read aloud | Story reader | Browser Web Speech API | No child voice is collected or stored | UI control available on every page |
+| Four-language localization | Global language selector, home, parent onboarding, story dashboard, player, completion, and family task | Content stays keyed by stable story slug and task key | Locale preference is stored on-device; progress remains language-independent | Runtime coverage gate plus local and public Playwright locale switching |
+
+## Supported languages
+
+- Traditional Chinese: `zh-TW`
+- Simplified Chinese: `zh-CN`
+- Filipino: `fil-PH`
+- English: `en`
+
+The language switch changes navigation, connection/account state, home onboarding, parent sign-in and child creation, story metadata, all 14 story pages, interaction prompts, completion prompts, all daily family tasks, and speech synthesis language. The selected locale persists in `localStorage` and does not duplicate or reset the child's database progress.
 
 ## Validation performed
 

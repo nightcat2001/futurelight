@@ -910,6 +910,29 @@ button:disabled {
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
+.language-switcher select {
+  min-height: 42px;
+  padding: 0 34px 0 12px;
+  border: 1px solid #cbd7e4;
+  border-radius: 8px;
+  background: #fff;
+  color: #173042;
+  font: inherit;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .story-experience {
   min-height: 680px;
   color: #173042;

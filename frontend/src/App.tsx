@@ -10,6 +10,7 @@ import {
 } from 'react'
 import './App.css'
 import { StoryExperience } from './StoryExperience'
+import { type Locale, localeOptions, ui } from './i18n'
 
 type ApiStatus = 'checking' | 'ok' | 'error'
 type AuthMode = 'login' | 'register'
@@ -449,12 +450,6 @@ const notFoundRoute: RouteDefinition = {
   state: 'blocked',
 }
 
-const apiStatusText: Record<ApiStatus, string> = {
-  checking: 'Checking API',
-  ok: 'API connected',
-  error: 'API unavailable',
-}
-
 const authErrorMessages: Record<string, string> = {
   activity_type_required: 'Activity type is required.',
   activity_update_required: 'Change at least one activity field before saving.',
@@ -534,6 +529,10 @@ function useSoundController(parent: ParentAccount | null): SoundController {
 }
 
 function App() {
+  const [locale, setLocale] = useState<Locale>(() => {
+    const stored = localStorage.getItem('futurelight.locale')
+    return localeOptions.some((option) => option.code === stored) ? stored as Locale : 'zh-TW'
+  })
   const [locationPath, setLocationPath] = useState(() => normalizedPath(window.location.pathname))
   const [apiStatus, setApiStatus] = useState<ApiStatus>('checking')
   const [home, setHome] = useState<HomeSummary | null>(null)
@@ -571,6 +570,7 @@ function App() {
   const [gateRequest, setGateRequest] = useState<ParentGateRequest | null>(null)
   const [gateVerifiedUntil, setGateVerifiedUntil] = useState(0)
   const sound = useSoundController(parent)
+  const strings = ui[locale]
 
   useEffect(() => {
     function handlePopState() {
@@ -580,6 +580,11 @@ function App() {
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = locale
+    localStorage.setItem('futurelight.locale', locale)
+  }, [locale])
 
   useEffect(() => {
     function handleInstallPrompt(event: Event) {
@@ -694,6 +699,13 @@ function App() {
 
   function updateAuthForm(field: keyof AuthForm, value: string) {
     setAuthForm((current) => ({ ...current, [field]: value }))
+  }
+
+  function changeLocale(nextLocale: Locale) {
+    setLocale(nextLocale)
+    if (authStatus !== 'signed_in') {
+      setAuthForm((current) => ({ ...current, locale: nextLocale }))
+    }
   }
 
   function selectAuthMode(mode: AuthMode) {
@@ -1034,7 +1046,7 @@ function App() {
           <span className="brand-mark">FL</span>
           <span>
             <strong>FutureLight</strong>
-            <small>{parent ? parent.display_name : 'Language learning'}</small>
+            <small>{parent ? parent.display_name : strings.brandSubtitle}</small>
           </span>
         </button>
 
@@ -1047,12 +1059,18 @@ function App() {
               type="button"
               onClick={() => navigate(route)}
             >
-              {route.label}
+              {strings.nav[route.id] ?? route.label}
             </button>
           ))}
+          <label className="language-switcher">
+            <span className="sr-only">Language</span>
+            <select value={locale} onChange={(event) => changeLocale(event.target.value as Locale)}>
+              {localeOptions.map((option) => <option key={option.code} value={option.code}>{option.label}</option>)}
+            </select>
+          </label>
           {installPrompt && (
             <button className="install-button" type="button" onClick={() => void installApp()}>
-              安裝
+              {strings.install}
             </button>
           )}
         </nav>
@@ -1060,8 +1078,8 @@ function App() {
 
       <section className={`status-strip ${apiStatus}`} aria-live="polite">
         <span className="status-dot" />
-        <span>{apiStatusText[apiStatus]}</span>
-        <span className="auth-chip">{authStatusText(authStatus)}</span>
+        <span>{strings.api[apiStatus]}</span>
+        <span className="auth-chip">{authStatus === 'checking' ? strings.auth.checking : authStatus === 'signed_in' ? strings.auth.signedIn : strings.auth.signedOut}</span>
         <span className="status-path">{activeRoute.path}</span>
       </section>
 
@@ -1075,7 +1093,7 @@ function App() {
               type="button"
               onClick={() => navigate(route)}
             >
-              <span>{route.label}</span>
+              <span>{strings.nav[route.id] ?? route.label}</span>
               <small>{route.path}</small>
               <RouteStatePill state={route.state} />
             </button>
@@ -1092,6 +1110,7 @@ function App() {
             home={home}
             navigate={navigate}
             route={activeRoute}
+            locale={locale}
           />
         </section>
       </div>
@@ -1120,6 +1139,7 @@ function RouteView({
   home,
   navigate,
   route,
+  locale,
 }: {
   apiStatus: ApiStatus
   auth: AuthController
@@ -1129,6 +1149,7 @@ function RouteView({
   home: HomeSummary | null
   navigate: (route: RouteDefinition) => void
   route: RouteDefinition
+  locale: Locale
 }) {
   if (route.id === 'home') {
     return (
@@ -1138,6 +1159,7 @@ function RouteView({
         home={home}
         navigate={navigate}
         onboardingNeeded={auth.authStatus !== 'signed_in' || childProfiles.children.length === 0}
+        locale={locale}
       />
     )
   }
@@ -1155,7 +1177,7 @@ function RouteView({
   }
 
   if (route.id === 'parent') {
-    return <ParentRoute auth={auth} childProfiles={childProfiles} gate={gate} />
+    return <ParentRoute auth={auth} childProfiles={childProfiles} gate={gate} locale={locale} />
   }
 
   if (route.id === 'content') {
@@ -1170,6 +1192,7 @@ function RouteView({
         children={childProfiles.children}
         mode={route.id === 'bedtime' ? 'bedtime' : 'standard'}
         onOpenParent={() => navigate(routes[4])}
+        locale={locale}
       />
     )
   }
@@ -1245,34 +1268,37 @@ function HomeRoute({
   home,
   navigate,
   onboardingNeeded,
+  locale,
 }: {
   apiStatus: ApiStatus
   courses: CourseSummary[]
   home: HomeSummary | null
   navigate: (route: RouteDefinition) => void
   onboardingNeeded: boolean
+  locale: Locale
 }) {
   const primaryCourse = courses[0]
+  const t = ui[locale].home
 
   return (
     <>
       <section className="hero-band">
         <div className="hero-copy">
-          <p className="eyebrow">Today</p>
-          <h1>今天，一起走進故事裡。</h1>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h1>{t.title}</h1>
           <p>
             {home
-              ? `${home.current_child} 的故事、親子任務和睡前陪伴都準備好了。`
+              ? `${home.current_child}：${t.ready}`
               : apiStatus === 'error'
-                ? 'The local API is unavailable, so live learning data is paused.'
-                : '正在準備今天適合孩子的內容。'}
+                ? t.unavailable
+                : t.loading}
           </p>
           <div className="hero-actions">
             <button className="primary-action" type="button" onClick={() => navigate(onboardingNeeded ? routes[4] : routes[7])}>
-              {onboardingNeeded ? '開始建立家庭資料' : '開始今天的故事'}
+              {onboardingNeeded ? t.setup : t.start}
             </button>
             <button className="secondary-action" type="button" onClick={() => navigate(routes[4])}>
-              家長中心
+              {t.parent}
             </button>
           </div>
         </div>
@@ -2930,21 +2956,24 @@ function ParentRoute({
   auth,
   childProfiles,
   gate,
+  locale,
 }: {
   auth: AuthController
   childProfiles: ChildController
   gate: ParentGateController
+  locale: Locale
 }) {
+  const t = ui[locale].parent
   if (auth.authStatus === 'checking') {
     return (
       <>
         <section className="route-heading">
-          <p className="eyebrow">Parent</p>
-          <h1>Parent Center</h1>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h1>{t.center}</h1>
         </section>
         <section className="empty-state">
-          <h2>Checking parent session</h2>
-          <p>Stored credentials are being validated with the local API.</p>
+          <h2>{t.checking}</h2>
+          <p>{t.checkingDetail}</p>
         </section>
       </>
     )
@@ -2954,12 +2983,12 @@ function ParentRoute({
     return (
       <>
         <section className="route-heading">
-          <p className="eyebrow">Parent</p>
-          <h1>Parent Center</h1>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h1>{t.center}</h1>
         </section>
         <section className="parent-grid">
           <ParentAccountSettings auth={auth} />
-          <ChildProfileForm childProfiles={childProfiles} />
+          <ChildProfileForm childProfiles={childProfiles} locale={locale} />
         </section>
         <ParentLearningSummary authToken={auth.authToken} children={childProfiles.children} />
         <ParentPrivacyPanel
@@ -2978,8 +3007,8 @@ function ParentRoute({
   return (
     <>
       <section className="route-heading">
-        <p className="eyebrow">Parent</p>
-        <h1>Parent Center</h1>
+        <p className="eyebrow">{t.eyebrow}</p>
+        <h1>{t.center}</h1>
       </section>
       <form className="auth-panel" onSubmit={auth.submitAuth}>
         <div className="segmented-control" role="tablist" aria-label="Auth mode">
@@ -2989,7 +3018,7 @@ function ParentRoute({
             type="button"
             onClick={() => auth.selectAuthMode('login')}
           >
-            Sign In
+            {t.signIn}
           </button>
           <button
             aria-selected={auth.authMode === 'register'}
@@ -2997,12 +3026,12 @@ function ParentRoute({
             type="button"
             onClick={() => auth.selectAuthMode('register')}
           >
-            Create Account
+            {t.createAccount}
           </button>
         </div>
 
         <label>
-          Email
+          {t.email}
           <input
             autoComplete="email"
             disabled={auth.authBusy}
@@ -3015,7 +3044,7 @@ function ParentRoute({
 
         {auth.authMode === 'register' && (
           <label>
-            Display Name
+            {t.displayName}
             <input
               autoComplete="name"
               disabled={auth.authBusy}
@@ -3028,7 +3057,7 @@ function ParentRoute({
         )}
 
         <label>
-          Password
+          {t.password}
           <input
             autoComplete={auth.authMode === 'login' ? 'current-password' : 'new-password'}
             disabled={auth.authBusy}
@@ -3042,7 +3071,7 @@ function ParentRoute({
 
         {auth.authMode === 'register' && (
           <label>
-            Locale
+            {t.locale}
             <input
               disabled={auth.authBusy}
               required
@@ -3058,11 +3087,11 @@ function ParentRoute({
         <button className="primary-action" disabled={auth.authBusy} type="submit">
           {auth.authBusy
             ? auth.authMode === 'login'
-              ? 'Signing In'
-              : 'Creating Account'
+              ? t.signingIn
+              : t.creating
             : auth.authMode === 'login'
-              ? 'Sign In'
-              : 'Create Account'}
+              ? t.signIn
+              : t.createAccount}
         </button>
       </form>
     </>
@@ -3744,14 +3773,15 @@ function ParentSupportPanel({
   )
 }
 
-function ChildProfileForm({ childProfiles }: { childProfiles: ChildController }) {
+function ChildProfileForm({ childProfiles, locale }: { childProfiles: ChildController; locale: Locale }) {
+  const t = ui[locale].parent
   return (
     <form className="child-form info-panel" onSubmit={childProfiles.submitChild}>
-      <p className="eyebrow">{childProfiles.editingChildId ? 'Edit Child' : 'New Child'}</p>
-      <h2>{childProfiles.editingChildId ? 'Update child profile' : 'Create child profile'}</h2>
+      <p className="eyebrow">{childProfiles.editingChildId ? t.editChild : t.newChild}</p>
+      <h2>{childProfiles.editingChildId ? t.updateChild : t.createChild}</h2>
 
       <label>
-        Display Name
+        {t.displayName}
         <input
           disabled={childProfiles.childBusy}
           required
@@ -3763,7 +3793,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
 
       <div className="field-grid">
         <label>
-          Age Band
+          {t.ageBand}
           <select
             disabled={childProfiles.childBusy}
             value={childProfiles.childForm.ageBand}
@@ -3779,7 +3809,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
         </label>
 
         <label>
-          Region
+          {t.region}
           <select
             disabled={childProfiles.childBusy}
             value={childProfiles.childForm.marketRegion}
@@ -3795,7 +3825,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
       </div>
 
       <label>
-        English Variant
+          {t.englishVariant}
         <select
           disabled={childProfiles.childBusy}
           value={childProfiles.childForm.englishVariant}
@@ -3807,7 +3837,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
       </label>
 
       <section className="privacy-choice">
-        <p className="eyebrow">Privacy</p>
+        <p className="eyebrow">{t.privacy}</p>
         <p>{privacyGuidance(childProfiles.childForm)}</p>
         <label className="checkbox-row">
           <input
@@ -3818,7 +3848,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
               childProfiles.updateChildForm('privacyConsent', event.target.checked)
             }
           />
-          Record parent privacy consent
+          {t.consent}
         </label>
       </section>
 
@@ -3827,10 +3857,10 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
       <div className="form-actions">
         <button className="primary-action" disabled={childProfiles.childBusy} type="submit">
           {childProfiles.childBusy
-            ? 'Saving'
+            ? t.saving
             : childProfiles.editingChildId
-              ? 'Save Changes'
-              : 'Create Child'}
+              ? t.updateProfile
+              : t.saveChild}
         </button>
         {childProfiles.editingChildId && (
           <button
@@ -3839,7 +3869,7 @@ function ChildProfileForm({ childProfiles }: { childProfiles: ChildController })
             type="button"
             onClick={childProfiles.cancelChildEdit}
           >
-            Cancel
+            {t.cancel}
           </button>
         )}
       </div>
@@ -3947,12 +3977,6 @@ function RewardList({ rewards }: { rewards: RewardRecord[] }) {
 
 function RouteStatePill({ state }: { state: RouteState }) {
   return <span className={`route-state ${state}`}>{state}</span>
-}
-
-function authStatusText(status: AuthStatus) {
-  if (status === 'signed_in') return 'Parent signed in'
-  if (status === 'checking') return 'Checking parent'
-  return 'Parent signed out'
 }
 
 function matchRoute(path: string) {

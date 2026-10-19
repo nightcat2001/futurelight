@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { type Locale, speechLanguage, storyTranslations, taskTranslations, ui } from './i18n'
 
 type ChildProfile = {
   id: string
@@ -8,6 +9,7 @@ type ChildProfile = {
 
 type StorySummary = {
   id: string
+  slug: string
   title: string
   summary: string
   theme: string
@@ -36,6 +38,7 @@ type StorySession = {
 
 type DailyFamilyTask = {
   id: string
+  task_key: string
   title: string
   instruction: string
   parent_tip: string
@@ -48,6 +51,7 @@ type Props = {
   children: ChildProfile[]
   mode: 'standard' | 'bedtime'
   onOpenParent: () => void
+  locale: Locale
 }
 
 const sceneSymbols: Record<string, string> = {
@@ -56,7 +60,7 @@ const sceneSymbols: Record<string, string> = {
   star: '★', sleep: 'zZ',
 }
 
-export function StoryExperience({ authToken, children, mode, onOpenParent }: Props) {
+export function StoryExperience({ authToken, children, mode, onOpenParent, locale }: Props) {
   const [childId, setChildId] = useState(children[0]?.id ?? '')
   const [stories, setStories] = useState<StorySummary[]>([])
   const [task, setTask] = useState<DailyFamilyTask | null>(null)
@@ -66,6 +70,7 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
   const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle')
   const [actionBusy, setActionBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const t = ui[locale].story
 
   const activeChildId = children.some((child) => child.id === childId)
     ? childId
@@ -89,15 +94,15 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
           headers: { Authorization: `Bearer ${authToken}` },
         }),
       ])
-      if (!storyResponse.ok || !taskResponse.ok) throw new Error('無法載入故事內容')
+      if (!storyResponse.ok || !taskResponse.ok) throw new Error(t.loadFailed)
       setStories(await storyResponse.json())
       setTask(await taskResponse.json())
       setStatus('ready')
     } catch (loadError) {
-      setError(loadError instanceof Error ? loadError.message : '無法載入故事內容')
+      setError(loadError instanceof Error ? loadError.message : t.loadFailed)
       setStatus('error')
     }
-  }, [activeChildId, authToken, mode])
+  }, [activeChildId, authToken, mode, t.loadFailed])
 
   useEffect(() => {
     const timer = window.setTimeout(() => void loadDashboard(), 0)
@@ -108,9 +113,10 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
 
   function readCurrentPage() {
     if (!activeStory) return
+    const copy = storyTranslations[activeStory.slug]?.[locale]
     window.speechSynthesis?.cancel()
-    const utterance = new SpeechSynthesisUtterance(activeStory.pages[pageIndex].text)
-    utterance.lang = 'zh-TW'
+    const utterance = new SpeechSynthesisUtterance(copy?.pages[pageIndex]?.text ?? activeStory.pages[pageIndex].text)
+    utterance.lang = speechLanguage[locale]
     utterance.rate = mode === 'bedtime' ? 0.72 : 0.85
     utterance.pitch = mode === 'bedtime' ? 0.9 : 1
     window.speechSynthesis?.speak(utterance)
@@ -138,14 +144,14 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
         const failure = !sessionResponse.ok ? sessionResponse : detailResponse
         const body = await failure.json().catch(() => ({}))
         throw new Error(body.error === 'parental_consent_required'
-          ? '請先到家長中心完成隱私同意，再開始記錄閱讀進度。'
-          : '故事目前無法開始')
+          ? t.consentRequired
+          : t.cannotStart)
       }
       setActiveStory(await detailResponse.json())
       setSession(await sessionResponse.json())
       setPageIndex(0)
     } catch (startError) {
-      setError(startError instanceof Error ? startError.message : '故事目前無法開始')
+      setError(startError instanceof Error ? startError.message : t.cannotStart)
     } finally {
       setActionBusy(false)
     }
@@ -162,11 +168,11 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
         headers: { Authorization: `Bearer ${authToken}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ current_page: nextPage }),
       })
-      if (!response.ok) throw new Error('閱讀進度無法儲存，請再試一次。')
+      if (!response.ok) throw new Error(t.cannotSave)
       setSession(await response.json())
       setPageIndex(nextPage)
     } catch (progressError) {
-      setError(progressError instanceof Error ? progressError.message : '閱讀進度無法儲存')
+      setError(progressError instanceof Error ? progressError.message : t.cannotSave)
     } finally {
       setActionBusy(false)
     }
@@ -181,10 +187,10 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
         method: 'PATCH',
         headers: { Authorization: `Bearer ${authToken}` },
       })
-      if (!response.ok) throw new Error('故事完成狀態無法儲存')
+      if (!response.ok) throw new Error(t.cannotComplete)
       setSession(await response.json())
     } catch (completeError) {
-      setError(completeError instanceof Error ? completeError.message : '故事完成狀態無法儲存')
+      setError(completeError instanceof Error ? completeError.message : t.cannotComplete)
     } finally {
       setActionBusy(false)
     }
@@ -200,51 +206,55 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
         headers: { Authorization: `Bearer ${authToken}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ child_id: activeChildId }),
       })
-      if (!response.ok) throw new Error('每日任務完成狀態無法儲存')
+      if (!response.ok) throw new Error(t.cannotCompleteTask)
       setTask(await response.json())
     } catch (taskError) {
-      setError(taskError instanceof Error ? taskError.message : '每日任務完成狀態無法儲存')
+      setError(taskError instanceof Error ? taskError.message : t.cannotCompleteTask)
     } finally {
       setActionBusy(false)
     }
   }
 
   if (!authToken) {
-    return <StoryAccessState title="家長先登入" detail="登入後才能依孩子年齡推薦內容並保存閱讀進度。" action="前往家長中心" onAction={onOpenParent} />
+    return <StoryAccessState title={t.signInTitle} detail={t.signInDetail} action={t.parentCenter} onAction={onOpenParent} />
   }
   if (children.length === 0) {
-    return <StoryAccessState title="先建立孩子資料" detail="年齡是故事長度、文字量與互動難度的依據。" action="建立孩子" onAction={onOpenParent} />
+    return <StoryAccessState title={t.createChildTitle} detail={t.createChildDetail} action={t.createChild} onAction={onOpenParent} />
   }
 
   if (activeStory && session?.completed_at) {
     const nextStory = stories.find((story) => story.id !== activeStory.id)
+    const activeCopy = storyTranslations[activeStory.slug]?.[locale]
     return (
       <section className={`story-experience completion ${mode}`} aria-labelledby="story-complete-title">
         <div className="completion-mark" aria-hidden="true">✓</div>
-        <p className="eyebrow">故事完成</p>
-        <h1 id="story-complete-title">{selectedChild?.display_name}，你聽完了！</h1>
-        <p className="completion-prompt">親子聊聊：{activeStory.parent_prompt}</p>
+        <p className="eyebrow">{t.storyComplete}</p>
+        <h1 id="story-complete-title">{t.heardIt(selectedChild?.display_name ?? '')}</h1>
+        <p className="completion-prompt">{t.talkTogether}{activeCopy?.parentPrompt ?? activeStory.parent_prompt}</p>
         <div className="completion-actions">
-          {nextStory && <button className="primary-action" type="button" onClick={() => void startStory(nextStory)}>下一個故事</button>}
-          <button className="secondary-action" type="button" onClick={() => { setActiveStory(null); setSession(null) }}>回到今日內容</button>
+          {nextStory && <button className="primary-action" type="button" onClick={() => void startStory(nextStory)}>{t.nextStory}</button>}
+          <button className="secondary-action" type="button" onClick={() => { setActiveStory(null); setSession(null) }}>{t.backToday}</button>
         </div>
-        {task && <FamilyTaskCard task={task} busy={actionBusy} onComplete={completeTask} />}
+        {task && <FamilyTaskCard task={task} busy={actionBusy} locale={locale} onComplete={completeTask} />}
       </section>
     )
   }
 
   if (activeStory && session) {
-    const page = activeStory.pages[pageIndex]
+    const activeCopy = storyTranslations[activeStory.slug]?.[locale]
+    const sourcePage = activeStory.pages[pageIndex]
+    const translatedPage = activeCopy?.pages[pageIndex]
+    const page = { ...sourcePage, ...translatedPage }
     const lastPage = pageIndex === activeStory.pages.length - 1
     return (
-      <section className={`story-reader ${mode}`} aria-label={`${activeStory.title} 故事播放器`}>
+      <section className={`story-reader ${mode}`} aria-label={`${activeCopy?.title ?? activeStory.title} ${t.player}`}>
         <header className="reader-header">
-          <button className="reader-close" type="button" aria-label="離開故事" onClick={() => { setActiveStory(null); setSession(null) }}>×</button>
+          <button className="reader-close" type="button" aria-label={t.leaveStory} onClick={() => { setActiveStory(null); setSession(null) }}>×</button>
           <div>
-            <strong>{activeStory.title}</strong>
+            <strong>{activeCopy?.title ?? activeStory.title}</strong>
             <span>{pageIndex + 1} / {activeStory.pages.length}</span>
           </div>
-          <progress value={pageIndex + 1} max={activeStory.pages.length} aria-label="故事進度" />
+          <progress value={pageIndex + 1} max={activeStory.pages.length} aria-label={t.storyProgress} />
         </header>
         <div className={`story-scene scene-${page.scene}`} aria-hidden="true">
           <span>{sceneSymbols[page.scene] ?? '●'}</span>
@@ -252,15 +262,15 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
         <div className="story-copy" aria-live="polite">
           <p>{page.text}</p>
           <small>{page.prompt}</small>
-          <button className="read-aloud" type="button" onClick={readCurrentPage}>朗讀這一頁</button>
+          <button className="read-aloud" type="button" onClick={readCurrentPage}>{t.readPage}</button>
         </div>
-        {activeStory.calming_prompt && pageIndex === 0 && <p className="calming-note">{activeStory.calming_prompt}</p>}
+        {(activeCopy?.calmingPrompt ?? activeStory.calming_prompt) && pageIndex === 0 && <p className="calming-note">{activeCopy?.calmingPrompt ?? activeStory.calming_prompt}</p>}
         {error && <p className="form-error" role="alert">{error}</p>}
         <footer className="reader-controls">
-          <button className="secondary-action" disabled={actionBusy || pageIndex === 0} type="button" onClick={() => void moveToPage(pageIndex - 1)}>上一頁</button>
+          <button className="secondary-action" disabled={actionBusy || pageIndex === 0} type="button" onClick={() => void moveToPage(pageIndex - 1)}>{t.previous}</button>
           {lastPage
-            ? <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void finishStory()}>{actionBusy ? '儲存中' : '故事完成'}</button>
-            : <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void moveToPage(pageIndex + 1)}>{actionBusy ? '儲存中' : '下一頁'}</button>}
+            ? <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void finishStory()}>{actionBusy ? t.saving : t.finish}</button>
+            : <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void moveToPage(pageIndex + 1)}>{actionBusy ? t.saving : t.next}</button>}
         </footer>
       </section>
     )
@@ -270,46 +280,46 @@ export function StoryExperience({ authToken, children, mode, onOpenParent }: Pro
     <section className={`story-experience ${mode}`}>
       <header className="story-title-band">
         <div>
-          <p className="eyebrow">{mode === 'bedtime' ? '睡前模式' : '今天的故事'}</p>
-          <h1>{mode === 'bedtime' ? '慢慢安靜下來' : `嗨，${selectedChild?.display_name}`}</h1>
-          <p>{mode === 'bedtime' ? '低亮度、慢節奏，陪孩子安心結束今天。' : '依年齡準備的故事與親子活動。'}</p>
+          <p className="eyebrow">{mode === 'bedtime' ? t.bedtime : t.todayStories}</p>
+          <h1>{mode === 'bedtime' ? t.settleDown : t.hello(selectedChild?.display_name ?? '')}</h1>
+          <p>{mode === 'bedtime' ? t.bedtimeIntro : t.storyIntro}</p>
         </div>
-        <label className="child-switcher">為誰播放
+        <label className="child-switcher">{t.playFor}
           <select value={activeChildId} onChange={(event) => {
             setChildId(event.target.value)
             setActiveStory(null)
             setSession(null)
             setPageIndex(0)
           }}>
-            {children.map((child) => <option key={child.id} value={child.id}>{child.display_name} · {child.age_band} 歲</option>)}
+            {children.map((child) => <option key={child.id} value={child.id}>{child.display_name} · {child.age_band} {t.years}</option>)}
           </select>
         </label>
       </header>
 
-      {status === 'loading' && <div className="story-loading" role="status"><span />正在準備適合的故事…</div>}
-      {status === 'error' && <StoryAccessState title="內容暫時載入失敗" detail={error ?? '請檢查連線後再試一次。'} action="重新載入" onAction={() => void loadDashboard()} />}
-      {status === 'ready' && stories.length === 0 && <StoryAccessState title="這個年齡帶目前沒有內容" detail="我們不會用不合齡的故事填補空缺。" action="重新載入" onAction={() => void loadDashboard()} />}
+      {status === 'loading' && <div className="story-loading" role="status"><span />{t.loading}</div>}
+      {status === 'error' && <StoryAccessState title={t.loadFailed} detail={error ?? t.retryDetail} action={t.reload} onAction={() => void loadDashboard()} />}
+      {status === 'ready' && stories.length === 0 && <StoryAccessState title={t.noContent} detail={t.noContentDetail} action={t.reload} onAction={() => void loadDashboard()} />}
       {status === 'ready' && stories.length > 0 && (
         <div className="story-dashboard">
           <article className="featured-story">
             <img src={stories[0].cover_path} alt="" />
             <div>
-              <span className="story-meta">{stories[0].theme} · {stories[0].duration_minutes} 分鐘</span>
-              <h2>{stories[0].title}</h2>
-              <p>{stories[0].summary}</p>
-              <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void startStory(stories[0])}>{actionBusy ? '準備中' : '開始播放'}</button>
+              <span className="story-meta">{storyTranslations[stories[0].slug]?.[locale]?.theme ?? stories[0].theme} · {stories[0].duration_minutes} {t.minutes}</span>
+              <h2>{storyTranslations[stories[0].slug]?.[locale]?.title ?? stories[0].title}</h2>
+              <p>{storyTranslations[stories[0].slug]?.[locale]?.summary ?? stories[0].summary}</p>
+              <button className="primary-action" disabled={actionBusy} type="button" onClick={() => void startStory(stories[0])}>{actionBusy ? t.preparing : t.start}</button>
             </div>
           </article>
-          {stories.length > 1 && <div className="story-list" aria-label="更多推薦故事">
+          {stories.length > 1 && <div className="story-list" aria-label={t.moreStories}>
             {stories.slice(1).map((story) => (
               <article key={story.id} className="story-list-item">
                 <img src={story.cover_path} alt="" />
-                <div><small>{story.theme} · {story.duration_minutes} 分鐘</small><h3>{story.title}</h3><p>{story.summary}</p></div>
-                <button type="button" aria-label={`播放 ${story.title}`} onClick={() => void startStory(story)}>▶</button>
+                <div><small>{storyTranslations[story.slug]?.[locale]?.theme ?? story.theme} · {story.duration_minutes} {t.minutes}</small><h3>{storyTranslations[story.slug]?.[locale]?.title ?? story.title}</h3><p>{storyTranslations[story.slug]?.[locale]?.summary ?? story.summary}</p></div>
+                <button type="button" aria-label={t.play(storyTranslations[story.slug]?.[locale]?.title ?? story.title)} onClick={() => void startStory(story)}>▶</button>
               </article>
             ))}
           </div>}
-          {task && mode === 'standard' && <FamilyTaskCard task={task} busy={actionBusy} onComplete={completeTask} />}
+          {task && mode === 'standard' && <FamilyTaskCard task={task} busy={actionBusy} locale={locale} onComplete={completeTask} />}
         </div>
       )}
       {error && status !== 'error' && <p className="form-error" role="alert">{error}</p>}
@@ -321,10 +331,12 @@ function StoryAccessState({ title, detail, action, onAction }: { title: string; 
   return <section className="story-access-state"><div aria-hidden="true">◉</div><h1>{title}</h1><p>{detail}</p><button className="primary-action" type="button" onClick={onAction}>{action}</button></section>
 }
 
-function FamilyTaskCard({ task, busy, onComplete }: { task: DailyFamilyTask; busy: boolean; onComplete: () => void }) {
+function FamilyTaskCard({ task, busy, locale, onComplete }: { task: DailyFamilyTask; busy: boolean; locale: Locale; onComplete: () => void }) {
+  const t = ui[locale].story
+  const copy = taskTranslations[task.task_key]?.[locale]
   return <article className={`family-task ${task.completed_today ? 'completed' : ''}`}>
     <div className="family-task-icon" aria-hidden="true">{task.completed_today ? '✓' : '✦'}</div>
-    <div><p className="eyebrow">今日親子任務 · {task.duration_minutes} 分鐘</p><h2>{task.title}</h2><p>{task.instruction}</p><small>給家長：{task.parent_tip}</small></div>
-    <button className={task.completed_today ? 'secondary-action' : 'primary-action'} disabled={busy || task.completed_today} type="button" onClick={() => void onComplete()}>{task.completed_today ? '今天已完成' : '完成任務'}</button>
+    <div><p className="eyebrow">{t.dailyTask} · {task.duration_minutes} {t.minutes}</p><h2>{copy?.title ?? task.title}</h2><p>{copy?.instruction ?? task.instruction}</p><small>{t.forParent}{copy?.parentTip ?? task.parent_tip}</small></div>
+    <button className={task.completed_today ? 'secondary-action' : 'primary-action'} disabled={busy || task.completed_today} type="button" onClick={() => void onComplete()}>{task.completed_today ? t.taskDone : t.completeTask}</button>
   </article>
 }
